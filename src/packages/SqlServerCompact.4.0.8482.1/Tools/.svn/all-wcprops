@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/packages/SqlServerCompact.4.0.8482.1/Tools
+END
+GetSqlCEPostBuildCmd.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/packages/SqlServerCompact.4.0.8482.1/Tools/GetSqlCEPostBuildCmd.ps1
+END
+install.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/packages/SqlServerCompact.4.0.8482.1/Tools/install.ps1
+END
+uninstall.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/packages/SqlServerCompact.4.0.8482.1/Tools/uninstall.ps1
+END

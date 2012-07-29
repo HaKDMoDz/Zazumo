@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Input
+END
+GamePad.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Input/GamePad.cs
+END
+Keyboard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Input/Keyboard.cs
+END
+Mouse.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Input/Mouse.cs
+END
+MouseState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Input/MouseState.cs
+END

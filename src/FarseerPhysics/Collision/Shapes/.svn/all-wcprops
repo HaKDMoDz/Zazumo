@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes
+END
+Shape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes/Shape.cs
+END
+CircleShape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes/CircleShape.cs
+END
+EdgeShape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes/EdgeShape.cs
+END
+PolygonShape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes/PolygonShape.cs
+END
+LoopShape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Collision/Shapes/LoopShape.cs
+END

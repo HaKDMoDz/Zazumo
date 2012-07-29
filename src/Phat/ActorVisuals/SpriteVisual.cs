@@ -1,0 +1,235 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat;
+using Microsoft.Xna.Framework.Graphics;
+using Phat.Visual;
+using Microsoft.Xna.Framework;
+using Phat.Actors;
+using Phat.Messages;
+using Phat.ActorResources;
+
+namespace Phat.ActorVisuals
+{
+    public class SpriteVisual: VisualBase
+    {
+        protected class VisualProperties
+        {
+            public Single XOffset;
+            public Single YOffset;
+            public Single WidthOffset;
+            public Single HeightOffset;
+            public Single Opacity;
+            public Single Rotation;
+            public Vector2 Center;
+        }
+
+        private Boolean _isInitialRender = true;
+        private readonly Actor _actor;
+
+        protected Actor Actor { get { return _actor; } }
+
+        protected readonly SpriteBatch _spriteBatch;
+
+        private Phat.ActorResources.IDrawable _resource;
+        protected Phat.ActorResources.IDrawable Resource { get { return _resource; } }
+
+        private Texture2D _texture;
+        private SpriteResource _sprite;
+        private String _currentAnimationSet;
+        private Int32 _currentFrame;
+        private Int32 _frameCount;
+        private Int64 _frameTickCounter;
+        private Single _animationSpeed;
+        private Boolean _isAnimating;
+        private List<Animation> _currentAnimations;
+        private VisualProperties _properties;
+
+        protected VisualProperties Properties { get { return _properties; } }
+
+        public SpriteVisual(Actor actor, SpriteBatch spriteBatch, IResourceDictionary resourceDictionary)
+            : base(resourceDictionary)
+        {
+            this._actor = actor;
+            this._spriteBatch = spriteBatch;
+
+            this._currentAnimations = new List<Animation>();
+        }
+
+        public override void HandleEvent(Object @event)
+        {
+            if (@event.GetType() == typeof(ActorSpriteSetEvent))
+            {
+                _isAnimating = false;
+                this.SetSprite(((ActorSpriteSetEvent)@event).SpriteKey);
+            }
+            else if (@event.GetType() == typeof(ActorFrameSetSetEvent))
+            {
+                _isAnimating = true;
+                _frameTickCounter = 0;
+                _currentFrame = 0;
+                _currentAnimationSet = ((ActorFrameSetSetEvent)@event).FrameSetKey;
+                var frameset = ((FrameSetResource)ResourceDictionary.GetResource(_currentAnimationSet));
+                this._animationSpeed = frameset.FrameDuration;
+                this.SetSprite(frameset.FrameKeys[0]);
+                this._frameCount = frameset.FrameKeys.Length;
+            }
+            else if (@event.GetType() == typeof(ActorPropertySetEvent))
+            {
+                SetProperty(((ActorPropertySetEvent)@event).Property, ((ActorPropertySetEvent)@event).Value);
+            }
+            else if (@event.GetType() == typeof(AnimationStartedEvent))
+            {
+                this._currentAnimations.Add(((AnimationStartedEvent)@event).Animation);
+            }            
+        }
+
+        public override VisualHitTestResult GetHitResult(Vector2 location, ViewPort viewPort)
+        {
+            var screenLocation = new Vector2((_actor.Location.X - viewPort.Left) * viewPort.ZoomFactor, (_actor.Location.Y - viewPort.Top) * viewPort.ZoomFactor);
+
+            if (location.X >= screenLocation.X
+                && location.X <= (screenLocation.X + _resource.Width * viewPort.ZoomFactor)
+                && location.Y >= screenLocation.Y
+                && location.Y <= (screenLocation.Y + _resource.Height * viewPort.ZoomFactor)
+                )
+            {
+                return new VisualHitTestResult(this._actor, new Vector2(location.X - screenLocation.X, location.Y - screenLocation.Y), true);
+            }
+            else
+            {
+                return new VisualHitTestResult(this._actor, new Vector2(0f, 0f), false);
+            }
+        }
+
+        public override void Draw(TimeSpan ellapsedTime, ViewPort viewPort)
+        {
+            var location = ((ILocatable)_actor).Location;
+
+            Draw(ellapsedTime, 
+                new Rectangle((Int32)((location.X * Settings.MetersToPixels - viewPort.Left + _properties.XOffset * Settings.MetersToPixels) * viewPort.ZoomFactor),
+                              (Int32)((location.Y * Settings.MetersToPixels - viewPort.Top + _properties.YOffset * Settings.MetersToPixels) * viewPort.ZoomFactor),
+                              (Int32)(Math.Ceiling((_resource.Width + _properties.WidthOffset) * viewPort.ZoomFactor * Phat.Settings.MetersToPixels) + (viewPort.ZoomFactor == 1.0 ? 0 : 1)),
+                              (Int32)(Math.Ceiling((_resource.Height + _properties.HeightOffset) * viewPort.ZoomFactor * Phat.Settings.MetersToPixels)) + (viewPort.ZoomFactor == 1.0 ? 0 : 1))
+                           );
+        }
+
+        protected void Draw(TimeSpan ellapsedTime, Rectangle destination)
+        {
+            if (_isInitialRender)
+            {
+                _isInitialRender = false;
+                _properties.Opacity = _actor.Opacity;
+            }
+
+            if (this.ResourceDictionary == null)
+                return;
+
+            ellapsedTime = RunAnimations(ellapsedTime);
+
+            if (_properties.Opacity == 0f)
+                return;
+
+            var location = ((ILocatable)_actor).Location;
+
+
+            Color c;
+
+            if (_properties.Opacity != 1f)
+                c = new Color(1f, 1f, 1f, _properties.Opacity);
+            else
+                c = Color.White;
+
+            var spriteEffect = SpriteEffects.None;
+
+            if (_sprite.HorizontalFlip)
+                spriteEffect = SpriteEffects.FlipHorizontally;
+
+            if (_sprite.VerticalFlip)
+                spriteEffect |= SpriteEffects.FlipVertically;
+
+            Vector2 center = Vector2.Zero;
+            if (_properties.Center != Vector2.Zero)
+            {
+                center = new Vector2(_properties.Center.X * _sprite.Width, _properties.Center.Y * _sprite.Height);
+                destination = new Rectangle(destination.Left + (Int32)(_properties.Center.X * destination.Width), destination.Top + (Int32)(_properties.Center.Y * destination.Height), destination.Width, destination.Height);
+            }
+
+            _spriteBatch.Draw(_texture,
+                              destination,
+                              new Rectangle(_sprite.UCoordinate, _sprite.VCoordinate, _sprite.Width, _sprite.Height) /* texture source */,
+                              c, _properties.Rotation, center, spriteEffect, 1f
+                           );
+            
+        }
+
+        private TimeSpan RunAnimations(TimeSpan ellapsedTime)
+        {
+            if (_isAnimating)
+            {
+                _frameTickCounter += ellapsedTime.Ticks;
+                if (_frameTickCounter > (_animationSpeed * 10000000f))
+                {
+                    _currentFrame++;
+
+                    if (_currentFrame >= _frameCount)
+                        _currentFrame = 0;
+
+                    _frameTickCounter = 0;
+
+                    SetSprite(((FrameSetResource)ResourceDictionary.GetResource(_currentAnimationSet)).FrameKeys[_currentFrame]);
+                }
+            }
+
+            foreach (var animation in this._currentAnimations.ToArray())
+            {
+                if (animation.IsComplete == true)
+                {
+                    this._currentAnimations.Remove(animation);
+                }
+                else
+                {
+                    SetProperty(animation.AnimatedProperty, animation.AnimatedValue);                    
+
+                }
+            }
+            return ellapsedTime;
+        }
+
+        private void SetProperty(String property, Object value)
+        {
+            if (property == "XOffset")
+                _properties.XOffset = (Single)value;
+            else if (property == "YOffset")
+                _properties.YOffset = (Single)value;
+            else if (property == "WidthOffset")
+                _properties.WidthOffset = (Single)value;
+            else if (property == "HeightOffset")
+                _properties.HeightOffset = (Single)value;
+            else if (property == "Opacity")
+                _properties.Opacity = (Single)value;
+            else if (property == "Rotation")
+                _properties.Rotation = (Single)value;
+            else if (property == "Center")
+                _properties.Center = (Vector2)value;
+        }
+
+        public override void Initialize(Object initializationData)
+        {
+            _resource = (Phat.ActorResources.IDrawable)initializationData;
+            this._currentAnimationSet = String.Empty;
+            this._currentFrame = 0;
+            this._frameCount = 0; // ((AnimationSetResource)_resourceDictionary.GetResource(_currentAnimationSet)).SpriteKeys.Length;
+            this._properties = new VisualProperties { HeightOffset = 0f, Opacity = _actor.Opacity, WidthOffset = 0f, XOffset = 0f, YOffset = 0f, Rotation = 0f, Center = Vector2.Zero };
+
+            SetSprite(_resource.SpriteKey);
+        }
+
+        private void SetSprite(String spriteKey)
+        {
+            _sprite = (SpriteResource)ResourceDictionary.GetResource(spriteKey);
+            _texture = (Texture2D)ResourceDictionary.GetResource(_sprite.TextureKey);
+        }
+    }
+}

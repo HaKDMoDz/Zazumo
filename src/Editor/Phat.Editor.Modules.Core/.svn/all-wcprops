@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/19/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core
+END
+MenuBuilder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/MenuBuilder.cs
+END
+CoreModule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/CoreModule.cs
+END
+ViewNames.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewNames.cs
+END
+packages.config
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/packages.config
+END
+AppStart_SQLCEEntityFramework.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/AppStart_SQLCEEntityFramework.cs
+END
+Phat.Editor.Modules.Core.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/Phat.Editor.Modules.Core.csproj
+END

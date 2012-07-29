@@ -1,0 +1,15 @@
+C:\Dev\Phat.Zazumo\src\Mono\Phat.Zazumo.Mono\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\build\Windows\Debug\Phat.Zazumo.Mono.exe
+C:\Dev\Phat.Zazumo\build\Windows\Debug\Phat.Zazumo.Mono.pdb
+C:\Dev\Phat.Zazumo\src\Mono\Phat.Zazumo.Mono\obj\Debug\Phat.Zazumo.Mono.exe
+C:\Dev\Phat.Zazumo\src\Mono\Phat.Zazumo.Mono\obj\Debug\Phat.Zazumo.Mono.pdb
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Phat.Zazumo.Mono.exe
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Phat.Zazumo.Mono.pdb
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Backgrounds\Splash.png
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Sprites\Sprites.png
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Sprites\Worm.png
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Sprites\Wormholes.png
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Sprites\Zazumo.png
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Packages\Splash.dat
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Packages\Zazumo.dat
+C:\Dev\Phat.Zazumo\build\Mono\Debug\Content\Sprites\GameElements.png

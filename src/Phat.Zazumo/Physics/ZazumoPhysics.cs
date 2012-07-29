@@ -1,0 +1,101 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorPhysics;
+using Phat.Zazumo.Resources;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Common;
+using Microsoft.Xna.Framework;
+using Phat.Actors;
+using FarseerPhysics.Collision.Shapes;
+using Phat.Physics;
+using FarseerPhysics.Dynamics.Contacts;
+using Phat.Zazumo.Messages;
+using Phat.Zazumo.Actors;
+
+namespace Phat.Zazumo.Physics
+{
+    public class ZazumoPhysics : PhysicsBase
+    {
+        private readonly ZazumoActor _actor;
+        private IZazumoData _resource;
+        private Body _body;
+
+        public ZazumoPhysics(ZazumoActor actor, IResourceDictionary resourceDictionary)
+            : base(resourceDictionary)
+        {
+            this._actor = actor;
+        }
+
+        public override void HandleEvent(Object @event)
+        {
+            base.HandleEvent(@event);
+
+            /*if (@event is ZazumoSizeChangedEvent)
+            {
+                var fixture = this._body.FixtureList[0];
+                fixture.OnCollision -= OnCollision;
+                this._body.DestroyFixture(fixture);
+                this._body.FixtureList.Remove(fixture);
+                
+                CreateFixture();
+            }*/
+        }
+
+        public override Body CreateBody(World world)
+        {
+            var body = new Body(world);
+            body.BodyType = BodyType.Dynamic;
+            body.IgnoreGravity = true;
+            body.FixedRotation = true;
+            body.LinearDamping = _resource.Damping;
+            body.Mass = 165;
+
+
+            var location = ((ILocatable)_actor).Location;
+            body.Position = new Vector2(location.X, location.Y);
+                        
+            _body = body;
+            CreateFixture();
+            return body;
+        }
+
+        private void CreateFixture()
+        {
+            var unitHull = (Vector2[])ResourceDictionary.GetResource("ZazumoNormalHull");
+
+            var scaledVertices = new List<Vector2>();
+            foreach (var vertex in unitHull)
+            {
+                scaledVertices.Add(new Vector2(vertex.X * (_resource.Width), vertex.Y * (_resource.Height)));
+            }
+
+            var vertices = new Vertices(scaledVertices);
+            var shape = new PolygonShape(vertices, 1f);
+
+            shape.Density = 10f / (_resource.Height * _resource.Width);
+                        
+            var fixture = _body.CreateFixture(shape, 0f);
+            fixture.CollisionGroup = 2;
+            fixture.UserData = new CollisionData { Actor = _actor };
+
+            fixture.OnCollision += OnCollision;
+        }
+
+        public Boolean OnCollision(Fixture fixtureA, Fixture fixtureB, Contact manifold)
+        {
+            return true;
+        }
+
+        public override void Initialize(Object initializationData)
+        {
+            this._resource = (IZazumoData)initializationData;
+        }
+
+        public override void RemoveBodies(World world)
+        {
+            world.RemoveBody(_body);
+        }
+    }
+}

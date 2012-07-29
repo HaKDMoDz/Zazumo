@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewModels
+END
+PackageDatabaseTreeViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewModels/PackageDatabaseTreeViewModel.cs
+END
+MenuItemViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewModels/MenuItemViewModel.cs
+END
+CreateNewPackageViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewModels/CreateNewPackageViewModel.cs
+END
+MainMenuViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Core/ViewModels/MainMenuViewModel.cs
+END

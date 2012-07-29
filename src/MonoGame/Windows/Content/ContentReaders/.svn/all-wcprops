@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Content/ContentReaders
+END
+SpriteFontReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Content/ContentReaders/SpriteFontReader.cs
+END
+SoundEffectReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Content/ContentReaders/SoundEffectReader.cs
+END
+SongReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Content/ContentReaders/SongReader.cs
+END
+Texture2DReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Content/ContentReaders/Texture2DReader.cs
+END

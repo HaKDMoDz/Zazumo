@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject
+END
+ConcreteWorldObjectArchetypeDataViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject/ConcreteWorldObjectArchetypeDataViewModel.cs
+END
+ConcreteWorldObjectViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject/ConcreteWorldObjectViewModel.cs
+END
+ArchetypeBasedConcreteWorldObjectPropertiesViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject/ArchetypeBasedConcreteWorldObjectPropertiesViewModel.cs
+END
+ArchetypeBasedConcreteWorldObjectViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject/ArchetypeBasedConcreteWorldObjectViewModel.cs
+END
+ConcreteWorldObjectPropertiesViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/ConcreteWorldObject/ConcreteWorldObjectPropertiesViewModel.cs
+END

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68C6C33F-9C04-4B0F-B091-141E97DB48BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phat.Zazumo</RootNamespace>
+    <AssemblyName>Phat.Zazumo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\.NET\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="ProjectMercury, Version=4.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Mercury\Windows\ProjectMercury.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actors\AmmoMeter.cs" />
+    <Compile Include="Actors\ArrowEnemyActor.cs" />
+    <Compile Include="Actors\BoulderEnemy.cs" />
+    <Compile Include="Actors\BulletTrailParticleSystemActor.cs" />
+    <Compile Include="Actors\CircleEnemyActor.cs" />
+    <Compile Include="Actors\ClamActor.cs" />
+    <Compile Include="Actors\DefaultWeapon.cs" />
+    <Compile Include="Actors\DiamondEnemyActor.cs" />
+    <Compile Include="Actors\ExplosionParticleSystemActor.cs" />
+    <Compile Include="Actors\EyeEnemyActor.cs" />
+    <Compile Include="Actors\FireButton.cs" />
+    <Compile Include="Actors\FrogActor.cs" />
+    <Compile Include="Actors\OwlBomb.cs" />
+    <Compile Include="Actors\PowerUpActor.cs" />
+    <Compile Include="Actors\EnemyActor.cs" />
+    <Compile Include="Actors\PowerUpTrailParticleSystemActor.cs" />
+    <Compile Include="Actors\SquareEnemyActor.cs" />
+    <Compile Include="Actors\SquidBoss.cs" />
+    <Compile Include="Actors\SquiggleEnemyActor.cs" />
+    <Compile Include="Actors\StarWeapon.cs" />
+    <Compile Include="Actors\TriangleEnemyActor.cs" />
+    <Compile Include="Actors\WallVolume.cs" />
+    <Compile Include="Actors\Weapon.cs" />
+    <Compile Include="Actors\WormActor.cs" />
+    <Compile Include="Actors\WormholeActor.cs" />
+    <Compile Include="Actors\ZazumoActor.cs" />
+    <Compile Include="Actors\ZazumoProjectileActor.cs" />
+    <Compile Include="Controllers\Action\ActionGameMode.cs" />
+    <Compile Include="Controllers\Action\ArrowController.cs" />
+    <Compile Include="Controllers\Action\BoulderController.cs" />
+    <Compile Include="Controllers\Action\CircleController.cs" />
+    <Compile Include="Controllers\Action\ClamController.cs" />
+    <Compile Include="Controllers\Action\DiamondController.cs" />
+    <Compile Include="Controllers\Action\EyeController.cs" />
+    <Compile Include="Controllers\Action\FrogController.cs" />
+    <Compile Include="Controllers\Action\OwlBombController.cs" />
+    <Compile Include="Controllers\Action\PatternSegment.cs" />
+    <Compile Include="Controllers\Action\PowerUpController.cs" />
+    <Compile Include="Controllers\Action\SquareController.cs" />
+    <Compile Include="Controllers\Action\SquidController.cs" />
+    <Compile Include="Controllers\Action\SquiggleController.cs" />
+    <Compile Include="Controllers\Action\TriangleController.cs" />
+    <Compile Include="Controllers\Action\WormController.cs" />
+    <Compile Include="Controllers\Action\ZazumoController.cs" />
+    <Compile Include="Controllers\Splash\SplashGameMode.cs" />
+    <Compile Include="Controllers\Title\TitleGameMode.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Messages\AmmoDepletedEvent.cs" />
+    <Compile Include="Messages\BigPointsAwardedEvent.cs" />
+    <Compile Include="Messages\BombAwardedEvent.cs" />
+    <Compile Include="Messages\BombDeployedEvent.cs" />
+    <Compile Include="Messages\BossHitEvent.cs" />
+    <Compile Include="Messages\EnemyDestoryedEvent.cs" />
+    <Compile Include="Messages\EnemyFlockDestroyedEvent.cs" />
+    <Compile Include="Messages\EnemySpawnedEvent.cs" />
+    <Compile Include="Messages\FireButtonPressedEvent.cs" />
+    <Compile Include="Messages\FireButtonReleasedEvent.cs" />
+    <Compile Include="Messages\MiniBossDestroyedEvent.cs" />
+    <Compile Include="Messages\PointsAwardedEvent.cs" />
+    <Compile Include="Messages\WormholeClosedEvent.cs" />
+    <Compile Include="Messages\ZazumoShapeChangedEvent.cs" />
+    <Compile Include="Messages\ZazumoSizeChangedEvent.cs" />
+    <Compile Include="Physics\ProjectilePhysics.cs" />
+    <Compile Include="Physics\StarGatePhysics.cs" />
+    <Compile Include="Physics\ZazumoPhysics.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveData.cs" />
+    <Compile Include="Visuals\AmmoMeterVisual.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Background.png" />
+    <Content Include="Game.ico" />
+    <Content Include="Thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FarseerPhysics\FarseerPhysics.csproj">
+      <Project>{8CE73DB2-7512-4003-BFB8-BD63D526A8C0}</Project>
+      <Name>FarseerPhysics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phat.Zazumo.Resources\Phat.Zazumo.Resources.csproj">
+      <Project>{F8DB7F62-B17C-4FF8-80C4-753B3D37ED20}</Project>
+      <Name>Phat.Zazumo.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phat\Phat.csproj">
+      <Project>{237D245B-F4DE-4684-A33F-8FB1F49C8198}</Project>
+      <Name>Phat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

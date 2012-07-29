@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices
+END
+TextFieldAlertView.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/TextFieldAlertView.cs
+END
+GamerProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerProfile.cs
+END
+SignedInGamer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/SignedInGamer.cs
+END
+GamerPresence.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerPresence.cs
+END
+GamerServicesComponent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerServicesComponent.cs
+END
+GamerDefaults.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerDefaults.cs
+END
+FriendGamer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/FriendGamer.cs
+END
+FriendCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/FriendCollection.cs
+END
+GamerPrivileges.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerPrivileges.cs
+END
+GamerPresenceMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerPresenceMode.cs
+END
+GamerZone.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerZone.cs
+END
+Achievement.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/Achievement.cs
+END
+SignedInGamerCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/SignedInGamerCollection.cs
+END
+Gamer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/Gamer.cs
+END
+Guide.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/Guide.cs
+END
+GamerPrivilegeSetting.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerPrivilegeSetting.cs
+END
+AchievementCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/AchievementCollection.cs
+END
+MessageBoxIcon.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/MessageBoxIcon.cs
+END
+GamerCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GamerServices/GamerCollection.cs
+END

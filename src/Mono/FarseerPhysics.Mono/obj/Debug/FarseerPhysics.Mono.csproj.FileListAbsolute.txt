@@ -1,0 +1,5 @@
+C:\Dev\Phat.Zazumo\build\Mono\Debug\FarseerPhysics.Mono.dll
+C:\Dev\Phat.Zazumo\build\Mono\Debug\FarseerPhysics.Mono.pdb
+C:\Dev\Phat.Zazumo\src\Mono\FarseerPhysics.Mono\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Mono\FarseerPhysics.Mono\obj\Debug\FarseerPhysics.Mono.dll
+C:\Dev\Phat.Zazumo\src\Mono\FarseerPhysics.Mono\obj\Debug\FarseerPhysics.Mono.pdb

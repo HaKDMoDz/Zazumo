@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.Actors;
+using Phat.Zazumo.Actors;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Messages;
+using Phat.Zazumo.Resources;
+
+namespace Phat.Zazumo.Controllers.Action
+{
+    public class ZazumoController : ActorController, 
+                                        IHandle<ZazumoShapeChangedEvent>,
+                                        IHandle<FireButtonPressedEvent>,
+                                        IHandle<FireButtonReleasedEvent>
+    {
+        private static Single horizontalAcceleration = 0f;
+        private static Single verticalAcceleration = 0f;
+
+        private ZazumoShape _shape;
+
+#if WINDOWS_PHONE
+        private static Microsoft.Devices.Sensors.Accelerometer accelerometer;
+#endif
+
+        static ZazumoController()
+        {
+#if WINDOWS_PHONE
+            accelerometer = new Microsoft.Devices.Sensors.Accelerometer();
+            accelerometer.ReadingChanged += new EventHandler<Microsoft.Devices.Sensors.AccelerometerReadingEventArgs>(accelerometer_ReadingChanged);
+            accelerometer.Start();
+#endif
+        }
+
+        protected override void OnInitialize()
+        {
+#if WINDOWS_PHONE
+            
+#endif
+        }
+
+        protected override void OnSuspended()
+        {
+            base.OnSuspended();
+
+#if WINDOWS_PHONE
+
+#endif
+        }
+
+        public override void Update(TimeSpan ellapsedTime)
+        {
+            base.Update(ellapsedTime);
+
+
+
+#if WINDOWS
+            var mouseState = Microsoft.Xna.Framework.Input.Mouse.GetState();
+
+            var gamePadState = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+
+            horizontalAcceleration = gamePadState.ThumbSticks.Left.X * 0.8f; // (mouseState.X - (ViewPort.ResolutionX / 2f)) / (ViewPort.ResolutionX / 2f);
+            verticalAcceleration = gamePadState.ThumbSticks.Left.Y * -0.8f; // (mouseState.Y - (ViewPort.ResolutionY / 2f)) / (ViewPort.ResolutionY / 2f);
+
+            if (this._shape != ZazumoShape.None)
+            {
+
+                if (gamePadState.IsButtonDown(Microsoft.Xna.Framework.Input.Buttons.A))
+                    ((ZazumoActor)Actor).StartFiring();
+                else
+                    ((ZazumoActor)Actor).StopFiring();
+            }
+
+#endif
+            var enemies = base.ActorRepository.GetAllActors<EnemyActor>();
+
+            var targetFound = ((ZazumoActor)Actor).FindTargets(enemies);
+                    
+            ((ZazumoActor)Actor).Move(horizontalAcceleration * (Single)ellapsedTime.TotalSeconds, verticalAcceleration * (Single)ellapsedTime.TotalSeconds);
+
+        }
+
+#if WINDOWS_PHONE
+        private static void accelerometer_ReadingChanged(object sender, Microsoft.Devices.Sensors.AccelerometerReadingEventArgs e)
+        {
+            horizontalAcceleration = (Single)e.Y * -3.0f;
+            verticalAcceleration = (Single)e.X * -3.0f;
+        }
+#endif
+
+        public void Handle(ZazumoShapeChangedEvent @event)
+        {
+            this._shape = @event.Shape;
+
+            if (@event.Shape == ZazumoShape.None)
+                ((ZazumoActor)Actor).StartFiring();
+            else
+                ((ZazumoActor)Actor).StopFiring();
+        }
+
+        public void Handle(FireButtonPressedEvent @event)
+        {
+           ((ZazumoActor)Actor).StartFiring();
+        }
+
+        public void Handle(FireButtonReleasedEvent @event)
+        {
+            ((ZazumoActor)Actor).StopFiring();
+        }
+    }
+}

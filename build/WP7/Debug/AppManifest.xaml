@@ -1,0 +1,9 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Phat.Zazumo.WP7" EntryPointType="Phat.Zazumo.Game1" RuntimeVersion="3.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Phat.Zazumo.WP7" Source="Phat.Zazumo.WP7.dll" />
+    <AssemblyPart x:Name="FarseerPhysics.WP7" Source="FarseerPhysics.WP7.dll" />
+    <AssemblyPart x:Name="Phat.WP7" Source="Phat.WP7.dll" />
+    <AssemblyPart x:Name="Phat.Zazumo.Resources.WP7" Source="Phat.Zazumo.Resources.WP7.dll" />
+    <AssemblyPart x:Name="ProjectMercury" Source="ProjectMercury.dll" />
+  </Deployment.Parts>
+</Deployment>

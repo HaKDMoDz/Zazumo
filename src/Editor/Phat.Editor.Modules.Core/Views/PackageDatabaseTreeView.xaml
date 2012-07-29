@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Phat.Editor.Modules.Core.Views.PackageDatabaseTreeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:pa="clr-namespace:Phat.Editor.Actions;assembly=Phat.Editor.Interfaces"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <Style x:Key="ContextMenuItemStyle">
+            <Setter Property="MenuItem.Header" Value="{Binding HeaderText}" />
+            <Setter Property="MenuItem.ItemsSource" Value="{Binding Children}" />
+            <Setter Property="MenuItem.Command" Value="{Binding Command}" />
+            <Setter Property="MenuItem.CommandParameter" Value="{Binding Model}" />
+            <Setter Property="MenuItem.InputGestureText" Value="{Binding GestureText}" />
+        </Style>
+
+        <Style TargetType="{x:Type MenuItem}" x:Key="ContextMenuSeparatorStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <Separator Margin="30,0,0,0" HorizontalAlignment="Stretch" IsEnabled="false"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <TreeView HorizontalAlignment="Stretch" 
+                  VerticalAlignment="Stretch"   
+                  ItemsSource="{Binding RootNodes}">            
+            <TreeView.ItemContainerStyle>
+                <Style>
+                    <Setter Property="TreeViewItem.Header" Value="{Binding Name}" />
+                    <Setter Property="TreeViewItem.ItemsSource" Value="{Binding Children}" />
+                    <Setter Property="TreeViewItem.IsExpanded" Value="{Binding IsExpanded}" />
+                    <Setter Property="TreeViewItem.ContextMenu">
+                        <Setter.Value>
+                            <ContextMenu ItemsSource="{Binding ContextMenuTopLevelItems}"
+                                         ItemContainerStyleSelector="{Binding StyleSelector}">
+                            </ContextMenu>
+                        </Setter.Value>
+                    </Setter>
+                    <EventSetter Event="TreeViewItem.MouseDoubleClick" Handler="HandleDoubleClick" />
+                </Style>
+                
+            </TreeView.ItemContainerStyle>
+        </TreeView>
+    </Grid>
+</UserControl>

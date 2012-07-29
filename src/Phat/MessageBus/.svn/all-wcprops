@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus
+END
+IBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/IBus.cs
+END
+Subscription.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/Subscription.cs
+END
+IQueueingBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/IQueueingBus.cs
+END
+QueuedAction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/QueuedAction.cs
+END
+IEventPublisher.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/IEventPublisher.cs
+END
+Bus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/Bus.cs
+END
+BusProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/MessageBus/BusProcessor.cs
+END

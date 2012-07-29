@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/TerrainTileEditor
+END
+TerrainTileDefinitionEditorViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/TerrainTileEditor/TerrainTileDefinitionEditorViewModel.cs
+END
+CreateNewTerrainTileDefinitionViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/TerrainTileEditor/CreateNewTerrainTileDefinitionViewModel.cs
+END

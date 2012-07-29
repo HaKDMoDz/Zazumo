@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices
+END
+VertexElementUsage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexElementUsage.cs
+END
+VertexPositionTexture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexPositionTexture.cs
+END
+VertexDeclaration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexDeclaration.cs
+END
+VertexElement.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexElement.cs
+END
+IVertexType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/IVertexType.cs
+END
+VertexPositionNormalTexture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexPositionNormalTexture.cs
+END
+VertexElementDeclaration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexElementDeclaration.cs
+END
+VertexColorTexture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexColorTexture.cs
+END
+BufferUsage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/BufferUsage.cs
+END
+VertexElementFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexElementFormat.cs
+END
+VertexPositionColor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexPositionColor.cs
+END
+IndexBuffer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/IndexBuffer.cs
+END
+VertexPosition2ColorTexture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexPosition2ColorTexture.cs
+END
+VertexBuffer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/VertexBuffer.cs
+END
+PrimitiveType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Vertices/PrimitiveType.cs
+END

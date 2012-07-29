@@ -1,0 +1,13 @@
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\Phat.Karendow.Resources.WP7.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\Phat.Karendow.Resources.WP7.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\Phat.WP7.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\FarseerPhysics.WP7.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\ProjectMercury.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\Phat.WP7.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\FarseerPhysics.WP7.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\ProjectMercury.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\bin\Windows Phone\Debug\ProjectMercury.xml
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\obj\Windows Phone\Debug\Phat.Karendow.Resources.WP7.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.Resources.WP7\obj\Windows Phone\Debug\Phat.Karendow.Resources.WP7.pdb

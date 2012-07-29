@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorResources;
+using Microsoft.Xna.Framework;
+
+namespace Phat.ActorModel
+{
+    public abstract class UIActor : Actor<UIActor>
+    {
+        private Single _width;
+        private Single _height;
+
+        protected override void OnInitializing(object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            if (!(initializationData is UIResource))
+                return;
+
+            this._width = ((UIResource)initializationData).Width;
+            this._height = ((UIResource)initializationData).Height;
+            this.SetLocation(((UIResource)initializationData).X, ((UIResource)initializationData).Y, 0f);
+        }
+    }
+}
+

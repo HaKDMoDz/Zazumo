@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<configuration>
+<startup>
+  <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup>
+
+  <connectionStrings>
+    <add name="PackageDatabase" connectionString="Data Source=|DataDirectory|PackageDatabase.sdf" providerName="System.Data.SqlServerCe.4.0"/>
+  </connectionStrings>
+
+  <appSettings>
+    <add key="ContentRoot" value="C:\Users\Philip.Brockmeyer\Desktop\Content"/>
+  </appSettings>
+</configuration>

@@ -1,0 +1,20 @@
+﻿<xapCache source="C:\Dev\Phat.Zazumo\src\WP7\Phat.Zazumo.WP7\..\..\..\build\WP7\Debug\Phat.Zazumo.WP7.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/29/2011 11:38:49 PM">
+  <file source="C:\Dev\Phat.Zazumo\src\WP7\Phat.Zazumo.WP7\Background.png" archivePath="Background.png" lastWriteTime="3/14/2011 3:41:58 PM" />
+  <file source="C:\Dev\Phat.Zazumo\src\WP7\Phat.Zazumo.WP7\Thumbnail.png" archivePath="Thumbnail.png" lastWriteTime="3/14/2011 3:41:46 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/4/2011 8:29:00 PM" />
+  <file source="C:\Dev\Phat.Zazumo\src\WP7\Phat.Zazumo.WP7\obj\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/19/2011 12:13:58 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Phat.Zazumo.WP7.dll" archivePath="Phat.Zazumo.WP7.dll" lastWriteTime="4/29/2011 11:38:47 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\FarseerPhysics.WP7.dll" archivePath="FarseerPhysics.WP7.dll" lastWriteTime="4/14/2011 8:47:48 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Phat.WP7.dll" archivePath="Phat.WP7.dll" lastWriteTime="4/29/2011 10:52:40 PM" />
+  <file source="C:\Dev\Phat.Zazumo\src\WP7\Phat.Zazumo.Resources.WP7\bin\Windows Phone\Debug\Phat.Zazumo.Resources.WP7.dll" archivePath="Phat.Zazumo.Resources.WP7.dll" lastWriteTime="4/29/2011 10:52:41 PM" />
+  <file source="C:\Dev\Phat.Zazumo\lib\Mercury\WP7\ProjectMercury.dll" archivePath="ProjectMercury.dll" lastWriteTime="3/4/2011 10:50:08 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Backgrounds\Splash.xnb" archivePath="Content\Backgrounds\Splash.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\Zazumo.xnb" archivePath="Content\Sprites\Zazumo.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\Worm.xnb" archivePath="Content\Sprites\Worm.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\Wormholes.xnb" archivePath="Content\Sprites\Wormholes.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\Sprites.xnb" archivePath="Content\Sprites\Sprites.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\GameElements.xnb" archivePath="Content\Sprites\GameElements.xnb" lastWriteTime="4/29/2011 10:52:42 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Sprites\Enemies.xnb" archivePath="Content\Sprites\Enemies.xnb" lastWriteTime="4/29/2011 10:52:43 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Packages\Splash.xnb" archivePath="Content\Packages\Splash.xnb" lastWriteTime="4/29/2011 10:52:43 PM" />
+  <file source="C:\Dev\Phat.Zazumo\build\WP7\Debug\Content\Packages\Zazumo.xnb" archivePath="Content\Packages\Zazumo.xnb" lastWriteTime="4/29/2011 10:52:43 PM" />
+</xapCache>

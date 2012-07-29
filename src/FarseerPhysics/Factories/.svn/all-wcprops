@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Factories
+END
+JointFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Factories/JointFactory.cs
+END
+FixtureFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Factories/FixtureFactory.cs
+END
+BodyFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Factories/BodyFactory.cs
+END
+LinkFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Factories/LinkFactory.cs
+END

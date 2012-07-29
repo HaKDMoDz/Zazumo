@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor
+END
+TerrainWorldObjectPropertiesViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/TerrainWorldObjectPropertiesViewModel.cs
+END
+TerrainWorldObjectViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/TerrainWorldObjectViewModel.cs
+END
+WorldEditorTerrainViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldEditorTerrainViewModel.cs
+END
+WorldEditorTerrainToolsViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldEditorTerrainToolsViewModel.cs
+END
+CreateNewWorldViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/CreateNewWorldViewModel.cs
+END
+WorldEditorWorldViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldEditorWorldViewModel.cs
+END
+WorldEditorWorldToolsViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldEditorWorldToolsViewModel.cs
+END
+WorldObjectPropertiesViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldObjectPropertiesViewModel.cs
+END
+WorldEditorViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldEditorViewModel.cs
+END
+WorldObjectViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/WorldEditor/WorldObjectViewModel.cs
+END

@@ -1,0 +1,1084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ActorResources="Phat.ActorResources">
+  <Asset Type="ActorResources:ResourceModel[]">
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Solid</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>950</UCoordinate>
+      <VCoordinate>930</VCoordinate>
+      <Width>18</Width>
+      <Height>18</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.AmmoFrog</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.AmmoFrog2</Item>
+        <Item>Zazumo.Sprites.AmmoFrog3</Item>
+        <Item>Zazumo.Sprites.AmmoFrog2</Item>
+      </FrameKeys>
+      <FrameDuration>0.208033815</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.BlackFrog</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.BlackFrog2</Item>
+        <Item>Zazumo.Sprites.BlackFrog3</Item>
+        <Item>Zazumo.Sprites.BlackFrog2</Item>
+      </FrameKeys>
+      <FrameDuration>0.20665963</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.BlueFrog</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.BlueFrog2</Item>
+        <Item>Zazumo.Sprites.BlueFrog3</Item>
+        <Item>Zazumo.Sprites.BlueFrog2</Item>
+      </FrameKeys>
+      <FrameDuration>0.202959821</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.ClamOpen</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Clam1</Item>
+        <Item>Zazumo.Sprites.Clam2</Item>
+        <Item>Zazumo.Sprites.Clam3</Item>
+        <Item>Zazumo.Sprites.Clam4</Item>
+        <Item>Zazumo.Sprites.Clam5</Item>
+        <Item>Zazumo.Sprites.Clam6</Item>
+      </FrameKeys>
+      <FrameDuration>0.09164908</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.EnemyBullet</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.EyeBullet</Item>
+        <Item>Zazumo.Sprites.EyeBullet2</Item>
+        <Item>Zazumo.Sprites.EyeBullet3</Item>
+        <Item>Zazumo.Sprites.EyeBullet4</Item>
+      </FrameKeys>
+      <FrameDuration>0.05454546</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.Explosion</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Explosion1</Item>
+        <Item>Zazumo.Sprites.Explosion2</Item>
+        <Item>Zazumo.Sprites.Explosion3</Item>
+      </FrameKeys>
+      <FrameDuration>0.176849887</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.EyeClose</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Eye</Item>
+        <Item>Zazumo.Sprites.Eye2</Item>
+        <Item>Zazumo.Sprites.Eye3</Item>
+        <Item>Zazumo.Sprites.Eye4</Item>
+        <Item>Zazumo.Sprites.Eye5</Item>
+        <Item>Zazumo.Sprites.Eye6</Item>
+      </FrameKeys>
+      <FrameDuration>0.0614164919</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.EyeOpen</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Eye6</Item>
+        <Item>Zazumo.Sprites.Eye5</Item>
+        <Item>Zazumo.Sprites.Eye4</Item>
+        <Item>Zazumo.Sprites.Eye3</Item>
+        <Item>Zazumo.Sprites.Eye2</Item>
+        <Item>Zazumo.Sprites.Eye</Item>
+      </FrameKeys>
+      <FrameDuration>0.0627907</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.GrowFrog</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.GrowFrog2</Item>
+        <Item>Zazumo.Sprites.GrowFrog1</Item>
+        <Item>Zazumo.Sprites.GrowFrog2</Item>
+      </FrameKeys>
+      <FrameDuration>0.21215646</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.ShrinkFrog</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.ShrinkFrog2</Item>
+        <Item>Zazumo.Sprites.ShrinkFrog3</Item>
+        <Item>Zazumo.Sprites.ShrinkFrog2</Item>
+      </FrameKeys>
+      <FrameDuration>0.20940803</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.SquidBrainWiggle</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Squid1</Item>
+        <Item>Zazumo.Sprites.Squid5</Item>
+        <Item>Zazumo.Sprites.Squid6</Item>
+        <Item>Zazumo.Sprites.Squid7</Item>
+        <Item>Zazumo.Sprites.Squid6</Item>
+        <Item>Zazumo.Sprites.Squid5</Item>
+        <Item>Zazumo.Sprites.Squid1</Item>
+      </FrameKeys>
+      <FrameDuration>0.153488368</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.SquidHit</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.SquidHit</Item>
+        <Item>Zazumo.Sprites.Squid1</Item>
+        <Item>Zazumo.Sprites.SquidHit</Item>
+        <Item>Zazumo.Sprites.Squid1</Item>
+      </FrameKeys>
+      <FrameDuration>0.0600422844</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.SquidMouthClose</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Squid4</Item>
+        <Item>Zazumo.Sprites.Squid3</Item>
+        <Item>Zazumo.Sprites.Squid2</Item>
+        <Item>Zazumo.Sprites.Squid1</Item>
+      </FrameKeys>
+      <FrameDuration>0.0871036</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.SquidMouthOpen</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.Squid1</Item>
+        <Item>Zazumo.Sprites.Squid2</Item>
+        <Item>Zazumo.Sprites.Squid3</Item>
+        <Item>Zazumo.Sprites.Squid4</Item>
+      </FrameKeys>
+      <FrameDuration>0.0875264</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarBullet</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarBullet</Item>
+        <Item>Zazumo.Sprites.StarBullet2</Item>
+      </FrameKeys>
+      <FrameDuration>0.0902747959</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarWormhole</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarWormhole</Item>
+        <Item>Zazumo.Sprites.StarWormhole2</Item>
+        <Item>Zazumo.Sprites.StarWormhole3</Item>
+        <Item>Zazumo.Sprites.StarWormhole4</Item>
+        <Item>Zazumo.Sprites.StarWormhole5</Item>
+        <Item>Zazumo.Sprites.StarWormhole6</Item>
+      </FrameKeys>
+      <FrameDuration>0.275792867</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarWormhole2</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarWormhole</Item>
+        <Item>Zazumo.Sprites.StarWormhole2</Item>
+        <Item>Zazumo.Sprites.StarWormhole3</Item>
+        <Item>Zazumo.Sprites.StarWormhole4</Item>
+        <Item>Zazumo.Sprites.StarWormhole5</Item>
+        <Item>Zazumo.Sprites.StarWormhole6</Item>
+      </FrameKeys>
+      <FrameDuration>0.235517979</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarWormhole3</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarWormhole</Item>
+        <Item>Zazumo.Sprites.StarWormhole2</Item>
+        <Item>Zazumo.Sprites.StarWormhole3</Item>
+        <Item>Zazumo.Sprites.StarWormhole4</Item>
+        <Item>Zazumo.Sprites.StarWormhole5</Item>
+        <Item>Zazumo.Sprites.StarWormhole6</Item>
+      </FrameKeys>
+      <FrameDuration>0.164482027</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarWormhole4</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarWormhole</Item>
+        <Item>Zazumo.Sprites.StarWormhole2</Item>
+        <Item>Zazumo.Sprites.StarWormhole3</Item>
+        <Item>Zazumo.Sprites.StarWormhole4</Item>
+        <Item>Zazumo.Sprites.StarWormhole5</Item>
+        <Item>Zazumo.Sprites.StarWormhole6</Item>
+      </FrameKeys>
+      <FrameDuration>0.117336154</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Zazumo.FrameSets.StarWormhole5</Key>
+      <FrameKeys>
+        <Item>Zazumo.Sprites.StarWormhole</Item>
+        <Item>Zazumo.Sprites.StarWormhole2</Item>
+        <Item>Zazumo.Sprites.StarWormhole3</Item>
+        <Item>Zazumo.Sprites.StarWormhole4</Item>
+        <Item>Zazumo.Sprites.StarWormhole5</Item>
+        <Item>Zazumo.Sprites.StarWormhole6</Item>
+      </FrameKeys>
+      <FrameDuration>0.06691332</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.AmmoFrog1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>517</UCoordinate>
+      <VCoordinate>520</VCoordinate>
+      <Width>141</Width>
+      <Height>197</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.AmmoFrog2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>655</UCoordinate>
+      <VCoordinate>520</VCoordinate>
+      <Width>141</Width>
+      <Height>197</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.AmmoFrog3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>795</UCoordinate>
+      <VCoordinate>520</VCoordinate>
+      <Width>141</Width>
+      <Height>197</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.AmmoMeter</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>979</UCoordinate>
+      <VCoordinate>794</VCoordinate>
+      <Width>45</Width>
+      <Height>210</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.ArrowShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>241</UCoordinate>
+      <VCoordinate>965</VCoordinate>
+      <Width>80</Width>
+      <Height>58</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlackFrog1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>42</UCoordinate>
+      <VCoordinate>446</VCoordinate>
+      <Width>150</Width>
+      <Height>210</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlackFrog2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>200</UCoordinate>
+      <VCoordinate>446</VCoordinate>
+      <Width>150</Width>
+      <Height>210</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlackFrog3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>358</UCoordinate>
+      <VCoordinate>446</VCoordinate>
+      <Width>150</Width>
+      <Height>210</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlueFrog1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>42</UCoordinate>
+      <VCoordinate>676</VCoordinate>
+      <Width>150</Width>
+      <Height>219</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlueFrog2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>202</UCoordinate>
+      <VCoordinate>676</VCoordinate>
+      <Width>150</Width>
+      <Height>219</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BlueFrog3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>361</UCoordinate>
+      <VCoordinate>676</VCoordinate>
+      <Width>150</Width>
+      <Height>219</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BombButton</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>728</UCoordinate>
+      <VCoordinate>852</VCoordinate>
+      <Width>100</Width>
+      <Height>96</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BottomLeftBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>942</UCoordinate>
+      <VCoordinate>849</VCoordinate>
+      <Width>24</Width>
+      <Height>24</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>true</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.BottomRightBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>942</UCoordinate>
+      <VCoordinate>849</VCoordinate>
+      <Width>24</Width>
+      <Height>24</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>true</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Boulder</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>4</UCoordinate>
+      <VCoordinate>66</VCoordinate>
+      <Width>115</Width>
+      <Height>158</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Bullet</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>769</UCoordinate>
+      <VCoordinate>19</VCoordinate>
+      <Width>50</Width>
+      <Height>50</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.CircleShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>326</UCoordinate>
+      <VCoordinate>973</VCoordinate>
+      <Width>52</Width>
+      <Height>50</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>82</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>180</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>272</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam4</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>365</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam5</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>460</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Clam6</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>555</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>95</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.CloudBackground</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>114</VCoordinate>
+      <Width>153</Width>
+      <Height>158</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.DiamondShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>150</UCoordinate>
+      <VCoordinate>974</VCoordinate>
+      <Width>88</Width>
+      <Height>40</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Explosion1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>620</UCoordinate>
+      <VCoordinate>955</VCoordinate>
+      <Width>65</Width>
+      <Height>60</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Explosion2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>685</UCoordinate>
+      <VCoordinate>954</VCoordinate>
+      <Width>65</Width>
+      <Height>60</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Explosion3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>751</UCoordinate>
+      <VCoordinate>957</VCoordinate>
+      <Width>65</Width>
+      <Height>60</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye2</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>124</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye3</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>247</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye4</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>372</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye5</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>496</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Eye6</Key>
+      <TextureKey>Zazumo.Textures.EnemyTexture</TextureKey>
+      <UCoordinate>621</UCoordinate>
+      <VCoordinate>3</VCoordinate>
+      <Width>125</Width>
+      <Height>55</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.EyeBullet</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>829</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>22</Width>
+      <Height>21</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.EyeBullet2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>851</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>22</Width>
+      <Height>21</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.EyeBullet3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>872</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>22</Width>
+      <Height>21</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.EyeBullet4</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>895</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>22</Width>
+      <Height>21</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.FireButton</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>897</UCoordinate>
+      <VCoordinate>955</VCoordinate>
+      <Width>70</Width>
+      <Height>68</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.GreenFrog</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>252</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>110</Width>
+      <Height>100</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.GrowFrog1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>878</UCoordinate>
+      <VCoordinate>115</VCoordinate>
+      <Width>145</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.GrowFrog2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>730</UCoordinate>
+      <VCoordinate>115</VCoordinate>
+      <Width>145</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.GrowFrog3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>589</UCoordinate>
+      <VCoordinate>115</VCoordinate>
+      <Width>145</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.HorizontalBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>955</UCoordinate>
+      <VCoordinate>911</VCoordinate>
+      <Width>6</Width>
+      <Height>6</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.OwlBomb</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>123</VCoordinate>
+      <Width>592</Width>
+      <Height>320</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.PearWormHole</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>184</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>147</Width>
+      <Height>168</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.PurpleFrog</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>354</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>110</Width>
+      <Height>100</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.RemainingLives</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>829</UCoordinate>
+      <VCoordinate>914</VCoordinate>
+      <Width>50</Width>
+      <Height>105</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.ShrinkFrog1</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>570</UCoordinate>
+      <VCoordinate>292</VCoordinate>
+      <Width>150</Width>
+      <Height>187</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.ShrinkFrog2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>712</UCoordinate>
+      <VCoordinate>292</VCoordinate>
+      <Width>150</Width>
+      <Height>187</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.ShrinkFrog3</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>865</UCoordinate>
+      <VCoordinate>292</VCoordinate>
+      <Width>150</Width>
+      <Height>187</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.SquareShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>83</UCoordinate>
+      <VCoordinate>960</VCoordinate>
+      <Width>60</Width>
+      <Height>60</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid1</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid2</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>103</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid3</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>207</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid4</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>311</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid5</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>416</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid6</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>522</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Squid7</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>629</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>114</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.SquidBall</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>984</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>40</Width>
+      <Height>40</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.SquidHit</Key>
+      <TextureKey>Zazumo.Textures.BossTexture</TextureKey>
+      <UCoordinate>741</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>104</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.SquiggleShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>381</UCoordinate>
+      <VCoordinate>974</VCoordinate>
+      <Width>50</Width>
+      <Height>47</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarBullet</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>527</UCoordinate>
+      <VCoordinate>745</VCoordinate>
+      <Width>90</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarBullet2</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>630</UCoordinate>
+      <VCoordinate>745</VCoordinate>
+      <Width>90</Width>
+      <Height>90</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarPickup</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>182</UCoordinate>
+      <VCoordinate>5</VCoordinate>
+      <Width>175</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>3</UCoordinate>
+      <VCoordinate>4</VCoordinate>
+      <Width>175</Width>
+      <Height>175</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole2</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>215</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>210</Width>
+      <Height>200</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole3</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>425</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>210</Width>
+      <Height>200</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole4</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>637</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>210</Width>
+      <Height>200</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole5</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>12</UCoordinate>
+      <VCoordinate>201</VCoordinate>
+      <Width>210</Width>
+      <Height>200</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.StarWormhole6</Key>
+      <TextureKey>Zazumo.Textures.WormholesTexture</TextureKey>
+      <UCoordinate>224</UCoordinate>
+      <VCoordinate>201</VCoordinate>
+      <Width>210</Width>
+      <Height>200</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.SwirlWormhole</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>4</UCoordinate>
+      <VCoordinate>457</VCoordinate>
+      <Width>250</Width>
+      <Height>210</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.TopLeftCornerBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>942</UCoordinate>
+      <VCoordinate>849</VCoordinate>
+      <Width>24</Width>
+      <Height>24</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.TopRightBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>942</UCoordinate>
+      <VCoordinate>849</VCoordinate>
+      <Width>24</Width>
+      <Height>24</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.TriangleShape</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>972</VCoordinate>
+      <Width>80</Width>
+      <Height>50</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.VerticalBorder</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>961</UCoordinate>
+      <VCoordinate>887</VCoordinate>
+      <Width>6</Width>
+      <Height>4</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Worm</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>50</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>62</Width>
+      <Height>62</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Wormhead</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>140</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>110</Width>
+      <Height>109</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.WormSegment</Key>
+      <TextureKey>Zazumo.Textures.SpritesTexture</TextureKey>
+      <UCoordinate>50</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>82</Width>
+      <Height>82</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.Zazumo</Key>
+      <TextureKey>Zazumo.Textures.GameElements</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>73</Width>
+      <Height>110</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Zazumo.Sprites.ZazumoNormal</Key>
+      <TextureKey>Zazumo.Textures.ZazumoTexture</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>235</Width>
+      <Height>350</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.BossTexture</Key>
+      <Path>Sprites\Bosses.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.EnemyTexture</Key>
+      <Path>Sprites\Enemies.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.GameElements</Key>
+      <Path>Sprites\GameElements.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.Particles.Bubble</Key>
+      <Path>Particles\Bubble.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.Particles.BulletTrail</Key>
+      <Path>Particles\BulletTrail.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.Particles.SmallBubbles</Key>
+      <Path>Particles\SmallBubbles.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.Particles.Sparks</Key>
+      <Path>Particles\Sparks.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.Particles.Star</Key>
+      <Path>Particles\Star.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.SpritesTexture</Key>
+      <Path>Sprites\Sprites.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.WormholesTexture</Key>
+      <Path>Sprites\Wormholes.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.WormTexture</Key>
+      <Path>Sprites\Worm.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Zazumo.Textures.ZazumoTexture</Key>
+      <Path>Sprites\Zazumo.png</Path>
+    </Item>
+  </Asset>
+</XnaContent>

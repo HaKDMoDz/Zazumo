@@ -1,0 +1,10 @@
+C:\Dev\Zazumo\build\.NET\Debug\Phat.Zazumo.dll
+C:\Dev\Zazumo\build\.NET\Debug\Phat.Zazumo.pdb
+C:\Dev\Zazumo\src\Phat.Zazumo\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Zazumo\src\Phat.Zazumo\obj\Debug\Phat.Zazumo.dll
+C:\Dev\Zazumo\src\Phat.Zazumo\obj\Debug\Phat.Zazumo.pdb
+C:\Dev\Phat.Zazumo\build\.NET\Debug\Phat.Zazumo.dll
+C:\Dev\Phat.Zazumo\build\.NET\Debug\Phat.Zazumo.pdb
+C:\Dev\Phat.Zazumo\src\Phat.Zazumo\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Phat.Zazumo\obj\Debug\Phat.Zazumo.dll
+C:\Dev\Phat.Zazumo\src\Phat.Zazumo\obj\Debug\Phat.Zazumo.pdb

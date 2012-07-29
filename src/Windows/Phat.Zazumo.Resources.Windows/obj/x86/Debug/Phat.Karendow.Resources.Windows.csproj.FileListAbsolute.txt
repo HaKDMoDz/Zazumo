@@ -1,0 +1,6 @@
+C:\Dev\Karendow\build\Windows\Debug\Phat.Karendow.Resources.Windows.dll
+C:\Dev\Karendow\build\Windows\Debug\Phat.Karendow.Resources.Windows.pdb
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Resources.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Resources.Windows\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Resources.Windows\obj\x86\Debug\Phat.Karendow.Resources.Windows.dll
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Resources.Windows\obj\x86\Debug\Phat.Karendow.Resources.Windows.pdb

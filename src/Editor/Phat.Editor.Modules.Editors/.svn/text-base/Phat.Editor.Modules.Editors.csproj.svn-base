@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E457C79-9374-4901-9A38-FDECF3DC3C9F}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phat.Editor.Modules.Editors</RootNamespace>
+    <AssemblyName>Phat.Editor.Modules.Editors</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\build\Editor\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\lib\EFCodeFirst.0.8\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Expression\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\..\..\lib\Prism.4.0.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\..\..\lib\Prism.4.0.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions">
+      <HintPath>..\..\..\lib\Prism.MEFExtensions.4.0.0.0\lib\NET40\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\lib\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Expression\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationCommands\OpenStoryboardCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewStoryboardCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewArchetypeCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewFrameSetCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewLevelCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewSpriteCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewTerrainTileDefinitionCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewTexture2DCommand.cs" />
+    <Compile Include="ApplicationCommands\CreateNewWorldCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenArchetypeEditorCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenFrameSetCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenLevelCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenSpriteCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenTerrainTileDefinitionCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenTexture2DCommand.cs" />
+    <Compile Include="ApplicationCommands\OpenWorldCommand.cs" />
+    <Compile Include="ApplicationCommands\RenameCommand.cs" />
+    <Compile Include="ArchetypeBasedWorldEditorTypeDefinition.cs" />
+    <Compile Include="Behaviors\AreaSelectionBehavior.cs" />
+    <Compile Include="Behaviors\ClickableGridBehavior.cs" />
+    <Compile Include="Behaviors\DynamicGridDefinitionBehavior.cs" />
+    <Compile Include="Behaviors\ListBoxDragItemsBehavior.cs" />
+    <Compile Include="Behaviors\TrackContextMenuOpenPositionBehavior.cs" />
+    <Compile Include="ExportArchetypeBasedWorldEditorTypeAttribute.cs" />
+    <Compile Include="ExportArchetypeDataEditorAttribute.cs" />
+    <Compile Include="ExportWorldEditorTypeAttribute.cs" />
+    <Compile Include="IWorldChildEditor.cs" />
+    <Compile Include="IWorldEditor.cs" />
+    <Compile Include="IWorldEditorContext.cs" />
+    <Compile Include="IWorldEditorObject.cs" />
+    <Compile Include="IWorldEditorTypeDefinition.cs" />
+    <Compile Include="SpriteLoader.cs" />
+    <Compile Include="TerrainPosition.cs" />
+    <Compile Include="ValueConverters\FlipValueConverter.cs" />
+    <Compile Include="EditorAssetTypes.cs" />
+    <Compile Include="ViewModels\Archetypes\DrawableArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\CreateNewLevelViewModel.cs" />
+    <Compile Include="ViewModels\LevelEditorViewModel.cs" />
+    <Compile Include="ViewModels\RotatingArrowWorldObject\ArchetypeBasedRotatingArrowWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\RetractableSpikeButton\ArchetypeBasedRetractableSpikeButtonWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\BombWorldObject\ArchetypeBasedBombWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\RetractableSpikeButton\RetractableSpikeButtonWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\RetractableSpike\ArchetypeBasedRetractableSpikeWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\BombWorldObject\BombWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\FrameSetEditor\CreateNewFrameSetViewModel.cs" />
+    <Compile Include="ViewModels\FrameSetEditor\FrameSetEditorViewModel.cs" />
+    <Compile Include="ViewModels\MirrorWorldObject\ArchetypeBasedMirrorWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\ArrowWorldObject\ArchetypeBasedArrowWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\ConcreteWorldObject\ArchetypeBasedConcreteWorldObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\ConcreteWorldObject\ArchetypeBasedConcreteWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\Archetypes\ArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\Archetypes\ArchetypeEditorViewModel.cs" />
+    <Compile Include="ViewModels\ArrowWorldObject\ArrowWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\ConcreteWorldObject\ConcreteWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\ConcreteWorldObject\ConcreteWorldObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\ConcreteWorldObject\ConcreteWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\Archetypes\CreateNewArchetypeViewModel.cs" />
+    <Compile Include="ViewModels\RetractableSpike\RetractableSpikeWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\RotatingArrowWorldObject\RotatingArrowWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\ScriptedSearchableWorldObject\ArchetypeBasedScriptedSearchableWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\ScriptedSearchableWorldObject\ScriptedSearchableWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\SpriteEditor\CreateNewSpriteViewModel.cs" />
+    <Compile Include="ViewModels\CreateNewTerrainViewModel.cs" />
+    <Compile Include="ViewModels\StoryboardEditor\CreateNewStoryboardViewModel.cs" />
+    <Compile Include="ViewModels\StoryboardEditor\StoryboardEditorViewModel.cs" />
+    <Compile Include="ViewModels\Texture2DEditor\CreateNewTexture2DViewModel.cs" />
+    <Compile Include="ViewModels\TutorialTriggerVolumeWorldObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\TutorialTriggerVolumeWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\UI\UIArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\CreateNewWorldViewModel.cs" />
+    <Compile Include="ViewModels\TerrainTileEditor\CreateNewTerrainTileDefinitionViewModel.cs" />
+    <Compile Include="ViewModels\MirrorWorldObject\MirrorWorldObjectArchetypeDataViewModel.cs" />
+    <Compile Include="ViewModels\SpriteEditor\SpriteEditorViewModel.cs" />
+    <Compile Include="ViewModels\SpriteViewModel.cs" />
+    <Compile Include="ViewModels\TerrainTileEditor\TerrainTileDefinitionEditorViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\TerrainWorldObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\TerrainWorldObjectViewModel.cs" />
+    <Compile Include="ViewModels\Texture2DEditor\Texture2DEditorViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldEditorTerrainToolsViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldEditorTerrainViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldEditorViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldEditorWorldToolsViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldEditorWorldViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldObjectPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\WorldEditor\WorldObjectViewModel.cs" />
+    <Compile Include="ViewNames.cs" />
+    <Compile Include="Views\ArchetypeBasedConcreteWorldObjectPropertiesView.xaml.cs">
+      <DependentUpon>ArchetypeBasedConcreteWorldObjectPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArchetypeEditorView.xaml.cs">
+      <DependentUpon>ArchetypeEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConcreteWorldObjectPropertiesView.xaml.cs">
+      <DependentUpon>ConcreteWorldObjectPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoryboardEditorView.xaml.cs">
+      <DependentUpon>StoryboardEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewStoryboardView.xaml.cs">
+      <DependentUpon>CreateNewStoryboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewArchetypeView.xaml.cs">
+      <DependentUpon>CreateNewArchetypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewFrameSetView.xaml.cs">
+      <DependentUpon>CreateNewFrameSetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewLevelView.xaml.cs">
+      <DependentUpon>CreateNewLevelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewSpriteView.xaml.cs">
+      <DependentUpon>CreateNewSpriteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewTerrainTileDefinitionView.xaml.cs">
+      <DependentUpon>CreateNewTerrainTileDefinitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewTerrainView.xaml.cs">
+      <DependentUpon>CreateNewTerrainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewTexture2D.xaml.cs">
+      <DependentUpon>CreateNewTexture2D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateNewWorldView.xaml.cs">
+      <DependentUpon>CreateNewWorldView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrameSetEditorView.xaml.cs">
+      <DependentUpon>FrameSetEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LevelEditorView.xaml.cs">
+      <DependentUpon>LevelEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpriteEditorView.xaml.cs">
+      <DependentUpon>SpriteEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TerrainTileDefinitionEditorView.xaml.cs">
+      <DependentUpon>TerrainTileDefinitionEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TerrainWorldObjectPropertiesView.xaml.cs">
+      <DependentUpon>TerrainWorldObjectPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Texture2DEditorView.xaml.cs">
+      <DependentUpon>Texture2DEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditorsModule.cs" />
+    <Compile Include="EditorMenuItems.cs" />
+    <Compile Include="Views\TutorialTriggerVolumeWorldObjectPropertiesView.xaml.cs">
+      <DependentUpon>TutorialTriggerVolumeWorldObjectPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldEditorTerrainToolsView.xaml.cs">
+      <DependentUpon>WorldEditorTerrainToolsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldEditorTerrainView.xaml.cs">
+      <DependentUpon>WorldEditorTerrainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldEditorView.xaml.cs">
+      <DependentUpon>WorldEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldEditorWorldToolsView.xaml.cs">
+      <DependentUpon>WorldEditorWorldToolsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldEditorWorldView.xaml.cs">
+      <DependentUpon>WorldEditorWorldView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorldEditorContext.cs" />
+    <Compile Include="WorldEditorTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedArrowWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedBombWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedConcreteWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedMirrorWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedRetractableSpikeButtonWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedRetractableSpikeWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedRotatingArrowWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ConcreteWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\ArchetypeBasedScriptedSearchableWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\TerrainWorldObjectTypeDefinition.cs" />
+    <Compile Include="WorldObjectEditorTypes\TutorialTriggerVolumeWorldObjectTypeDefinition.cs" />
+    <Page Include="Views\ArchetypeBasedConcreteWorldObjectPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArchetypeDataViewDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArchetypeEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConcreteWorldObjectPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StoryboardEditorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateNewStoryboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateNewArchetypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewFrameSetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewLevelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewSpriteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewTerrainTileDefinitionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewTerrainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewTexture2D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateNewWorldView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FrameSetEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LevelEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpriteEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TerrainTileDefinitionEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TerrainWorldObjectPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Texture2DEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TutorialTriggerVolumeWorldObjectPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorObjectViewDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorTerrainToolsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorTerrainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorWorldToolsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldEditorWorldView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Phat\Phat.csproj">
+      <Project>{237D245B-F4DE-4684-A33F-8FB1F49C8198}</Project>
+      <Name>Phat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phat.Editor.Interfaces\Phat.Editor.Interfaces.csproj">
+      <Project>{7B385E96-AD1D-41EE-8569-985D9CAF9A28}</Project>
+      <Name>Phat.Editor.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

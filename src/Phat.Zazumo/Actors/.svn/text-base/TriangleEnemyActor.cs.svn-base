@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Resources;
+
+namespace Phat.Zazumo.Actors
+{
+    public class TriangleFlockActor : Actor
+    {
+        private const Int32 EnemySpawnCount = 8;
+
+        public TriangleEnemy[] Segments { get; private set; }
+        private readonly List<TriangleEnemy> _deadList = new List<TriangleEnemy>();
+
+        public StartPosition StartPosition { get; private set; }
+
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            var enemyList = new List<TriangleEnemy>();
+
+            var data = (TriangleShapeData)initializationData;
+            StartPosition = data.StartPosition;
+          
+            for (Int32 i = 0; i < EnemySpawnCount; i++)
+            {
+                TriangleEnemy triangle = ActorFactory.Create<TriangleEnemy>(Resources.GetResource("TriangleData"), new Vector2(data.StartPosition == StartPosition.Left ? 0.25f : 9.25f, (Single)i * (5.75f / 8f) + 0.25f));
+                triangle.Opacity = 0.0f;
+                enemyList.Add(triangle);
+                triangle.SetFlock(this);
+            }
+
+            Segments = enemyList.ToArray();
+        }
+
+        public void Hit(TriangleEnemy hitEnemy)
+        {
+            if (!_deadList.Contains(hitEnemy))
+                _deadList.Add(hitEnemy);
+
+
+            if (_deadList.Count >= EnemySpawnCount)
+                this.Destroy();            
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
+    }
+
+    public class TriangleEnemy : EnemyActor
+    {
+        public TriangleFlockActor Flock { get; private set; }
+
+        protected override void OnInitializing(object initializationData)
+        {
+            base.OnInitializing(initializationData);
+            CanDamagePlayer = false;
+        }
+
+        public void SetFlock(TriangleFlockActor flock)
+        {
+            this.Flock = flock;
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            Flock.Hit(this);
+        }
+
+        protected override void OnActorCollided(Phat.Messages.ActorCollidedEvent @event)
+        {
+            base.OnActorCollided(@event);
+
+            if (@event.OtherActor is WallVolume)
+            {
+                @event.Cancel = true;
+            }
+            else if (@event.OtherActor is ZazumoProjectileActor)
+            {
+                if (!CanDamagePlayer)
+                {
+                    @event.Cancel = true;
+                    return;
+                }
+
+                Destroy();
+            }
+        }
+    }
+}

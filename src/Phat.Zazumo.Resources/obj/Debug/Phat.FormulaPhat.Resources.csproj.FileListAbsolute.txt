@@ -1,0 +1,12 @@
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\Phat.FormulaPhat.Resources.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\Phat.FormulaPhat.Resources.pdb
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\obj\Debug\Phat.FormulaPhat.Resources.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\obj\Debug\Phat.FormulaPhat.Resources.pdb
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\Phat.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\ProjectMercury.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\FarseerPhysics.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\Phat.pdb
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\ProjectMercury.pdb
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\ProjectMercury.xml
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat.Resources\bin\Debug\FarseerPhysics.pdb

@@ -1,0 +1,5 @@
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\FormulaPhat\build\.NET\Debug\Phat.FormulaPhat.dll
+C:\Dev\FormulaPhat\build\.NET\Debug\Phat.FormulaPhat.pdb
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat\obj\Debug\Phat.FormulaPhat.dll
+C:\Dev\FormulaPhat\src\Phat.FormulaPhat\obj\Debug\Phat.FormulaPhat.pdb

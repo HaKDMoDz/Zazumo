@@ -1,0 +1,355 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System.IO.IsolatedStorage;
+using System.Xml.Serialization;
+using System.Reflection;
+using Phat.Visual.Xna;
+using Phat.Messages;
+using Phat.ActorResources;
+using System.IO;
+using Phat.ActorModel;
+using Phat.ActorPhysics;
+using Phat.ActorVisuals;
+
+#if !XBOX
+using Microsoft.Xna.Framework.Input.Touch;
+using ProjectMercury.Renderers;
+#endif
+
+namespace Phat
+{
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    public abstract class PhatGame : Microsoft.Xna.Framework.Game
+    {
+        private static Microsoft.Xna.Framework.Game _application;
+        public static Microsoft.Xna.Framework.Game Application { get { return _application; } }
+        GraphicsDeviceManager graphics;
+        IProcessRunner processRunner;
+        IVisualSubsystem visualSubsystem;
+        IResourceDictionary resourceDictionary;
+        Dictionary<String, Object> spriteTextures;
+        SpriteBatch spriteBatch;
+        SpriteBatch uiSpriteBatch;
+        SpriteBatchRenderer particleRenderer;
+        IBus bus;
+        MouseState mouseStateCurrent, mouseStatePrevious;
+        
+        public Color BackgroundColor { get; set; }
+        
+        public PhatGame()
+        {
+            _application = this;
+            graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
+            spriteTextures = new Dictionary<String, Object>();
+            Content.RootDirectory = "Content";
+
+            // Frame rate is 30 fps by default for Windows Phone.
+            TargetElapsedTime = TimeSpan.FromTicks(333333);
+        }
+
+        /// <summary>
+        /// Allows the game to perform any initialization it needs to before starting to run.
+        /// This is where it can query for any required services and load any non-graphic
+        /// related content.  Calling base.Initialize will enumerate through any components
+        /// and initialize them as well.
+        /// </summary>
+        protected override void Initialize()
+        {
+            base.Initialize();
+            graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
+            graphics.ApplyChanges();
+        }
+
+        protected void InitializeAndRun<TGameMode, TSaveData>()
+            where TGameMode : GameMode
+            where TSaveData : new()
+        {
+
+            TSaveData data;
+#if WINDOWS || MONO
+            this.IsMouseVisible = true;
+            using (var userStore = IsolatedStorageFile.GetUserStoreForDomain())
+#else
+            using (var userStore = IsolatedStorageFile.GetUserStoreForApplication())
+#endif
+            {
+                if (!userStore.FileExists("SaveData.Xml"))
+                {
+                    using (var file = userStore.CreateFile("SaveData.Xml"))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(TSaveData));
+                        data = new TSaveData();
+                        serializer.Serialize(file, data);
+                    }
+                }
+                else
+                {
+                    using (var file = userStore.OpenFile("SaveData.Xml", System.IO.FileMode.Open))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(TSaveData));
+                        data = (TSaveData)serializer.Deserialize(file);
+                    }
+                }
+            }
+
+
+            var config = Configurator.Configure()
+                .UseDefaultConfiguration()
+                .SetGameAssembly(Assembly.GetCallingAssembly())
+                .SetContentManager(Content)
+                .SetVisualSubsystem<VisualSubsystem>(GraphicsDevice)
+                .SetInitialGameHandler<TGameMode>()
+                .SetSaveData(data)
+                .SetViewportSize(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height)
+                .Initialize();
+
+            processRunner = config.Resolve<IProcessRunner>();
+            visualSubsystem = config.Resolve<IVisualSubsystem>();
+            resourceDictionary = config.Resolve<IResourceDictionary>();
+            bus = config.Resolve<IBus>();
+
+            bus.Subscribe<GameQuitEvent>(x => 
+                {
+                    this.Exit();
+                }, this);
+
+
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            uiSpriteBatch = new SpriteBatch(GraphicsDevice);
+            RegisterVisuals(config.Resolve<IActorVisualFactory>(), resourceDictionary, spriteBatch);
+            RegisterPhysics(config.Resolve<IActorPhysicsFactory>(), resourceDictionary);
+
+            resourceDictionary.ApplyCustomProcessor<Texture2DResource>(x =>
+            {
+                return Content.Load<Texture2D>(Path.Combine(Path.GetDirectoryName(x.Path), Path.GetFileNameWithoutExtension(x.Path)));
+            });
+
+            LoadResources(resourceDictionary);
+
+            config.Run();
+        }
+
+        protected virtual void LoadResources(IResourceDictionary resources)
+        {
+            Dictionary<String, Object> phat = new Dictionary<String, Object>();
+            phat.Add("UnitHull", new Vector2[] 
+            { 
+                new Vector2(0f, 0f), 
+                new Vector2(1f, 0f), 
+                new Vector2(1f, 1f), 
+                new Vector2(0f, 1f) 
+            });
+
+            resources.MergeResources("Phat", phat);
+        }
+
+        protected virtual void RegisterPhysics(IActorPhysicsFactory actorPhysicsFactory, IResourceDictionary resourceDictionary)
+        {
+            actorPhysicsFactory.RegisterPhysicsFactory<TerrainActor>(x => new TerrainPhysics(x, resourceDictionary));
+            actorPhysicsFactory.RegisterPhysicsFactory<Volume>(x => new VolumePhysics(x, resourceDictionary));
+            actorPhysicsFactory.RegisterPhysicsFactory<Actor>(x => new NullPhysics());
+
+
+            actorPhysicsFactory.RegisterPhysicsFactory<ParticleSystemActor>(x => new NullPhysics());
+
+
+            actorPhysicsFactory.RegisterPhysicsFactory<UIButtonActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UIBackgroundActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UIToolButtonActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UITextBlockActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UITextPanelActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UIPanelActor>(x => new NullPhysics());
+            actorPhysicsFactory.RegisterPhysicsFactory<UICarousel>(x => new NullPhysics());
+        }
+
+        protected virtual void RegisterVisuals(IActorVisualFactory actorVisualFactory, IResourceDictionary resourceDictionary, SpriteBatch spriteBatch)
+        {
+            var terrainSpriteBatch = new SpriteBatch(GraphicsDevice);
+            actorVisualFactory.RegisterVisualFactory<TerrainActor>(x => new TerrainVisual(x, terrainSpriteBatch, resourceDictionary));
+
+        
+            actorVisualFactory.RegisterVisualFactory<BurgalsActor>(x => new SpriteVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<DecoratorActor>(x => new SpriteVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<EffectActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<Volume>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<Actor>(x => new SpriteVisual(x, spriteBatch, resourceDictionary));
+
+            actorVisualFactory.RegisterVisualFactory<ParticleSystemActor>(x => new ParticleEffectVisual(x, particleRenderer, resourceDictionary));
+
+            actorVisualFactory.RegisterVisualFactory<UIActor>(x => new SpriteVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UIButtonActor>(x => new UIButtonVisual(x, spriteBatch, resourceDictionary, bus));
+            actorVisualFactory.RegisterVisualFactory<UIBackgroundActor>(x => new UIVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UIToolButtonActor>(x => new UIToolButtonVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UITextBlockActor>(x => new UITextBlockVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UITextPanelActor>(x => new UITextPanelVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UIPanelActor>(x => new UIPanelVisual(x, spriteBatch, resourceDictionary));
+            actorVisualFactory.RegisterVisualFactory<UICarousel>(x => new UICarouselVisual(x, spriteBatch, resourceDictionary));
+        }
+
+        /// <summary>
+        /// LoadContent will be called once per game and is the place to load
+        /// all of your content.
+        /// </summary>
+        protected override void LoadContent()
+        {
+            particleRenderer = new SpriteBatchRenderer()
+            {
+                GraphicsDeviceService = graphics,
+                SpriteBatch = this.spriteBatch,                 
+                Transformation = Matrix.Identity
+            };
+
+            particleRenderer.LoadContent(Content);
+        }
+
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
+        }
+
+#if WINDOWS_PHONE
+        private Single _pinchX = 0f;
+        private Single _pinchY = 0f;
+        private Boolean _hasTouches = false;
+#elif WINDOWS
+        private Boolean _isDragging;
+        private Vector2 _clickPoint;
+        private Boolean _isMouseDown;
+#endif
+
+
+        /// <summary>
+        /// Allows the game to run logic such as updating the world,
+        /// checking for collisions, gathering input, and playing audio.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Update(GameTime gameTime)
+        {
+            GameStack.Current.Update(gameTime.ElapsedGameTime);
+
+            // this.ApplyPinch(grid, new Vector2(0, 0), -20f);
+
+#if WINDOWS_PHONE
+            if (TouchPanel.GetState().Count > 0 && !_hasTouches)
+            {
+                _hasTouches = true;
+                bus.Publish(new PanelTouchBeganEvent());
+            }
+
+            if (TouchPanel.GetState().Count == 0 && _hasTouches)
+            {
+                _hasTouches = false;
+            }
+
+            if (TouchPanel.EnabledGestures != GestureType.None)
+            {
+                while (TouchPanel.IsGestureAvailable)
+                {
+                    var gesture = TouchPanel.ReadGesture();
+
+                    switch (gesture.GestureType)
+                    {
+                        case GestureType.DoubleTap:
+                            bus.Publish(new PanelDoubleTapEvent(gesture.Position.X, gesture.Position.Y));
+                            break;
+                        case GestureType.DragComplete:
+                            break;
+                        case GestureType.Flick:
+                            bus.Publish(new PanelFlickEvent(gesture.Delta.X, gesture.Delta.Y));
+                            break;
+                        case GestureType.FreeDrag:
+                            bus.Publish(new PanelDragEvent(gesture.Position.X, gesture.Position.Y, gesture.Delta.X, gesture.Delta.Y));
+                            break;
+                        case GestureType.Hold:
+                            break;
+                        case GestureType.HorizontalDrag:
+                            bus.Publish(new PanelDragEvent(gesture.Position.X, gesture.Position.Y, gesture.Delta.X, gesture.Delta.Y));
+                            break;
+                        case GestureType.None:
+                            break;
+                        case GestureType.Pinch:
+                            this._pinchX = (gesture.Position2.X + gesture.Position.X) / 2f;
+                            this._pinchY = (gesture.Position2.Y + gesture.Position.Y) / 2f;
+                            //bus.Publish(new PanelDoubleTapEvent(gesture..X, gesture.Position.Y));
+                            break;
+                        case GestureType.PinchComplete:
+                            bus.Publish(new PanelDoubleTapEvent(_pinchX, _pinchY));
+                            break;
+                        case GestureType.Tap:
+                            bus.Publish(new PanelTapEvent(gesture.Position.X, gesture.Position.Y));
+                            break;
+                        case GestureType.VerticalDrag:
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+#elif WINDOWS
+            mouseStateCurrent = Mouse.GetState();
+            var keyState = Keyboard.GetState();
+
+            if (mouseStateCurrent.LeftButton == ButtonState.Released && mouseStatePrevious.LeftButton == ButtonState.Pressed)
+            {
+                _isMouseDown = false;
+
+                var position = new Vector2(mouseStateCurrent.X, mouseStateCurrent.Y);
+
+                if ((position - _clickPoint).Length() < 5.0f)
+                {
+                    bus.Publish(new PanelTapEvent(mouseStateCurrent.X, mouseStateCurrent.Y));
+                }
+            }
+
+            if (mouseStateCurrent.RightButton == ButtonState.Released && mouseStatePrevious.RightButton == ButtonState.Pressed)
+            {
+                bus.Publish(new BackPressedEvent());                
+            }
+
+            if (mouseStateCurrent.LeftButton == ButtonState.Pressed)
+            {
+                if (!_isMouseDown)
+                {
+                    _isMouseDown = true;
+                    _clickPoint = new Vector2(mouseStateCurrent.X, mouseStateCurrent.Y);
+                }
+                if (mouseStateCurrent.X != mouseStatePrevious.X || mouseStateCurrent.Y != mouseStatePrevious.Y)
+                {
+                    bus.Publish(new PanelDragEvent(mouseStateCurrent.X, mouseStatePrevious.Y, mouseStateCurrent.X - mouseStatePrevious.X, mouseStateCurrent.Y - mouseStatePrevious.Y));
+                }
+            }
+            
+            mouseStatePrevious = mouseStateCurrent;         
+#endif
+
+            processRunner.RunScheduledProcesses(gameTime.ElapsedGameTime, 1000);
+            
+            base.Update(gameTime);
+        }
+
+        /// <summary>
+        /// This is called when the game should draw itself.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Draw(GameTime gameTime)
+        {           
+            GraphicsDevice.Clear(BackgroundColor);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
+            visualSubsystem.Draw(gameTime.ElapsedGameTime);
+            spriteBatch.End();
+
+            base.Draw(gameTime);
+        }
+    }
+}

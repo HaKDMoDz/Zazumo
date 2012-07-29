@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS
+END
+GraphicsDeviceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/GraphicsDeviceManager.cs
+END
+PowerStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/PowerStatus.cs
+END
+GameWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/GameWindow.cs
+END
+KeyUtil.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/KeyUtil.cs
+END
+Game.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MacOS/Game.cs
+END

@@ -1,0 +1,20 @@
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\build\WP7\Debug\Phat.Karendow.WP7.dll
+C:\Dev\Karendow\build\WP7\Debug\Phat.Karendow.WP7.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\Phat.Karendow.WP7.dll
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\Phat.Karendow.WP7.pdb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\..\..\..\build\WP7\Debug\AppManifest.xaml
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\WMAppManifest.xml
+..\..\..\build\WP7\Debug\Thumbnail.png
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\..\..\..\build\WP7\Debug\Phat.Karendow.WP7.xap
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Dev\Karendow\build\WP7\Debug\Content\Backgrounds\Splash.xnb
+C:\Dev\Karendow\build\WP7\Debug\Content\Packages\Splash.xnb
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\..\..\..\build\WP7\Debug\Phat.Karendow.WP7.xap
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\..\..\..\build\WP7\Debug\AppManifest.xaml
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Dev\Karendow\src\WP7\Phat.Karendow.WP7\obj\Windows Phone\Debug\WMAppManifest.xml
+..\..\..\build\WP7\Debug\Thumbnail.png

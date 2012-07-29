@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics
+END
+GraphicsDeviceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/GraphicsDeviceManager.cs
+END
+Effect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/Effect.cs
+END
+RenderTarget2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/RenderTarget2D.cs
+END
+ESTexture2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/ESTexture2D.cs
+END
+PresentationParameters.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/PresentationParameters.cs
+END
+SpriteBatcher.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/SpriteBatcher.cs
+END
+GraphicsDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/GraphicsDevice.cs
+END
+RenderState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/RenderState.cs
+END
+GraphicsDevice2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/GraphicsDevice2D.cs
+END
+Texture2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/Texture2D.cs
+END
+SpriteBatch.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/SpriteBatch.cs
+END
+DisplayMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/DisplayMode.cs
+END
+ESImage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Windows/Graphics/ESImage.cs
+END

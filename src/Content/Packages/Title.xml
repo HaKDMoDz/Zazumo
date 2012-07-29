@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ActorResources="Phat.ActorResources">
+  <Asset Type="ActorResources:ResourceModel[]">
+    <Item Type="ActorResources:ArchetypeResource">
+      <Key>Title.Archetypes.TitleBackground</Key>
+      <Data Type="ActorResources:UIResource">
+        <X>0</X>
+        <Y>0</Y>
+        <Name Null="true" />
+        <SpriteKey>Title.Sprites.Title</SpriteKey>
+        <Width>1</Width>
+        <Height>1</Height>
+      </Data>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.ChiefDance</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.Chief1</Item>
+        <Item>Title.Sprites.Chief2</Item>
+      </FrameKeys>
+      <FrameDuration>0.939534962</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.ChiefDanceR</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.Chief1R</Item>
+        <Item>Title.Sprites.Chief2R</Item>
+      </FrameKeys>
+      <FrameDuration>0.9395349</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.VillageGirlDance</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.VillageGirl1</Item>
+        <Item>Title.Sprites.VillageGirl2</Item>
+      </FrameKeys>
+      <FrameDuration>0.9436575</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.VillageGirlDanceR</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.VillageGirl1R</Item>
+        <Item>Title.Sprites.VillageGirl2R</Item>
+      </FrameKeys>
+      <FrameDuration>0.9436575</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.VillagerDance</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.Villager1</Item>
+        <Item>Title.Sprites.Villager2</Item>
+      </FrameKeys>
+      <FrameDuration>0.9436575</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:FrameSetResource">
+      <Key>Title.FrameSets.VillagerDanceR</Key>
+      <FrameKeys>
+        <Item>Title.Sprites.Villager1R</Item>
+        <Item>Title.Sprites.Villager2R</Item>
+      </FrameKeys>
+      <FrameDuration>0.9436575</FrameDuration>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.A</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>114</UCoordinate>
+      <VCoordinate>116</VCoordinate>
+      <Width>70</Width>
+      <Height>72</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Chief1</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>100</Width>
+      <Height>103</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Chief1R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>100</Width>
+      <Height>103</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Chief2</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>100</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>100</Width>
+      <Height>103</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Chief2R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>100</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>100</Width>
+      <Height>103</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.M</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>100</UCoordinate>
+      <VCoordinate>198</VCoordinate>
+      <Width>90</Width>
+      <Height>91</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.O</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>215</UCoordinate>
+      <VCoordinate>209</VCoordinate>
+      <Width>79</Width>
+      <Height>88</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Title</Key>
+      <TextureKey>Title.Textures.TitleScreen</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>800</Width>
+      <Height>480</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.U</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>4</UCoordinate>
+      <VCoordinate>202</VCoordinate>
+      <Width>74</Width>
+      <Height>81</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.VillageGirl1</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>412</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>78</Width>
+      <Height>193</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.VillageGirl1R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>412</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>78</Width>
+      <Height>193</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.VillageGirl2</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>419</UCoordinate>
+      <VCoordinate>197</VCoordinate>
+      <Width>78</Width>
+      <Height>193</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.VillageGirl2R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>419</UCoordinate>
+      <VCoordinate>197</VCoordinate>
+      <Width>78</Width>
+      <Height>193</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Villager1</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>200</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>97</Width>
+      <Height>205</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Villager1R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>200</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>97</Width>
+      <Height>205</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Villager2</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>300</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>97</Width>
+      <Height>205</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Villager2R</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>300</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>97</Width>
+      <Height>205</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Title.Sprites.Z</Key>
+      <TextureKey>Title.Textures.Sprites</TextureKey>
+      <UCoordinate>2</UCoordinate>
+      <VCoordinate>119</VCoordinate>
+      <Width>91</Width>
+      <Height>69</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Title.Textures.Sprites</Key>
+      <Path>Sprites\Intro.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Title.Textures.TitleScreen</Key>
+      <Path>Backgrounds\TitleScreen.png</Path>
+    </Item>
+  </Asset>
+</XnaContent>

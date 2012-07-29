@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting
+END
+ScriptExecutionContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/ScriptExecutionContext.cs
+END
+ScriptManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/ScriptManager.cs
+END
+ScriptActivity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/ScriptActivity.cs
+END
+Script.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/Script.cs
+END
+ScriptActivityContainer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/ScriptActivityContainer.cs
+END
+IScriptActivityExecutor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/IScriptActivityExecutor.cs
+END
+ScriptNameAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Scripting/ScriptNameAttribute.cs
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/19/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna
+END
+XnaModule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/XnaModule.cs
+END
+XnaMenuItems.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/XnaMenuItems.cs
+END
+packages.config
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/packages.config
+END
+ExportXmlCommand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/ExportXmlCommand.cs
+END
+Phat.Editor.Xna.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/Phat.Editor.Xna.csproj
+END
+RunCommand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/RunCommand.cs
+END
+ImportXmlCommand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Xna/ImportXmlCommand.cs
+END

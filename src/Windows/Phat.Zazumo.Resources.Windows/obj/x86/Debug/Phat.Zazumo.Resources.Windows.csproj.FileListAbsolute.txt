@@ -1,0 +1,12 @@
+C:\Dev\Zazumo\build\Windows\Debug\Phat.Zazumo.Resources.Windows.dll
+C:\Dev\Zazumo\build\Windows\Debug\Phat.Zazumo.Resources.Windows.pdb
+C:\Dev\Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Phat.Zazumo.Resources.Windows.dll
+C:\Dev\Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Phat.Zazumo.Resources.Windows.pdb
+C:\Dev\Phat.Zazumo\build\Windows\Debug\Phat.Zazumo.Resources.Windows.dll
+C:\Dev\Phat.Zazumo\build\Windows\Debug\Phat.Zazumo.Resources.Windows.pdb
+C:\Dev\Phat.Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Phat.Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Phat.Zazumo.Resources.Windows.dll
+C:\Dev\Phat.Zazumo\src\Windows\Phat.Zazumo.Resources.Windows\obj\x86\Debug\Phat.Zazumo.Resources.Windows.pdb

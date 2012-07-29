@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages
+END
+ZazumoSizeChangedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/ZazumoSizeChangedEvent.cs
+END
+BossHitEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/BossHitEvent.cs
+END
+EnemySpawnedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/EnemySpawnedEvent.cs
+END
+ZazumoShapeChangedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/ZazumoShapeChangedEvent.cs
+END
+FireButtonReleasedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/FireButtonReleasedEvent.cs
+END
+MiniBossDestroyedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/MiniBossDestroyedEvent.cs
+END
+WormholeClosedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/WormholeClosedEvent.cs
+END
+WormDestroyedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/WormDestroyedEvent.cs
+END
+FireButtonPressedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat.Zazumo/Messages/FireButtonPressedEvent.cs
+END

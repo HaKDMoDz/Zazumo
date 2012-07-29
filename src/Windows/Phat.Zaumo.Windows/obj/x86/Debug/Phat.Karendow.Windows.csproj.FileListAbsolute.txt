@@ -1,0 +1,16 @@
+C:\Dev\Karendow\src\build\Windows\Debug\Phat.Karendow.Windows.exe
+C:\Dev\Karendow\src\build\Windows\Debug\Phat.Karendow.Windows.pdb
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\Phat.Karendow.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\Phat.Karendow.Windows\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\Phat.Karendow.Windows\obj\x86\Debug\Phat.Karendow.Windows.exe
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\Phat.Karendow.Windows\obj\x86\Debug\Phat.Karendow.Windows.pdb
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\obj\x86\Debug\Phat.Karendow.Windows.exe
+C:\Dev\Karendow\src\Windows\Phat.Karendow.Windows\obj\x86\Debug\Phat.Karendow.Windows.pdb
+C:\Dev\Karendow\build\Windows\Debug\Phat.Karendow.Windows.exe
+C:\Dev\Karendow\build\Windows\Debug\Phat.Karendow.Windows.pdb
+C:\Dev\Karendow\build\Windows\Debug\Content\Backgrounds\Splash.xnb
+C:\Dev\Karendow\build\Windows\Debug\Content\Packages\Splash.xnb
+C:\Dev\Karendow\build\Windows\Debug\Content\Sprites\Pandaka.xnb
+C:\Dev\Karendow\build\Windows\Debug\Content\Packages\Pandaka.xnb

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ActorResources="Phat.ActorResources">
+  <Asset Type="ActorResources:ResourceModel[]">
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Level1.Sprites.Level1Background</Key>
+      <TextureKey>Level1.Textures.Level1Background</TextureKey>
+      <UCoordinate>1</UCoordinate>
+      <VCoordinate>1</VCoordinate>
+      <Width>798</Width>
+      <Height>478</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Level1.Sprites.Level1BackgroundR</Key>
+      <TextureKey>Level1.Textures.Level1Background</TextureKey>
+      <UCoordinate>1</UCoordinate>
+      <VCoordinate>1</VCoordinate>
+      <Width>798</Width>
+      <Height>478</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Level1.Sprites.Level1Cloud</Key>
+      <TextureKey>Level1.Textures.Level1Cloud</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>800</Width>
+      <Height>480</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Level1.Sprites.Level1CloudR</Key>
+      <TextureKey>Level1.Textures.Level1Cloud</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>800</Width>
+      <Height>480</Height>
+      <HorizontalFlip>true</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Level1.Textures.Level1Background</Key>
+      <Path>Backgrounds\Level1.png</Path>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Level1.Textures.Level1Cloud</Key>
+      <Path>Backgrounds\Level1Cloud.png</Path>
+    </Item>
+  </Asset>
+</XnaContent>

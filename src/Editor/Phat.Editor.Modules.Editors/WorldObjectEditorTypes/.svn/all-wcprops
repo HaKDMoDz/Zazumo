@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes
+END
+ConcreteWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ConcreteWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedBombWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedBombWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedRetractableSpikeButtonWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedRetractableSpikeButtonWorldObjectTypeDefinition.cs
+END
+TerrainWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/TerrainWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedConcreteWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedConcreteWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedRotatingArrowWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedRotatingArrowWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedRetractableSpikeWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedRetractableSpikeWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedScriptedSearchableWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedScriptedSearchableWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedArrowWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedArrowWorldObjectTypeDefinition.cs
+END
+ArchetypeBasedMirrorWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/ArchetypeBasedMirrorWorldObjectTypeDefinition.cs
+END
+TutorialTriggerVolumeWorldObjectTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldObjectEditorTypes/TutorialTriggerVolumeWorldObjectTypeDefinition.cs
+END

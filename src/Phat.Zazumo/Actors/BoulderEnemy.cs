@@ -1,0 +1,120 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Messages;
+using Phat.Zazumo.Resources;
+
+namespace Phat.Zazumo.Actors
+{
+    public class BoulderFlockActor : Actor
+    {
+        private Int32 _enemySpawnCount;
+
+        public BoulderEnemy[] Segments { get; private set; }
+        private readonly List<BoulderEnemy> _deadList = new List<BoulderEnemy>();
+
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            var segmentsList = new List<BoulderEnemy>();
+
+            var data = (BoulderData)initializationData;
+            _enemySpawnCount = data.EnemyCount;
+
+            for (Int32 i = 0; i < data.EnemyCount; i++)
+            {
+                BoulderEnemy enemy = ActorFactory.Create<BoulderEnemy>(Resources.GetResource("BoulderData"), new Vector2(0f, 0f));
+                enemy.Opacity = 0.0f;
+                segmentsList.Add(enemy);
+                enemy.SetFlock(this);
+
+                enemy.HitPoints = data.HitPoints;
+            }
+
+            segmentsList.Reverse();
+            Segments = segmentsList.ToArray();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            foreach (var segment in Segments)
+            {
+                segment.Destroy();
+            }
+        }
+
+        public void Hit(BoulderEnemy hitEnemy)
+        {
+            if (!_deadList.Contains(hitEnemy))
+                _deadList.Add(hitEnemy);
+
+
+            if (_deadList.Count >= _enemySpawnCount)
+            {
+                this.Destroy();
+                Publish(new MiniBossDestroyedEvent());
+            }
+        }
+    }
+
+    public class BoulderEnemy : EnemyActor
+    {
+        public Int32 HitPoints { get; set; }
+
+        public BoulderFlockActor Flock { get; private set; }
+
+        protected override void OnInitializing(object initializationData)
+        {
+            base.OnInitializing(initializationData);
+            CanDamagePlayer = false;
+            IsMiniBoss = true;
+        }
+
+        public void SetFlock(BoulderFlockActor flock)
+        {
+            this.Flock = flock;
+        }
+
+        protected override void HitInternal()
+        {
+            HitPoints--;
+
+            if (HitPoints == 0)
+            {
+                Flock.Hit(this);
+                this.Destroy();
+            }
+
+            IsInvincible = true;
+        }
+
+        protected override void OnActorCollided(Phat.Messages.ActorCollidedEvent @event)
+        {
+            base.OnActorCollided(@event);
+
+            if (IsInvincible)
+            {
+                @event.Cancel = true;
+                return;
+            }
+
+            if (@event.OtherActor is ZazumoProjectileActor)
+            {
+                HitPoints--;
+
+                if (HitPoints == 0)
+                {
+                    Flock.Hit(this);
+                    this.Destroy();
+                }
+
+                IsInvincible = true;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/Archetypes
+END
+DrawableArchetypeDataViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/Archetypes/DrawableArchetypeDataViewModel.cs
+END
+CreateNewArchetypeViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/Archetypes/CreateNewArchetypeViewModel.cs
+END
+ArchetypeEditorViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/Archetypes/ArchetypeEditorViewModel.cs
+END
+ArchetypeDataViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewModels/Archetypes/ArchetypeDataViewModel.cs
+END

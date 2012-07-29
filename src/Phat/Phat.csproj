@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{237D245B-F4DE-4684-A33F-8FB1F49C8198}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phat</RootNamespace>
+    <AssemblyName>Phat</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\.NET\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="ProjectMercury, Version=4.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Mercury\Windows\ProjectMercury.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActorModel\ArrowActor.cs" />
+    <Compile Include="ActorModel\BombActor.cs" />
+    <Compile Include="ActorModel\BreakableWallActor.cs" />
+    <Compile Include="ActorModel\BubbleParticleSystem.cs" />
+    <Compile Include="ActorModel\BurgalsActor.cs" />
+    <Compile Include="ActorModel\CharacterActor.cs" />
+    <Compile Include="ActorModel\DecoratorActor.cs" />
+    <Compile Include="ActorModel\DoorActor.cs" />
+    <Compile Include="ActorModel\EffectActor.cs" />
+    <Compile Include="ActorModel\ExplodableArrowActor.cs" />
+    <Compile Include="ActorModel\ExplosionActor.cs" />
+    <Compile Include="ActorModel\FootprintsActor.cs" />
+    <Compile Include="ActorModel\IExplodable.cs" />
+    <Compile Include="ActorModel\IMortal.cs" />
+    <Compile Include="ActorModel\ISearchable.cs" />
+    <Compile Include="ActorModel\ITouchable.cs" />
+    <Compile Include="ActorModel\KeyActor.cs" />
+    <Compile Include="ActorModel\MedalActor.cs" />
+    <Compile Include="ActorModel\MirrorActor.cs" />
+    <Compile Include="ActorModel\ParticleSystemActor.cs" />
+    <Compile Include="ActorModel\PermanentArrowActor.cs" />
+    <Compile Include="ActorModel\PlaceableActor.cs" />
+    <Compile Include="ActorModel\PositionSelectorActor.cs" />
+    <Compile Include="ActorModel\ProjectileActor.cs" />
+    <Compile Include="ActorModel\RetractableSpikeActor.cs" />
+    <Compile Include="ActorModel\RetractableSpikeButtonActor.cs" />
+    <Compile Include="ActorModel\RotatingArrowActor.cs" />
+    <Compile Include="ActorModel\ScriptedSearchableActor.cs" />
+    <Compile Include="ActorModel\ScriptTriggerVolume.cs" />
+    <Compile Include="ActorModel\SelectionLocationActor.cs" />
+    <Compile Include="ActorModel\ShockwaveEffectActor.cs" />
+    <Compile Include="ActorModel\SpotlightEffectActor.cs" />
+    <Compile Include="ActorModel\StartPositionActor.cs" />
+    <Compile Include="ActorModel\TerrainActor.cs" />
+    <Compile Include="ActorModel\TerrainTile.cs" />
+    <Compile Include="ActorModel\TriggerVolume.cs" />
+    <Compile Include="ActorModel\TutorialTextTriggerVolume.cs" />
+    <Compile Include="ActorModel\UIActor.cs" />
+    <Compile Include="ActorModel\UIBackgroundActor.cs" />
+    <Compile Include="ActorModel\UIButtonActor.cs" />
+    <Compile Include="ActorModel\UICarousel.cs" />
+    <Compile Include="ActorModel\UIPanelActor.cs" />
+    <Compile Include="ActorModel\UITextBlockActor.cs" />
+    <Compile Include="ActorModel\UITextPanelActor.cs" />
+    <Compile Include="ActorModel\UIToolButtonActor.cs" />
+    <Compile Include="ActorModel\UserArrowActor.cs" />
+    <Compile Include="ActorModel\Volume.cs" />
+    <Compile Include="ActorPhysics\CharacterPhysics.cs" />
+    <Compile Include="ActorPhysics\NullPhysics.cs" />
+    <Compile Include="ActorPhysics\PhysicsBase.cs" />
+    <Compile Include="ActorPhysics\StaticPhysics.cs" />
+    <Compile Include="ActorPhysics\TerrainPhysics.cs" />
+    <Compile Include="ActorPhysics\VolumePhysics.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedArrowWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedBombWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedConcreteWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedMirrorWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedRetractableSpikeButtonWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedRetractableSpikeWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedRotatingArrowWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedScriptedSearchableWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeBasedWorldObject.cs" />
+    <Compile Include="ActorResources\ArchetypeData.cs" />
+    <Compile Include="ActorResources\ArchetypeResource.cs" />
+    <Compile Include="ActorResources\ArrowWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\BombWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\CharacterArchetypeData.cs" />
+    <Compile Include="ActorResources\ConcreteWorldObject.cs" />
+    <Compile Include="ActorResources\ConcreteWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\FrameSetResource.cs" />
+    <Compile Include="ActorResources\IAnimatedWorldObject.cs" />
+    <Compile Include="ActorResources\IArrowWorldObject.cs" />
+    <Compile Include="ActorResources\IBombWorldObject.cs" />
+    <Compile Include="ActorResources\IBurgalsData.cs" />
+    <Compile Include="ActorResources\IConcreteWorldObject.cs" />
+    <Compile Include="ActorResources\IDrawable.cs" />
+    <Compile Include="ActorResources\IMirrorWorldObject.cs" />
+    <Compile Include="ActorResources\IPhysicalObject.cs" />
+    <Compile Include="ActorResources\IRetractableSpikeButtonWorldObject.cs" />
+    <Compile Include="ActorResources\IRetractableSpikeWorldObject.cs" />
+    <Compile Include="ActorResources\IRotatingArrowWorldObject.cs" />
+    <Compile Include="ActorResources\IScriptedSearchableWorldObject.cs" />
+    <Compile Include="ActorResources\IWorldObject.cs" />
+    <Compile Include="ActorResources\LevelResource.cs" />
+    <Compile Include="ActorResources\MirrorWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\ResourceModel.cs" />
+    <Compile Include="ActorResources\RetractableSpikeButtonWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\RetractableSpikeWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\RotatingArrowWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\ScriptedSearchableWorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\SpriteResource.cs" />
+    <Compile Include="ActorResources\TerrainTileDefinitionResource.cs" />
+    <Compile Include="ActorResources\TerrainWorldObject.cs" />
+    <Compile Include="ActorResources\Texture2DResource.cs" />
+    <Compile Include="ActorResources\TileDefinitionResourceModel.cs" />
+    <Compile Include="ActorResources\TriggerVolumeWorldObject.cs" />
+    <Compile Include="ActorResources\TutorialTriggerVolumeWorldObject.cs" />
+    <Compile Include="ActorResources\UIResource.cs" />
+    <Compile Include="ActorResources\WorldObject.cs" />
+    <Compile Include="ActorResources\WorldObjectArchetypeData.cs" />
+    <Compile Include="ActorResources\WorldResource.cs" />
+    <Compile Include="Actors\Actor.cs" />
+    <Compile Include="Actors\ActorController.cs" />
+    <Compile Include="Actors\ActorCreatedEvent.cs" />
+    <Compile Include="Actors\ActorDestroyedEvent.cs" />
+    <Compile Include="Actors\ActorEvent.cs" />
+    <Compile Include="Actors\ActorEventHandler.cs" />
+    <Compile Include="Actors\ActorEventSubscriptionBehavior.cs" />
+    <Compile Include="Actors\ActorFactory.cs" />
+    <Compile Include="Actors\ActorFrameSetSetEvent.cs" />
+    <Compile Include="Actors\ActorPropertySetEvent.cs" />
+    <Compile Include="Actors\ActorRepository.cs" />
+    <Compile Include="Actors\ActorResource.cs" />
+    <Compile Include="Actors\ActorSpriteSetEvent.cs" />
+    <Compile Include="Actors\ActorState.cs" />
+    <Compile Include="Actors\ActorZIndexSetEvent.cs" />
+    <Compile Include="Actors\AnimationStartedEvent.cs" />
+    <Compile Include="Actors\Archetype.cs" />
+    <Compile Include="Actors\IActorEventSubscriptionProvider.cs" />
+    <Compile Include="Actors\IActorFactory.cs" />
+    <Compile Include="Actors\IActorFactoryProvider.cs" />
+    <Compile Include="Actors\IActorRepository.cs" />
+    <Compile Include="Actors\IActorState.cs" />
+    <Compile Include="Actors\ILatentFunctionProvider.cs" />
+    <Compile Include="Actors\ILocatable.cs" />
+    <Compile Include="ActorVisuals\DebugVisual.cs" />
+    <Compile Include="ActorVisuals\NullVisual.cs" />
+    <Compile Include="ActorVisuals\ParticleEffectVisual.cs" />
+    <Compile Include="ActorVisuals\SpriteVisual.cs" />
+    <Compile Include="ActorVisuals\TerrainVisual.cs" />
+    <Compile Include="ActorVisuals\UIButtonVisual.cs" />
+    <Compile Include="ActorVisuals\UICarouselVisual.cs" />
+    <Compile Include="ActorVisuals\UIPanelVisual.cs" />
+    <Compile Include="ActorVisuals\UITextBlockVisual.cs" />
+    <Compile Include="ActorVisuals\UITextPanelVisual.cs" />
+    <Compile Include="ActorVisuals\UIToolButtonVisual.cs" />
+    <Compile Include="ActorVisuals\UIVisual.cs" />
+    <Compile Include="ActorVisuals\VisualBase.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Animations\AnimationClock.cs" />
+    <Compile Include="Animations\AnimationContext.cs" />
+    <Compile Include="Animations\AnimationTimeline.cs" />
+    <Compile Include="Animations\DiscreteSingleKeyFrame.cs" />
+    <Compile Include="Animations\FadeInAnimation.cs" />
+    <Compile Include="Animations\FadeOutAnimation.cs" />
+    <Compile Include="Animations\KeyTime.cs" />
+    <Compile Include="Animations\LinearSingleKeyFrame.cs" />
+    <Compile Include="Animations\RepeatBehavior.cs" />
+    <Compile Include="Animations\ScrollAnimation.cs" />
+    <Compile Include="Animations\SingleAnimationBase.cs" />
+    <Compile Include="Animations\SingleAnimationUsingKeyFrames.cs" />
+    <Compile Include="Animations\SingleKeyFrame.cs" />
+    <Compile Include="Animations\SplineSingleKeyFrame.cs" />
+    <Compile Include="Animations\Storyboard.cs" />
+    <Compile Include="Animations\StoryboardTarget.cs" />
+    <Compile Include="Animations\XamlAnimationHelper.cs" />
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Configuration\Configurator.cs" />
+    <Compile Include="DelayHelper.cs" />
+    <Compile Include="Controllers\GameMode.cs" />
+    <Compile Include="Controllers\GameStack.cs" />
+    <Compile Include="Controllers\IGameSetters.cs" />
+    <Compile Include="Controllers\IHandle.cs" />
+    <Compile Include="IResourceDictionary.cs" />
+    <Compile Include="MessageBus\Bus.cs" />
+    <Compile Include="MessageBus\BusProcessor.cs" />
+    <Compile Include="MessageBus\IBus.cs" />
+    <Compile Include="MessageBus\IEventPublisher.cs" />
+    <Compile Include="MessageBus\IQueueingBus.cs" />
+    <Compile Include="MessageBus\QueuedAction.cs" />
+    <Compile Include="MessageBus\Subscription.cs" />
+    <Compile Include="Messages\ActorAnimationSetUpdatedEvent.cs" />
+    <Compile Include="Messages\ActorClickedEvent.cs" />
+    <Compile Include="Messages\ActorFrameIndexIncrementedEvent.cs" />
+    <Compile Include="Messages\ArrowTouchedEvent.cs" />
+    <Compile Include="Messages\BackPressedEvent.cs" />
+    <Compile Include="Messages\BombCountdownChangedEvent.cs" />
+    <Compile Include="Messages\BombExplodedEvent.cs" />
+    <Compile Include="Messages\ChooseDirectionCanceledEvent.cs" />
+    <Compile Include="Messages\DirectionChosenEvent.cs" />
+    <Compile Include="Messages\GameQuitEvent.cs" />
+    <Compile Include="Messages\GameRanEvent.cs" />
+    <Compile Include="Messages\KeyPickedUpEvent.cs" />
+    <Compile Include="Messages\LevelCompletedEvent.cs" />
+    <Compile Include="Messages\LevelExitedEvent.cs" />
+    <Compile Include="Messages\LevelSelectedEvent.cs" />
+    <Compile Include="Messages\MedalCollectedEvent.cs" />
+    <Compile Include="Messages\MirrorTouchedEvent.cs" />
+    <Compile Include="Messages\MoneyBagCollectedEvent.cs" />
+    <Compile Include="Messages\MouseButtonDownEvent.cs" />
+    <Compile Include="Messages\PanelDoubleTabEvent.cs" />
+    <Compile Include="Messages\PanelDragEvent.cs" />
+    <Compile Include="Messages\PanelFlickEvent.cs" />
+    <Compile Include="Messages\PanelTapEvent.cs" />
+    <Compile Include="Messages\PanelTouchBeganEvent.cs" />
+    <Compile Include="Messages\PlayerDiedEvent.cs" />
+    <Compile Include="Messages\RetractableSpikeButtonToggledEvent.cs" />
+    <Compile Include="Messages\ScriptActivatedEvent.cs" />
+    <Compile Include="Messages\SelectionChangedEvent.cs" />
+    <Compile Include="Messages\StartGameMenuItemSelected.cs" />
+    <Compile Include="Messages\ToolChosenEvent.cs" />
+    <Compile Include="Messages\ToolPlacedEvent.cs" />
+    <Compile Include="Messages\ToolPlacingCanceledEvent.cs" />
+    <Compile Include="Messages\ToolType.cs" />
+    <Compile Include="Messages\TutorialTextDismisedEvent.cs" />
+    <Compile Include="Messages\TutorialTriggeredEvent.cs" />
+    <Compile Include="Messages\UIButtonPressedEvent.cs" />
+    <Compile Include="Messages\UIButtonReleasedEvent.cs" />
+    <Compile Include="Messages\UserToolPickedUpEvent.cs" />
+    <Compile Include="Controllers\PhatGame.cs" />
+    <Compile Include="Physics\ActorCollidedEvent.cs" />
+    <Compile Include="Physics\ActorPhysicsFactory.cs" />
+    <Compile Include="Physics\ActorPositionSetEvent.cs" />
+    <Compile Include="Physics\ActorVelocitySetEvent.cs" />
+    <Compile Include="Physics\Collision.cs" />
+    <Compile Include="Physics\CollisionData.cs" />
+    <Compile Include="Physics\ForceAppliedToActorEvent.cs" />
+    <Compile Include="Physics\IActorPhysics.cs" />
+    <Compile Include="Physics\IActorPhysicsFactory.cs" />
+    <Compile Include="Physics\LocationSetEvent.cs" />
+    <Compile Include="Physics\PhysicsActorBehavior.cs" />
+    <Compile Include="Physics\PhysicsSubsystem.cs" />
+    <Compile Include="Processors\ActionProcess.cs" />
+    <Compile Include="Processors\IProcess.cs" />
+    <Compile Include="Processors\IProcessRunner.cs" />
+    <Compile Include="Processors\ProcessRunner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourceDictionary.cs" />
+    <Compile Include="Scripting\IScriptActivityExecutor.cs" />
+    <Compile Include="Scripting\Script.cs" />
+    <Compile Include="Scripting\ScriptActivity.cs" />
+    <Compile Include="Scripting\ScriptActivityContainer.cs" />
+    <Compile Include="Scripting\ScriptExecutionContext.cs" />
+    <Compile Include="Scripting\ScriptManager.cs" />
+    <Compile Include="Scripting\ScriptNameAttribute.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Visual\ActorVisualFactory.cs" />
+    <Compile Include="Visual\IActorVisual.cs" />
+    <Compile Include="Visual\IActorVisualFactory.cs" />
+    <Compile Include="Visual\IVisualSubsystem.cs" />
+    <Compile Include="Visual\ViewPort.cs" />
+    <Compile Include="Visual\VisualActorBehaviorSubsystem.cs" />
+    <Compile Include="Visual\VisualHitTestResult.cs" />
+    <Compile Include="Visual\VisualSubsystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FarseerPhysics\FarseerPhysics.csproj">
+      <Project>{8CE73DB2-7512-4003-BFB8-BD63D526A8C0}</Project>
+      <Name>FarseerPhysics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

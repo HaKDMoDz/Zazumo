@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Animations
+END
+SingleAnimationBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/SingleAnimationBase.cs
+END
+Animation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Animations/Animation.cs
+END
+SplineSingleKeyFrame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/SplineSingleKeyFrame.cs
+END
+AnimationContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/AnimationContext.cs
+END
+FadeInAnimation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/FadeInAnimation.cs
+END
+FadeOutAnimation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/FadeOutAnimation.cs
+END
+Storyboard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/Storyboard.cs
+END
+DiscreteSingleKeyFrame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/DiscreteSingleKeyFrame.cs
+END
+AnimationClock.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/AnimationClock.cs
+END
+SingleAnimationUsingKeyFrames.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/SingleAnimationUsingKeyFrames.cs
+END
+ScrollAnimation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/ScrollAnimation.cs
+END
+StoryboardTarget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Animations/StoryboardTarget.cs
+END
+LinearSingleKeyFrame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/LinearSingleKeyFrame.cs
+END
+XamlAnimationHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/XamlAnimationHelper.cs
+END
+SingleKeyFrame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/SingleKeyFrame.cs
+END
+AnimationTimeline.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/AnimationTimeline.cs
+END
+KeyTime.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Animations/KeyTime.cs
+END

@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics
+END
+RenderTargetUsage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/RenderTargetUsage.cs
+END
+RenderTarget2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/RenderTarget2D.cs
+END
+TextureCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/TextureCollection.cs
+END
+Color.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Color.cs
+END
+ESTexture2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ESTexture2D.cs
+END
+RenderState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/RenderState.cs
+END
+GraphicsExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsExtensions.cs
+END
+GraphicsDevice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsDevice.cs
+END
+SamplerStateCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SamplerStateCollection.cs
+END
+SpriteBlendMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteBlendMode.cs
+END
+StencilOperation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/StencilOperation.cs
+END
+TextureUsage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/TextureUsage.cs
+END
+RenderTarget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/RenderTarget.cs
+END
+GraphicsDeviceInformation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsDeviceInformation.cs
+END
+Texture2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Texture2D.cs
+END
+SpriteBatchItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteBatchItem.cs
+END
+SwapEffect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SwapEffect.cs
+END
+GraphicsDeviceCapabilities.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsDeviceCapabilities.cs
+END
+FillMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/FillMode.cs
+END
+CompareFunction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/CompareFunction.cs
+END
+Effect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect.cs
+END
+SpriteFont.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteFont.cs
+END
+Texture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Texture.cs
+END
+CullMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/CullMode.cs
+END
+SpriteEffects.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteEffects.cs
+END
+SpriteBatch.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteBatch.cs
+END
+IGraphicsDeviceService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/IGraphicsDeviceService.cs
+END
+ESImage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ESImage.cs
+END
+Viewport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Viewport.cs
+END
+GraphicsProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsProfile.cs
+END
+SpriteSortMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteSortMode.cs
+END
+GraphicsDeviceStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsDeviceStatus.cs
+END
+DirectionalLight.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/DirectionalLight.cs
+END
+ResolveTexture2D.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ResolveTexture2D.cs
+END
+CompilerOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/CompilerOptions.cs
+END
+ResourceType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ResourceType.cs
+END
+MultiSampleType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/MultiSampleType.cs
+END
+PresentationParameters.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/PresentationParameters.cs
+END
+SpriteBatcher.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SpriteBatcher.cs
+END
+BatchItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/BatchItem.cs
+END
+DeviceType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/DeviceType.cs
+END
+GraphicsAdapter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsAdapter.cs
+END
+SetDataOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SetDataOptions.cs
+END
+SurfaceFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/SurfaceFormat.cs
+END
+ClearOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ClearOptions.cs
+END
+ColorWriteChannels.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/ColorWriteChannels.cs
+END
+VertexBuffer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/VertexBuffer.cs
+END
+GraphicsResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/GraphicsResource.cs
+END
+DisplayMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/DisplayMode.cs
+END

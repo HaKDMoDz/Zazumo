@@ -1,0 +1,34 @@
+C:\Users\Phil\documents\visual studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\Phat.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\Phat.pdb
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\FarseerPhysics.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\FarseerPhysics.pdb
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\Phat.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\Phat.pdb
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\Phat.dll
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\Phat.pdb
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\FarseerPhysics.dll
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Debug\FarseerPhysics.pdb
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\Phat.dll
+C:\Users\philip.brockmeyer\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Debug\Phat.pdb
+C:\Dev\FormulaPhat\src\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\FormulaPhat\src\Phat\obj\Debug\Phat.dll
+C:\Dev\FormulaPhat\src\Phat\obj\Debug\Phat.pdb
+C:\Dev\FormulaPhat\build\.NET\Debug\Phat.dll
+C:\Dev\FormulaPhat\build\.NET\Debug\Phat.pdb
+C:\Dev\Karendow\src\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Phat\obj\Debug\Phat.dll
+C:\Dev\Karendow\src\Phat\obj\Debug\Phat.pdb
+C:\Dev\Karendow\build\.NET\Debug\Phat.dll
+C:\Dev\Karendow\build\.NET\Debug\Phat.pdb
+C:\Dev\Zazumo\build\.NET\Debug\Phat.dll
+C:\Dev\Zazumo\build\.NET\Debug\Phat.pdb
+C:\Dev\Zazumo\src\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Zazumo\src\Phat\obj\Debug\Phat.dll
+C:\Dev\Zazumo\src\Phat\obj\Debug\Phat.pdb
+C:\Dev\Phat.Zazumo\build\.NET\Debug\Phat.dll
+C:\Dev\Phat.Zazumo\build\.NET\Debug\Phat.pdb
+C:\Dev\Phat.Zazumo\src\Phat\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Phat\obj\Debug\Phat.dll
+C:\Dev\Phat.Zazumo\src\Phat\obj\Debug\Phat.pdb

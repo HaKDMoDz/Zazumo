@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Phat/!svn/ver/16/Phat.Zazumo/trunk/src/Phat/ActorPhysics
+END
+PlaceablePhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/PlaceablePhysics.cs
+END
+NullPhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/NullPhysics.cs
+END
+PhysicsBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/PhysicsBase.cs
+END
+CharacterPhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat/ActorPhysics/CharacterPhysics.cs
+END
+TerrainPhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/TerrainPhysics.cs
+END
+StaticPhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/StaticPhysics.cs
+END
+VolumePhysics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorPhysics/VolumePhysics.cs
+END

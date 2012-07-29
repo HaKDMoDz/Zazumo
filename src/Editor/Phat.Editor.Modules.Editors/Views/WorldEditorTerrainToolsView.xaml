@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Phat.Editor.Modules.Editors.Views.WorldEditorTerrainToolsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:vc="clr-namespace:Phat.Editor.Modules.Editors.ValueConverters"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <vc:FlipValueConverter x:Key="FlipValueConverter" />
+    </UserControl.Resources>
+
+    <UserControl.InputBindings>
+        <KeyBinding Key="P" Command="{Binding SetToolCommand}" CommandParameter="Paint" />
+        <KeyBinding Key="F" Command="{Binding SetToolCommand}" CommandParameter="Fill" />
+        <KeyBinding Key="E" Command="{Binding SetToolCommand}" CommandParameter="EyeDropper" />
+    </UserControl.InputBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <WrapPanel Orientation="Horizontal">
+            <RadioButton Content="Paint" GroupName="Tools" Margin="5" Command="{Binding SetToolCommand}" CommandParameter="Paint" IsChecked="{Binding IsPaintSelected, Mode=OneWay}" />
+            <RadioButton Content="Fill" GroupName="Tools" Margin="5" Command="{Binding SetToolCommand}" CommandParameter="Fill" IsChecked="{Binding IsFillSelected, Mode=OneWay}"/>
+            <RadioButton Content="Eye Dropper" GroupName="Tools" Margin="5" Command="{Binding SetToolCommand}" CommandParameter="EyeDropper" IsChecked="{Binding IsEyeDropperSelected, Mode=OneWay}" />
+            <CheckBox Content="Show Grid Lines" Margin="5" IsChecked="{Binding IsGridVisible, Mode=TwoWay}" />
+        </WrapPanel>
+        
+        <ListBox 
+            Grid.Row="1"
+            ItemsSource="{Binding Tiles}"
+            SelectedItem="{Binding SelectedTile}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Height="32" Width="32" Margin="5" Source="{Binding Sprite.SpriteImage}" Stretch="Uniform" RenderTransformOrigin="0.5, 0.5">
+                        <Image.RenderTransform>
+                            <ScaleTransform ScaleX="{Binding Sprite.IsFlippedHorizontally, Converter={StaticResource FlipValueConverter}}" ScaleY="{Binding Sprite.IsFlippedVertically, Converter={StaticResource FlipValueConverter}}" />
+                        </Image.RenderTransform>
+                    </Image>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</UserControl>

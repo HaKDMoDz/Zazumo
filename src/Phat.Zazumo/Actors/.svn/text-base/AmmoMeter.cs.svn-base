@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorModel;
+
+namespace Phat.Zazumo.Actors
+{
+    public class AmmoMeter : UIActor
+    {       
+        public Single AmmoLevel { get; set; }
+
+        public AmmoMeter()
+        {
+            AmmoLevel = 1f;
+        }
+    }
+}

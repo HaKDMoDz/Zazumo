@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorModel;
+using Phat.Messages;
+using Microsoft.Xna.Framework;
+
+namespace Phat.Zazumo.Actors
+{
+    public class EnemyActor : CharacterActor<EnemyActor>
+    {
+        public Boolean IsDead { get; protected set; }
+        public Boolean IsMiniBoss { get; protected set; }
+        public Boolean IsInvincible { get; set; }
+        
+        public Boolean CanDamagePlayer { get; set; }
+        
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+        }
+
+        public void Hit()
+        {
+            if (IsInvincible)
+                return;
+
+            HitInternal();                
+        }
+
+        protected virtual void HitInternal()
+        {
+
+        }
+    }
+}

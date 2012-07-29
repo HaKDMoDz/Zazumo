@@ -1,0 +1,119 @@
+﻿using System;
+using System.Net;
+using Phat.ActorResources;
+using System.Collections.Generic;
+
+namespace Phat.Animations
+{
+    [Serializable]
+    public class Storyboard : ResourceModel
+    {
+        private readonly AnimationClock _clock;
+
+        public StoryboardTarget[] Children { get; set; }
+
+        public Storyboard()
+        {
+            _clock = new AnimationClock();
+        }
+
+        public void Begin(IProcessRunner processRunner, IActorRepository repository)
+        {
+            _clock.Reset();
+            Double duration = TimeSpan.FromMilliseconds(0).TotalMilliseconds;
+
+            foreach (var child in Children)
+            {
+                Actor target = null;
+
+                if (!String.IsNullOrEmpty(child.TargetName))
+                    target = repository.GetActorByName(child.TargetName);
+                else if (child.TargetActor != null)
+                    target = child.TargetActor;
+                else
+                    throw new Exception("A storyboard child was found that did not specify an actor name or actor.");
+
+                var targetProperty = child.TargetProperty;
+                child.Timeline.SetActor(target);
+                child.Timeline.ApplyAnimationClock(_clock);
+                child.Timeline.BeginAnimation(targetProperty);
+                duration = Math.Max(child.Timeline.GetNaturalDuration().TotalMilliseconds, duration);
+            }
+
+            processRunner.ScheduleProcess(new AnimationClockController(_clock, TimeSpan.FromMilliseconds(duration)));
+        }
+
+        public void Begin(IProcessRunner processRunner)
+        {
+            _clock.Reset();
+            Double duration = TimeSpan.FromMilliseconds(0).TotalMilliseconds;
+
+            foreach (var child in Children)
+            {
+                Actor target = child.TargetActor;
+
+                var targetProperty = child.TargetProperty;
+                child.Timeline.SetActor(target);
+                child.Timeline.ApplyAnimationClock(_clock);
+                child.Timeline.BeginAnimation(targetProperty);
+                duration = Math.Max(child.Timeline.GetNaturalDuration().TotalMilliseconds, duration);
+            }
+
+            processRunner.ScheduleProcess(new AnimationClockController(_clock, TimeSpan.FromMilliseconds(duration)));
+        }
+
+        public void Begin(IProcessRunner processRunner, Actor target)
+        {
+            _clock.Reset();
+            Double duration = TimeSpan.FromMilliseconds(0).TotalMilliseconds;
+
+            foreach (var child in Children)
+            {
+                var targetProperty = child.TargetProperty;
+                child.Timeline.SetActor(target);
+                child.Timeline.ApplyAnimationClock(_clock);
+                child.Timeline.BeginAnimation(targetProperty);
+                duration = Math.Max(child.Timeline.GetNaturalDuration().TotalMilliseconds, duration);
+            }
+
+            processRunner.ScheduleProcess(new AnimationClockController(_clock, TimeSpan.FromMilliseconds(duration)));
+        }
+
+        public Storyboard Clone()
+        {
+            List<StoryboardTarget> clonedChildren = new List<StoryboardTarget>();
+            foreach (var child in Children)
+            {
+                clonedChildren.Add((StoryboardTarget)child.Clone());
+            }
+
+            return new Storyboard
+            {
+                Key = String.Empty,
+                Children = clonedChildren.ToArray()
+            };
+        }
+    }
+
+    public class AnimationClockController : IProcess
+    {
+        private readonly AnimationClock _clock;
+        private readonly TimeSpan _duration;
+
+        public AnimationClockController(AnimationClock clock, TimeSpan duration)
+        {
+            this._clock = clock;
+            this._duration = duration;
+        }
+
+        public ProcessState Run(long ticksSinceLastRun)
+        {
+            _clock.Update(ticksSinceLastRun);
+
+            if (_clock.TimeSpan.TotalMilliseconds > _duration.TotalMilliseconds)
+                return ProcessState.Completed;
+            else
+                return ProcessState.Running;
+        }
+    }
+}

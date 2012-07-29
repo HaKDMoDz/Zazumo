@@ -1,0 +1,43 @@
+10
+
+dir
+18
+http://24.89.67.76:9790/svn/Phat/Phat.Zazumo/trunk/src/Editor
+http://24.89.67.76:9790/svn/Phat
+
+
+
+2011-04-22T18:10:08.192002Z
+18
+phil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9ab44cb2-8876-c648-af67-d1cf941dd106
+
+Phat.Editor.Modules.Core
+dir
+
+Phat.Editor.Modules.Editors
+dir
+
+Phat.Editor.Interfaces
+dir
+
+Phat.Editor.Xna
+dir
+
+Phat.Editor.Core
+dir
+

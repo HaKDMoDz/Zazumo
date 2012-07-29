@@ -1,0 +1,7 @@
+C:\Dev\Phat.Zazumo\src\MonoGame\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\MonoGame\bin\Debug\MonoGame.Framework.Windows.dll
+C:\Dev\Phat.Zazumo\src\MonoGame\bin\Debug\OpenTK.dll
+C:\Dev\Phat.Zazumo\src\MonoGame\bin\Debug\OpenTK.xml
+C:\Dev\Phat.Zazumo\src\MonoGame\obj\Debug\MonoGame.Framework.Windows.dll
+C:\Dev\build\Windows\Debug\MonoGame.Framework.Windows.dll
+C:\Dev\build\Mono\Debug\MonoGame.Framework.Windows.dll

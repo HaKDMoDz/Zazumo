@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Contacts
+END
+Contact.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Contacts/Contact.cs
+END
+ContactSolver.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Contacts/ContactSolver.cs
+END

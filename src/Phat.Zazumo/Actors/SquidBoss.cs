@@ -1,0 +1,298 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Messages;
+
+namespace Phat.Zazumo.Actors
+{
+    public class SquidBoss : EnemyActor
+    {
+        private Int32 _armSegmentCount;
+        private Boolean _isFiring;
+        private Int64 _lastFired;
+        private Single _fireAngle;
+        private Boolean _isFireAngleIncreasing;
+        private Single _bulletSpeed = 3.0f;
+        private Single _fireAngleStep = 0.30f;
+        private Boolean _isMassFiring = false;
+        private Actor _target;
+
+        private TimeSpan _fireDelay = TimeSpan.FromMilliseconds(75);
+        private TimeSpan _slowFireDelay = TimeSpan.FromMilliseconds(750);
+
+        public Vector2 ArmAngleA { get; set; }
+        public Vector2 ArmAngleB { get; set; }
+        public Vector2 ArmAngleC { get; set; }
+        public Vector2 ArmAngleD { get; set; }
+
+        public SquidArm[] Segments { get; private set; }
+
+        public Int32 HitPoints { get; private set; }
+        public Single AngerLevel { get; private set; }
+
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            this.IsMiniBoss = true;
+
+            _armSegmentCount = 4;
+
+            this.Opacity = 0.0f;
+            HitPoints = 15;
+            AngerLevel = 1f;
+        }
+
+        public void BuildArms()
+        {
+            var segmentsList = new List<SquidArm>();
+
+            for (Int32 i = 0; i < _armSegmentCount * 2; i++)
+            {
+                SquidArm enemy = ActorFactory.Create<SquidArm>(Resources.GetResource("SquidArmData"), new Vector2(0f, 0f));
+                enemy.Opacity = 0.0f;
+                segmentsList.Add(enemy);
+            }
+
+            segmentsList.Reverse();
+            Segments = segmentsList.ToArray();
+        }
+
+        public void RebuildArms()
+        {
+            for (Int32 i = 0; i < _armSegmentCount * 2; i++)
+            {
+                Segments[i].Destroy();
+            }
+
+            _armSegmentCount += 2;
+            BuildArms();
+
+            foreach (var arm in Segments)
+            {
+                arm.CanDamagePlayer = true;
+            }
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            foreach (var segment in Segments)
+            {
+                segment.Destroy();
+            }
+        }
+
+        protected override void HitInternal()
+        {
+            base.HitInternal();
+            Hit(5);
+        }
+
+        public void Hit(Int32 power)
+        {
+            if (IsInvincible)
+                return;
+
+            IsInvincible = true;
+
+            HitPoints -= power;
+
+            this.Publish(new PointsAwardedEvent(100 * power, this.Location.X * Settings.MetersToPixels, this.Location.Y * Settings.MetersToPixels));
+            
+            if (HitPoints <= 0)
+            {
+                AngerLevel += 0.1f;
+                HitPoints = 0;
+
+                SetFrameSet("Zazumo.FrameSets.SquidHit");
+                In(750).Milliseconds.Run(() => SetSprite("Zazumo.Sprites.Squid1"));
+                
+                if (AngerLevel >= 1.6f)
+                {
+                    this.Destroy();
+                    this.Publish(new BigPointsAwardedEvent(20000, this.Location.X * Settings.MetersToPixels, this.Location.Y * Settings.MetersToPixels, false));
+                }
+            }
+            else if (HitPoints > 0)
+            {
+                SetFrameSet("Zazumo.FrameSets.SquidHit");
+                In(750).Milliseconds.Run(() =>
+                    {
+                        IsInvincible = false;
+                        SetSprite("Zazumo.Sprites.Squid1");
+                    });
+            }
+        }
+
+        public void OpenMouth()
+        {
+            SetFrameSet("Zazumo.FrameSets.SquidMouthOpen");
+            In(300).Milliseconds.Run(() => SetSprite("Zazumo.Sprites.Squid4"));
+        }
+
+        public void CloseMouth()
+        {
+            SetFrameSet("Zazumo.FrameSets.SquidMouthClose");
+            In(300).Milliseconds.Run(() => SetSprite("Zazumo.Sprites.Squid1"));
+        }
+
+        public void StartMassFiring()
+        {
+            StartFiring(true);
+        }
+
+        public void StartSlowFiring(Actor target)
+        {
+            _target = target;
+            StartFiring(false);
+        }
+
+        private void StartFiring(Boolean isMassFire)
+        {
+            if (_isFiring == true)
+                return;
+
+            TimeSpan delay;
+
+            if (isMassFire)
+            {
+                _isMassFiring = true;
+                delay = _fireDelay.Subtract(TimeSpan.FromMilliseconds((AngerLevel - 1f) * 25f));
+            }
+            else
+            {
+                _isMassFiring = false;
+                delay = _slowFireDelay.Subtract(TimeSpan.FromMilliseconds((AngerLevel - 1f) * 100f));
+            }
+
+            _isFiring = true;
+
+            RunLatent(t =>
+            {
+                _lastFired += t;
+
+                if (_lastFired > delay.Ticks)
+                {
+                    Fire();
+                    _lastFired = 0;
+                }
+
+                if (_isFiring)
+                    return ProcessState.Running;
+                else
+                    return ProcessState.Completed;
+            }
+            );
+        }
+
+        public void Fire()
+        {
+            if (_isMassFiring)
+            {
+                var bulletDirection = new Vector2((Single)Math.Cos(_fireAngle) * -1.0f, (Single)Math.Sin(_fireAngle));
+                bulletDirection.Normalize();
+                var bullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("EyeBullet"), new Vector2(Location.X + 0.48f, Location.Y + 1.27f));
+                bullet.SetFrameSet("Zazumo.FrameSets.EnemyBullet");
+                bullet.BulletSource = ZazumoProjectileActor.BulletSources.Enemy;
+                var bulletVelocity = bulletDirection * _bulletSpeed;
+                bullet.SetVelocity(bulletVelocity.X, bulletVelocity.Y, 0f);
+
+                if (_isFireAngleIncreasing)
+                {
+                    _fireAngle += _fireAngleStep;
+
+                    if (_fireAngle > (Math.PI / 2f))
+                        _isFireAngleIncreasing = false;
+                }
+                else
+                {
+                    _fireAngle -= _fireAngleStep;
+
+                    if (_fireAngle < (-Math.PI / 2f))
+                        _isFireAngleIncreasing = true;
+                }
+            }
+            else
+            {
+                var bulletDirection = this._target.Location - this.Location;
+                bulletDirection.Normalize();
+                var bullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("EyeBullet"), new Vector2(Location.X + 0.48f, Location.Y + 1.27f));
+                bullet.SetFrameSet("Zazumo.FrameSets.EnemyBullet");
+                bullet.BulletSource = ZazumoProjectileActor.BulletSources.Enemy;
+                var bulletVelocity = bulletDirection * _bulletSpeed;
+                bullet.SetVelocity(bulletVelocity.X, bulletVelocity.Y, 0f);
+            }
+        }
+
+        public void StopFiring()
+        {
+            if (_isFiring == false)
+                return;
+
+            _isFiring = false;
+
+            In((Int32)_fireDelay.TotalMilliseconds).Milliseconds.Run(() => _lastFired = _fireDelay.Ticks + 1);
+        }
+
+        protected override void OnActorCollided(Phat.Messages.ActorCollidedEvent @event)
+        {
+            base.OnActorCollided(@event);
+
+            if (@event.OtherActor is ZazumoProjectileActor)
+            {
+                if (IsInvincible)
+                {
+                    @event.Cancel = true;
+                    return;
+                }
+
+                if (((ZazumoProjectileActor)@event.OtherActor).BulletSource == ZazumoProjectileActor.BulletSources.Zazumo)
+                {
+                    Hit(((ZazumoProjectileActor)@event.OtherActor).BulletPower);
+                }
+            }
+        }
+
+        public void ResetHitPoints()
+        {
+            this.HitPoints = 15;
+        }
+    }
+
+    public class SquidArm : EnemyActor
+    {
+        public BoulderFlockActor Flock { get; private set; }
+
+        protected override void OnInitializing(object initializationData)
+        {
+            base.OnInitializing(initializationData);
+            CanDamagePlayer = false;
+            IsMiniBoss = true;
+        }
+
+        public void SetFlock(BoulderFlockActor flock)
+        {
+            this.Flock = flock;
+        }
+
+        protected override void OnActorCollided(Phat.Messages.ActorCollidedEvent @event)
+        {
+            base.OnActorCollided(@event);
+
+            if (IsInvincible)
+            {
+                @event.Cancel = true;
+                return;
+            }
+
+            if (@event.OtherActor is ZazumoProjectileActor)
+            {
+                return;
+            }
+        }
+    }
+}

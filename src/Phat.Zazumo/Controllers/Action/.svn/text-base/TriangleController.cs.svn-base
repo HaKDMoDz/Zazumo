@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.Zazumo.Actors;
+
+namespace Phat.Zazumo.Controllers.Action
+{
+    public class TriangleController : PatternActorController<TriangleFlockActor>
+    {
+        protected override void OnActorInitialized()
+        {
+            base.OnActorInitialized();
+            this.SetPatternSegment(new TriangleFadeInPatternSegment());
+        }
+
+        public override void Update(TimeSpan ellapsedTime)
+        {
+            base.Update(ellapsedTime);
+
+            foreach (var enemy in ((TriangleFlockActor)Actor).Segments)
+            {
+                if (enemy.Location.X < -1f || enemy.Location.X > 10f)
+                    enemy.Destroy();
+            }
+        }
+    }
+
+    public class TriangleFadeInPatternSegment : PatternSegment<TriangleFlockActor>
+    {
+        private readonly TimeSpan Duration = TimeSpan.FromMilliseconds(1000);
+
+        public override void Begin()
+        {
+            foreach (var enemy in Actor.Segments)
+            {
+                enemy.AnimateProperty("Opacity", 0.0f, 1.0f, Duration);
+            }
+        }
+
+        public override void End()
+        {
+            foreach (var enemy in Actor.Segments)
+            {
+                enemy.CanDamagePlayer = true;
+            }
+
+            base.SetPatternSegment(new TriangleMovePatternSegment());
+        }
+
+        public override void Update(TimeSpan ellapsedTime)
+        {
+            
+        }
+
+        public override Boolean IsComplete(TimeSpan ellapsedSegmentTime)
+        {
+            return ellapsedSegmentTime >= Duration;
+        }
+    }
+
+
+    public class TriangleMovePatternSegment : PatternSegment<TriangleFlockActor>
+    {
+        private readonly TimeSpan DelayDuration = TimeSpan.FromMilliseconds(400);
+        private const Single Speed = 4f;
+        
+        private Int32 triangleIndex = 0;
+        private TimeSpan currentEllapsedTime = TimeSpan.Zero;
+
+        public override void Begin()
+        {
+            
+        }
+
+        public override void End()
+        {
+            
+        }
+
+        public override void Update(TimeSpan ellapsedTime)
+        {
+            currentEllapsedTime = currentEllapsedTime.Add(ellapsedTime);
+
+            if (currentEllapsedTime >= DelayDuration)
+            {
+                Actor.Segments[triangleIndex].SetVelocity(Actor.StartPosition == Resources.StartPosition.Left ? 1.0f * Speed : -1.0f * Speed, 0f, 0f);
+                Actor.Segments[triangleIndex].SetVelocity(Actor.StartPosition == Resources.StartPosition.Left ? 1.0f * Speed : -1.0f * Speed, 0f, 0f);
+                currentEllapsedTime = TimeSpan.Zero;
+                triangleIndex++;
+            }
+        }
+
+        public override bool IsComplete(TimeSpan ellapsedSegmentTime)
+        {
+            return triangleIndex >= 8;
+        }
+    }
+}

@@ -1,0 +1,377 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.Actors;
+using Phat.MessageBus;
+using Microsoft.Xna.Framework;
+using Phat.Processors;
+using Phat.Animations;
+
+namespace Phat
+{
+    public abstract class Actor : IActorEventSubscriptionProvider, ILocatable, IEventPublisher, IActorFactoryProvider, ILatentFunctionProvider
+    {
+        private readonly Guid _actorId;
+        private readonly List<ActionProcess> _processes;
+        public Guid ActorId { get { return _actorId; } }
+
+        public IResourceDictionary Resources { get; set; }
+
+        public String Name { get; set; }
+
+        #region ctor
+        public Actor()
+        {
+            _state = null;
+            ((ILocatable)this).Location = new Vector3(0.0f, 0.0f, 0.0f);
+            this._actorId = Guid.NewGuid();
+            this.Opacity = 1f;
+            this._eventHandlers = new Dictionary<Type, IActorEventHandler>();
+            this._processes = new List<ActionProcess>();
+        }
+        #endregion
+
+        #region State
+
+        private IActorState _state;
+        public Type State
+        {
+            get
+            {
+                if (_state == null)
+                    return null;
+
+                return _state.GetType();
+            }
+        }
+
+        protected void SetState<TState>()
+            where TState : IActorState
+        {
+            _state = (IActorState)Activator.CreateInstance(typeof(TState));
+            _state.SetActor(this);
+            _state.EnterState();
+        }
+        #endregion
+
+        #region Latent Functions
+        private IProcessRunner _processRunner;
+
+        void ILatentFunctionProvider.SetProcessRunner(IProcessRunner processRunner)
+        {
+            _processRunner = processRunner;
+        }
+
+        protected void RunLatent(Func<Int64, ProcessState> action)
+        {
+            var process = new ActionProcess(action);
+            _processes.Add(process);
+            _processRunner.ScheduleProcess(process);
+        }
+        #endregion
+
+        #region Event Handling
+        private readonly IDictionary<Type, IActorEventHandler> _eventHandlers;
+
+        void IActorEventSubscriptionProvider.AddHandler(IActorEventHandler handler)
+        {
+            _eventHandlers[handler.EventType] = handler;
+        }
+
+        void IActorEventSubscriptionProvider.HandleEvent(Object @event)
+        {
+            var eventType = @event.GetType();
+
+            if (!_eventHandlers.ContainsKey(eventType))
+                return;
+
+            var handler = _eventHandlers[eventType];
+
+            if (State == null || !handler.HandledStates.Contains(State))
+            {
+                var action = handler.GetHandler();
+                if (action == null)
+                    return;
+
+                action.DynamicInvoke(@event);
+            }
+            else
+            {
+                handler.GetHandler(State).DynamicInvoke(_state, @event);
+            }
+        }
+        #endregion
+
+        #region Event Publishing
+        private IBus _bus;
+
+        protected void Publish(Object message)
+        {
+            if (_bus == null)
+                return;
+
+            _bus.Publish(message);
+        }
+
+        void IEventPublisher.SetBus(IBus bus)
+        {
+            _bus = bus;
+        }
+        #endregion
+
+        #region Location
+        private Vector3 _location;
+
+        public Vector3 Location
+        {
+            get
+            {
+                if (_attachedActor == null)
+                    return _location;
+                else
+                    return _attachedActor.Location + new Vector3(_attachmentOffset.X, _attachmentOffset.Y, 0);
+            }
+            set
+            {
+                _location = value;
+            }
+        }
+
+        public Single Opacity { get; set; }
+
+        public void SetLocation(Single x, Single y, Single z)
+        {
+            this.OnSetLocation(x, y, z);
+        }
+
+        protected virtual void OnSetLocation(Single x, Single y, Single z)
+        {
+            this._location = new Vector3(x, y, z);
+            this._bus.Publish(new ActorPositionSetEvent(ActorId, new Vector2(x, y)), true);
+        }
+        #endregion
+
+        #region Initialization
+
+        public void Initialize(Object initializationData)
+        {
+            this.OnInitializing(initializationData);
+        }
+
+        protected virtual void OnInitializing(Object initializationData)
+        {
+
+        }
+
+        #endregion
+
+        public Boolean IsDestoryed { get; set; }
+
+        protected IActorFactory ActorFactory { get; private set; }
+
+        void IActorFactoryProvider.SetActorFactory(IActorFactory actorFactory)
+        {
+            this.ActorFactory = actorFactory;
+        }
+
+        public void SetZIndex(Int32 zIndex)
+        {
+            this._bus.Publish(new ActorZIndexSetEvent(this.ActorId, zIndex));
+        }
+
+        public void SetSprite(String spriteKey)
+        {
+            this._bus.Publish(new ActorSpriteSetEvent(this.ActorId, spriteKey));
+        }
+
+        public void SetFrameSet(String frameSetKey)
+        {
+            this._bus.Publish(new ActorFrameSetSetEvent(this.ActorId, frameSetKey));
+        }
+
+        public AnimationContext SetAnimation(Animation animation)
+        {
+            AnimationContext context = new AnimationContext();
+
+            animation.SetActor(this);
+            animation.Initialize();
+            this._bus.Publish(new AnimationStartedEvent(this.ActorId, animation), true);
+
+            RunLatent(t =>
+                {
+                    animation.Run(t);
+
+                    if (animation.IsComplete)
+                    {
+                        if (context.Callback != null)
+                            context.Callback.Invoke();
+
+                        return ProcessState.Completed;
+                    }
+                    else
+                    {
+                        return ProcessState.Running;
+                    }
+                });
+
+            OnSetAnimation(animation);
+
+            return context;
+        }
+
+        protected DelayHelper In(Int32 delayValue)
+        {
+            var helper = new DelayHelper(delayValue, this._processRunner);
+            _processes.Add((ActionProcess)helper.Process);
+            return helper;
+        }
+
+        protected virtual void OnSetAnimation(Animation animation)
+        {
+
+        }
+
+        public void KillProcesses()
+        {
+            foreach (var process in _processes)
+            {
+                _processRunner.KillProcess(process);
+            }
+
+            _processes.Clear();
+        }
+
+        public void RunStoryboard(Storyboard storyboard)
+        {
+            storyboard.Begin(this._processRunner, this);
+
+            foreach (var child in storyboard.Children)
+            {
+                this._bus.Publish(new AnimationStartedEvent(this._actorId, child.Timeline));
+            }
+        }
+
+        public void AnimateProperty(String property, Object fromValue, Object toValue, TimeSpan duration)
+        {
+            var storyboard = new Storyboard
+            {
+                Children = new StoryboardTarget[]
+                {
+                    new StoryboardTarget 
+                    { 
+                        TargetActor = this, TargetProperty = property, Timeline = new SingleAnimationUsingKeyFrames()
+                        {
+                            Actor = this,
+                            KeyFrames = new SingleKeyFrame[]
+                            {
+                                new LinearSingleKeyFrame() { KeyTime = new KeyTime { TimeSpan = TimeSpan.Zero }, Value = (Single)fromValue },
+                                new LinearSingleKeyFrame() { KeyTime = new KeyTime { TimeSpan = duration }, Value = (Single)toValue }
+                            }
+                        }
+                    }
+                }
+            };
+
+            RunStoryboard(storyboard);
+        }
+
+        public void SetProperty(String property, Object value)
+        {
+            this.Publish(new ActorPropertySetEvent(this.ActorId, property, value));
+        }
+
+        public void ApplyForce(Single x, Single y)
+        {
+            OnForceApplied(x, y);
+        }
+
+        public void SetVelocity(Single x, Single y, Single z)
+        {
+            if (x == Single.NaN || y == Single.NaN)
+                return;
+
+            OnSetVelocity(x, y, z);
+        }
+
+        protected virtual void OnSetVelocity(Single x, Single y, Single z)
+        {
+            this.Publish(new ActorVelocitySetEvent(ActorId, new Vector2(x, y)));
+        }
+
+        protected virtual void OnForceApplied(Single x, Single y)
+        {
+            this.Publish(new ForceAppliedToActorEvent(this.ActorId, new Vector2(x, y)));
+        }
+
+
+        private Actor _attachedActor = null;
+        private Vector2 _attachmentOffset = Vector2.Zero;
+        public void AttachTo(Actor actor)
+        {
+            _attachedActor = actor;
+            _attachmentOffset = Vector2.Zero;
+        }
+
+        public void AttachTo(Actor actor, Vector2 offset)
+        {
+            this.OnAttached(actor, offset);
+        }
+
+        protected virtual void OnAttached(Actor actor, Vector2 offset)
+        {
+            _attachedActor = actor;
+            _attachmentOffset = offset;
+        }
+
+        public void Dettach()
+        {
+            this.OnDettached();
+        }
+
+        protected virtual void OnDettached()
+        {
+            SetLocation(Location.X, Location.Y, Location.Z);
+            _attachedActor = null;
+            _attachmentOffset = Vector2.Zero;
+        }
+
+        #region Destroy
+        public void Destroy()
+        {
+            OnDestroy();
+        }
+
+        protected virtual void OnDestroy()
+        {
+            this.IsDestoryed = true;
+
+            foreach (var process in _processes)
+            {
+                _processRunner.KillProcess(process);
+            }
+
+            _processes.Clear();
+            _bus.Publish(new ActorDestroyedEvent(this));
+        }
+        #endregion
+    }
+
+    public abstract class Actor<TActor> : Actor
+        where TActor : Actor<TActor>
+    {
+        protected new void SetState<TState>()
+            where TState : IActorState<TActor>
+        {
+            base.SetState<TState>();
+        }
+
+        protected ActorEventHandler<TActor, TActorEvent> Handle<TActorEvent>()
+            where TActorEvent : ActorEvent
+        {
+            var handler = new ActorEventHandler<TActor, TActorEvent>();
+            ((IActorEventSubscriptionProvider)this).AddHandler(handler);
+            return handler;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Controllers
+END
+IGameSetters.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Controllers/IGameSetters.cs
+END
+BaseController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Controllers/BaseController.cs
+END
+GameMode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Controllers/GameMode.cs
+END
+GameStack.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Controllers/GameStack.cs
+END
+IHandle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Controllers/IHandle.cs
+END
+PhatGame.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/Controllers/PhatGame.cs
+END

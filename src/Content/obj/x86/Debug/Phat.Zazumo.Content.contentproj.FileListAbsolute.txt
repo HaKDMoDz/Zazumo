@@ -1,0 +1,2 @@
+C:\Dev\Zazumo\src\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Content\obj\x86\Debug\ResolveAssemblyReference.cache

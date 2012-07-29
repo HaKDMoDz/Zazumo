@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep
+END
+DTSweep.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/DTSweep.cs
+END
+DTSweepPointComparator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepPointComparator.cs
+END
+DTSweepConstraint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepConstraint.cs
+END
+DTSweepContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/DTSweepContext.cs
+END
+AdvancingFront.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/AdvancingFront.cs
+END
+AdvancingFrontNode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/AdvancingFrontNode.cs
+END
+PointOnEdgeException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDT/Delaunay/Sweep/PointOnEdgeException.cs
+END

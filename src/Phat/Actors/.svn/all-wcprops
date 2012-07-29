@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Phat/!svn/ver/12/Phat.Zazumo/trunk/src/Phat/Actors
+END
+ActorController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorController.cs
+END
+ActorFrameSetSetEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorFrameSetSetEvent.cs
+END
+ActorSpriteSetEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorSpriteSetEvent.cs
+END
+ActorResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorResource.cs
+END
+ILatentFunctionProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ILatentFunctionProvider.cs
+END
+IActorRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IActorRepository.cs
+END
+IActorState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IActorState.cs
+END
+IActorFactoryProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IActorFactoryProvider.cs
+END
+Archetype.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/Archetype.cs
+END
+ActorPropertySetEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/Actors/ActorPropertySetEvent.cs
+END
+ActorDestroyedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorDestroyedEvent.cs
+END
+IArchetypeInitializable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IArchetypeInitializable.cs
+END
+ILocatable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ILocatable.cs
+END
+ActorEventSubscriptionBehavior.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorEventSubscriptionBehavior.cs
+END
+ActorFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorFactory.cs
+END
+IResourceInitializable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IResourceInitializable.cs
+END
+ActorCreatedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorCreatedEvent.cs
+END
+IActorEventSubscriptionProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IActorEventSubscriptionProvider.cs
+END
+AnimationStartedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/AnimationStartedEvent.cs
+END
+ActorZIndexSetEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorZIndexSetEvent.cs
+END
+ActorRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorRepository.cs
+END
+ActorEventHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorEventHandler.cs
+END
+Actor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/Actors/Actor.cs
+END
+ActorState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorState.cs
+END
+IActorFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/IActorFactory.cs
+END
+ActorEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Actors/ActorEvent.cs
+END

@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Phat/!svn/ver/12/Phat.Zazumo/trunk/src/Phat/ActorModel
+END
+UICarousel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/UICarousel.cs
+END
+RetractableSpikeActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/RetractableSpikeActor.cs
+END
+ITouchable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ITouchable.cs
+END
+KeyActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/KeyActor.cs
+END
+ExplodableArrowActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ExplodableArrowActor.cs
+END
+BubbleParticleSystem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/ActorModel/BubbleParticleSystem.cs
+END
+CharacterActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/ActorModel/CharacterActor.cs
+END
+EffectActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/EffectActor.cs
+END
+UITextBlockActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/ActorModel/UITextBlockActor.cs
+END
+BurgalsActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/BurgalsActor.cs
+END
+ProjectileActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/ActorModel/ProjectileActor.cs
+END
+TriggerVolume.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/TriggerVolume.cs
+END
+PermanentArrowActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/PermanentArrowActor.cs
+END
+TerrainActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/TerrainActor.cs
+END
+UIToolButtonActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/UIToolButtonActor.cs
+END
+UIButtonActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat/ActorModel/UIButtonActor.cs
+END
+UIBackgroundActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat/ActorModel/UIBackgroundActor.cs
+END
+IMortal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/IMortal.cs
+END
+BombActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/ActorModel/BombActor.cs
+END
+RetractableSpikeButtonActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/RetractableSpikeButtonActor.cs
+END
+StartPositionActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/StartPositionActor.cs
+END
+DecoratorActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/DecoratorActor.cs
+END
+MedalActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/MedalActor.cs
+END
+ScriptTriggerVolume.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ScriptTriggerVolume.cs
+END
+ScriptedSearchableActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ScriptedSearchableActor.cs
+END
+BreakableWallActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/BreakableWallActor.cs
+END
+UserArrowActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/UserArrowActor.cs
+END
+TerrainTile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/TerrainTile.cs
+END
+SpotlightEffectActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/SpotlightEffectActor.cs
+END
+ArrowActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ArrowActor.cs
+END
+TutorialTextTriggerVolume.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/TutorialTextTriggerVolume.cs
+END
+UIPanelActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/UIPanelActor.cs
+END
+IExplodable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/IExplodable.cs
+END
+RotatingArrowActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/RotatingArrowActor.cs
+END
+UITextPanelActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/UITextPanelActor.cs
+END
+DoorActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/DoorActor.cs
+END
+PositionSelectorActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/PositionSelectorActor.cs
+END
+FootprintsActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/FootprintsActor.cs
+END
+ShockwaveEffectActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ShockwaveEffectActor.cs
+END
+PlaceableActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/PlaceableActor.cs
+END
+ParticleSystemActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/ActorModel/ParticleSystemActor.cs
+END
+ISearchable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ISearchable.cs
+END
+MirrorActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/MirrorActor.cs
+END
+UIActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/24/Phat.Zazumo/trunk/src/Phat/ActorModel/UIActor.cs
+END
+SelectionLocationActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/SelectionLocationActor.cs
+END
+Volume.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/Volume.cs
+END
+ExplosionActor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorModel/ExplosionActor.cs
+END

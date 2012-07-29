@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure
+END
+PackageRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure/PackageRepository.cs
+END
+WindowRegionAdapter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure/WindowRegionAdapter.cs
+END
+LocalizedString.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure/LocalizedString.cs
+END
+RegionViewUIService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure/RegionViewUIService.cs
+END
+WorkspaceService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Core/Infrastructure/WorkspaceService.cs
+END

@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net
+END
+MonoGamePeerPickerControllerDelegate.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/MonoGamePeerPickerControllerDelegate.cs
+END
+NetworkMachine.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkMachine.cs
+END
+LocalNetworkGamer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/LocalNetworkGamer.cs
+END
+NetworkSessionJoinError.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionJoinError.cs
+END
+NetworkNotAvailableException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkNotAvailableException.cs
+END
+PacketReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/PacketReader.cs
+END
+NetworkSessionJoinException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionJoinException.cs
+END
+NetworkSessionEndReason.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionEndReason.cs
+END
+NetworkSession.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSession.cs
+END
+NetworkSessionState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionState.cs
+END
+AvailableNetworkSession.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/AvailableNetworkSession.cs
+END
+QualityOfService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/QualityOfService.cs
+END
+NetworkSessionType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionType.cs
+END
+SendDataOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/SendDataOptions.cs
+END
+MonoGameSessionDelegate.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/MonoGameSessionDelegate.cs
+END
+PacketWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/PacketWriter.cs
+END
+NetworkGamer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkGamer.cs
+END
+NetworkException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkException.cs
+END
+NetworkSessionProperties.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/NetworkSessionProperties.cs
+END
+AvailableNetworkSessionCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Net/AvailableNetworkSessionCollection.cs
+END

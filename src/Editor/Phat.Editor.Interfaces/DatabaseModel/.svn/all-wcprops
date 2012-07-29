@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/DatabaseModel
+END
+Package.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/DatabaseModel/Package.cs
+END
+Asset.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/DatabaseModel/Asset.cs
+END
+PackageDatabase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/DatabaseModel/PackageDatabase.cs
+END
+AssetData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/DatabaseModel/AssetData.cs
+END

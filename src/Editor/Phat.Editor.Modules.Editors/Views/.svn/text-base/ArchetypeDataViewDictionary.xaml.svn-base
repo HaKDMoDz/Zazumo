@@ -1,0 +1,687 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:r="clr-namespace:Phat.ActorResources;assembly=Phat"
+                    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:vm="clr-namespace:Phat.Editor.Modules.Editors.ViewModels"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <CollectionViewSource x:Key="ArrowDirectionView">
+        <CollectionViewSource.SortDescriptions>
+            <scm:SortDescription />
+        </CollectionViewSource.SortDescriptions>
+        <CollectionViewSource.Source>
+            <ObjectDataProvider MethodName="GetNames" ObjectType="{x:Type sys:Enum}" >
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="r:ArrowDirection"  />                    
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </CollectionViewSource.Source>
+    </CollectionViewSource>
+
+    <CollectionViewSource x:Key="MirrorDirectionView">
+        <CollectionViewSource.SortDescriptions>
+            <scm:SortDescription />
+        </CollectionViewSource.SortDescriptions>
+        <CollectionViewSource.Source>
+            <ObjectDataProvider MethodName="GetNames" ObjectType="{x:Type sys:Enum}" >
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="r:MirrorDirection"  />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </CollectionViewSource.Source>
+    </CollectionViewSource>
+
+    <CollectionViewSource x:Key="SpikePositionView">
+        <CollectionViewSource.SortDescriptions>
+            <scm:SortDescription />
+        </CollectionViewSource.SortDescriptions>
+        <CollectionViewSource.Source>
+            <ObjectDataProvider MethodName="GetNames" ObjectType="{x:Type sys:Enum}" >
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="r:SpikePosition"  />
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+        </CollectionViewSource.Source>
+    </CollectionViewSource>
+
+    <!-- Concrete -->
+    <DataTemplate DataType="{x:Type vm:ConcreteWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+        </Grid>
+    </DataTemplate>
+
+    <!-- Drawable -->
+    <DataTemplate DataType="{x:Type vm:DrawableArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="3" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="5" VerticalAlignment="Center" Margin="5,0"  />
+        </Grid>
+    </DataTemplate>
+
+    <!-- Arrow -->
+    <DataTemplate DataType="{x:Type vm:ArrowWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Arrow Direction" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+            
+            <ComboBox 
+                Grid.Row="11"
+                Margin="5"
+                VerticalAlignment="Center" 
+                ItemsSource="{Binding Source={StaticResource ArrowDirectionView}}"
+                SelectedItem="{Binding ArrowDirection, Mode=TwoWay}">
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Rotating Arrow -->
+    <DataTemplate DataType="{x:Type vm:RotatingArrowWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Arrow Direction" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="12" Text="Up Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="14" Text="Down Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="16" Text="Left Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="18" Text="Right Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+
+            <ComboBox 
+                Grid.Row="11"
+                Margin="5"
+                VerticalAlignment="Center" 
+                ItemsSource="{Binding Source={StaticResource ArrowDirectionView}}"
+                SelectedItem="{Binding ArrowDirection, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="13"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding UpSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox Grid.Row="15"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding DownSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox Grid.Row="17"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding LeftSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox Grid.Row="19"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding RightSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Mirror -->
+    <DataTemplate DataType="{x:Type vm:MirrorWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Mirror Direction" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+
+            <ComboBox 
+                Grid.Row="11"
+                Margin="5"
+                VerticalAlignment="Center" 
+                ItemsSource="{Binding Source={StaticResource MirrorDirectionView}}"
+                SelectedItem="{Binding MirrorDirection, Mode=TwoWay}">
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Retractable Spike -->
+    <DataTemplate DataType="{x:Type vm:RetractableSpikeWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Spike Position" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="12" Text="Spike Up Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="14" Text="Spike Down Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+
+            <ComboBox 
+                Grid.Row="11"
+                Margin="5"
+                VerticalAlignment="Center" 
+                ItemsSource="{Binding Source={StaticResource SpikePositionView}}"
+                SelectedItem="{Binding SpikePosition, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="13"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding SpikeUpSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox Grid.Row="15"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding SpikeDownSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Retractable Spike Button -->
+    <DataTemplate DataType="{x:Type vm:RetractableSpikeButtonWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Alternate Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+
+            <ComboBox Grid.Row="11"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding AlternateSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Bomb -->
+    <DataTemplate DataType="{x:Type vm:BombWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Timer" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="12" Text="Active Animation" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Timer, Mode=TwoWay}" Grid.Row="11" VerticalAlignment="Center" Margin="5,0"  />
+
+            <ComboBox Grid.Row="13"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Animations}"
+                  SelectedItem="{Binding ActiveAnimation, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+    </DataTemplate>
+
+    <!-- UIResource -->
+    <DataTemplate DataType="{x:Type vm:UIResourceArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="X" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Y" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="3" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="5" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding X, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Y, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+        </Grid>
+    </DataTemplate>
+
+    <!-- Scripted Searchable -->
+    <DataTemplate DataType="{x:Type vm:ScriptedSearchableWorldObjectArchetypeDataViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Behavior" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Text="Sprite" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Text="Collision Hull" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="6" Text="Width" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="8" Text="Height" Margin="5,0" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="10" Text="Script Key" Margin="5,0" VerticalAlignment="Bottom" />
+
+            <ComboBox Grid.Row="1"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Behaviors}"
+                  SelectedItem="{Binding Behavior, Mode=TwoWay}">
+            </ComboBox>
+
+            <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding Sprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <TextBox Text="{Binding Width, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding Height, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+            <TextBox Text="{Binding ScriptKey, Mode=TwoWay}" Grid.Row="11" VerticalAlignment="Center" Margin="5,0"  />
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>

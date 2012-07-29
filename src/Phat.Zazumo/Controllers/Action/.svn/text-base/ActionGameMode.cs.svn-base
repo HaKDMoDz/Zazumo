@@ -1,0 +1,365 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorModel;
+using Phat.Zazumo.Actors;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Resources;
+using Phat.ActorResources;
+using Phat.Messages;
+using Phat.Zazumo.Messages;
+
+namespace Phat.Zazumo.Controllers.Action
+{
+    public class ActionGameMode : GameMode
+    {
+        private ZazumoActor _zazumo;
+        private Rectangle _bounds;
+        private CharacterArchetypeData zazumoData;
+        private Random random;
+
+        private TimeSpan _spawnRate = TimeSpan.FromSeconds(4.0);
+        private TimeSpan _powerupRate = TimeSpan.FromSeconds(2.0);
+
+        private LevelSpawnData[] _normalSpawnData;
+        private TimeSpan _normalTotalTime;
+
+        private FireButton _fireButton;
+        private AmmoMeter _ammoMeter;
+
+        private TimeSpan _powerUpTime = TimeSpan.Zero;
+
+        private LevelSpawnData _growFrogData = new LevelSpawnData { SpawnType = SpawnType.Frog, Data = new FrogSpawnData { SizeAdjustment = FrogEffect.Grow } };
+        private LevelSpawnData _shrinkFrogData = new LevelSpawnData { SpawnType = SpawnType.Frog, Data = new FrogSpawnData { SizeAdjustment = FrogEffect.Shrink } };
+        private LevelSpawnData _ammoFrogData = new LevelSpawnData { SpawnType = SpawnType.Frog, Data = new FrogSpawnData { SizeAdjustment = FrogEffect.Ammo } };
+
+        private List<ZazumoShape> _levelShapeData = new List<ZazumoShape> { ZazumoShape.Star, ZazumoShape.Star, ZazumoShape.Star };
+
+        private enum ZazumoActionMode
+        {
+            Normal,
+            Shape,
+            Boss
+        }
+
+        private ZazumoActionMode _mode;
+
+        protected override void OnInitialize(Object initializationData)
+        {
+            random = new Random();
+            _mode = ZazumoActionMode.Normal;
+            Subscribe<PlayerDiedEvent>(OnPlayerDied);
+            Subscribe<ZazumoShapeChangedEvent>(OnShapeChanged);
+            Subscribe<WormholeClosedEvent>(OnWormholeClosed);
+            Subscribe<MiniBossDestroyedEvent>(OnMiniBossDestroyed);
+
+            ResourceDictionary.LoadPackage("Packages/Zazumo");
+            
+            /*#region Particle Systems
+
+            var particleSystemDictionary = new Dictionary<String, Object>();
+            particleSystemDictionary.Add("BubbleEffect", BubbleParticleSystem.CreateEffect(ResourceDictionary));
+            ResourceDictionary.MergeResources("ParticleSystems", particleSystemDictionary);
+            #endregion*/
+
+            _bounds = new Rectangle(0, 0, 10, 6);
+
+            ActorFactory.Create<DecoratorActor>(new Drawable { Height = _bounds.Height, Width = _bounds.Width, SpriteKey = "Zazumo.Sprites.CloudBackground" }, new Vector2(_bounds.Left, _bounds.Top));
+
+            ActorFactory.Create<WormholeActor>(new WormholeData { Width = 1.0f, Height = 1.0f, SpriteKey = "Zazumo.Sprites.StarWormhole", Size = 1, CollisionHullKey = "WormholeCollisionHull", CollisionGroup = 1, Shape = ZazumoShape.Star, MiniBossData = new LevelSpawnData { SpawnType = SpawnType.Eye, Data = new EyeData { HitPoints = 1 } } }, new Vector2(0.5f, 0.5f));
+            //ActorFactory.Create<WormholeActor>(new WormholeData { Width = 2f, Height = 2f, SpriteKey = "Zazumo.Sprites.StarWormhole", Size = 4, CollisionHullKey = "WormholeCollisionHull", CollisionGroup = 1, Shape = ZazumoShape.Star, MiniBossData = new LevelSpawnData { SpawnType = SpawnType.Boulder, Data = new BoulderData { HitPoints = 3, EnemyCount = 4 } } }, new Vector2(3f, 1f));
+            //ActorFactory.Create<WormholeActor>(new WormholeData { Width = 3f, Height = 3f, SpriteKey = "Zazumo.Sprites.StarWormhole", Size = 6, CollisionHullKey = "WormholeCollisionHull", CollisionGroup = 1, Shape = ZazumoShape.Star, MiniBossData = new LevelSpawnData { SpawnType = SpawnType.Eye, Data = new EyeData { HitPoints = 5 } } }, new Vector2(6f, 3f));
+
+            ActorFactory.Create<WallVolume>(new VolumeWorldObject { Width = _bounds.Width, Height = 0.1f }, new Vector2(_bounds.Left, _bounds.Top));
+            ActorFactory.Create<WallVolume>(new VolumeWorldObject { Width = 0.1f, Height = _bounds.Height }, new Vector2(_bounds.Left, _bounds.Top));
+            ActorFactory.Create<WallVolume>(new VolumeWorldObject { Width = _bounds.Width, Height = 0.1f }, new Vector2(_bounds.Left, _bounds.Bottom));
+            ActorFactory.Create<WallVolume>(new VolumeWorldObject { Width = 0.1f, Height = _bounds.Height }, new Vector2(_bounds.Right, _bounds.Top));
+
+            _normalSpawnData = (LevelSpawnData[])ResourceDictionary.GetResource("Level1NormalSpawnData");
+            CreateZazumo();
+
+            CreateClam();
+        }
+
+        public override void Update(TimeSpan ellapsedTime)
+        {
+            base.Update(ellapsedTime);
+
+            _powerUpTime = _powerUpTime.Add(ellapsedTime);
+            if (_powerUpTime > _powerupRate)
+            {
+                if (_mode == ZazumoActionMode.Shape)
+                {
+                    var r = random.Next(0, 3);
+                    if (r == 0)
+                        Spawn(_growFrogData);
+                    else if (r == 1)
+                        Spawn(_shrinkFrogData);
+                    else if (r == 2)
+                        Spawn(_ammoFrogData);
+                }
+
+                _powerUpTime = TimeSpan.Zero;
+            }
+
+            _normalTotalTime = _normalTotalTime.Add(ellapsedTime);
+
+            if (_normalTotalTime > _spawnRate)
+            {
+                if (_mode != ZazumoActionMode.Boss)
+                {
+                    var index = random.Next(0, _normalSpawnData.Length);
+                    Spawn(_normalSpawnData[index]);
+                }
+
+                _normalTotalTime = TimeSpan.Zero;
+            }
+
+            ViewPort.Left = (Int32)(Math.Min(_bounds.Right + 0.0f - (ViewPort.ResolutionX / Phat.Settings.MetersToPixels), Math.Max(_bounds.Left - 0.0f, (_zazumo.Location.X + zazumoData.Width / 2f) - (ViewPort.ResolutionX / 2f / Phat.Settings.MetersToPixels))) * Phat.Settings.MetersToPixels);
+            ViewPort.Top = (Int32)(Math.Min(_bounds.Bottom + 0.0f - (ViewPort.ResolutionY / Phat.Settings.MetersToPixels), Math.Max(_bounds.Top - 0.0f, (_zazumo.Location.Y + zazumoData.Height / 2f) - (ViewPort.ResolutionY / 2f / Phat.Settings.MetersToPixels))) * Phat.Settings.MetersToPixels);
+        }
+
+        private void Spawn(LevelSpawnData spawnInfo)
+        {
+            switch (spawnInfo.SpawnType)
+            {
+                case SpawnType.Worm:
+                    SpawnWorm((WormSpawnData)spawnInfo.Data);
+                    break;
+                case SpawnType.Frog:
+                    SpawnFrog((FrogSpawnData)spawnInfo.Data);
+                    break;
+
+                case SpawnType.Boulder:
+                    SpawnBoulder((BoulderData)spawnInfo.Data);
+                    break;
+
+                case SpawnType.Eye:
+                    SpawnEye((EyeData)spawnInfo.Data);
+                    break;
+
+                case SpawnType.Triangle:
+                    SpawnTriangle((TriangleShapeData)spawnInfo.Data);
+                    break;
+
+                case SpawnType.Square:
+                    SpawnSquare((SquareShapeData)spawnInfo.Data);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+
+        private void SpawnBoss(SpawnType spawnType)
+        {
+            switch (spawnType)
+            {
+                case SpawnType.Squid:
+                    var controller = AddActorController<SquidController>(ActorFactory.Create<SquidBoss>(ResourceDictionary.GetResource("SquidData"), new Vector2(7f, 1.75f)));
+                    controller.Zazumo = this._zazumo;
+                    break;
+            }
+        }
+
+
+        private void SpawnWorm(WormSpawnData data)
+        {
+            var path = (Vector2[])ResourceDictionary.GetResource(data.MotionPathKey);
+
+            var worm = ActorFactory.Create<WormActor>(data, new Vector2(path[0].X, path[0].Y));
+            var controller = AddActorController<WormController>(worm);
+        }
+
+        private void SpawnEye(EyeData data)
+        {
+            var eye = ActorFactory.Create<EyeFlockActor>(data, Vector2.Zero);
+            var controller = AddActorController<EyeController>(eye);
+        }
+
+        private void SpawnBoulder(BoulderData data)
+        {
+            var enemy = ActorFactory.Create<BoulderFlockActor>(data, Vector2.Zero);
+            var controller = AddActorController<BoulderController>(enemy);
+        }
+
+        private void SpawnTriangle(TriangleShapeData data)
+        {
+            var triangle = ActorFactory.Create<TriangleFlockActor>(data, Vector2.Zero);
+            var controller = AddActorController<TriangleController>(triangle);
+        }
+
+        private void SpawnSquare(SquareShapeData data)
+        {
+            var enemy = ActorFactory.Create<SquareFlockActor>(data, Vector2.Zero);
+            var controller = AddActorController<SquareController>(enemy);
+        }
+
+        private void SpawnFrog(FrogSpawnData data)
+        {
+            FrogActor frog = null;
+
+            switch (data.SizeAdjustment)
+            {
+                case FrogEffect.Shrink:
+                    var resource = ResourceDictionary.GetResource("PurpleFrogData");
+                    frog = ActorFactory.Create<FrogActor>(resource, new Vector2(random.Next((Int32)_bounds.Left + 1, (Int32)_bounds.Right - 1), _bounds.Bottom + 1f));
+                    frog.SetFrameSet("Zazumo.FrameSets.ShrinkFrog");
+                    break;
+                case FrogEffect.Grow:
+                    frog = ActorFactory.Create<FrogActor>(ResourceDictionary.GetResource("GreenFrogData"),
+                                                          new Vector2(random.Next((Int32)_bounds.Left + 1, (Int32)_bounds.Right - 1),
+                                                          _bounds.Bottom + 1f));
+                    frog.SetFrameSet("Zazumo.FrameSets.GrowFrog");
+                    break;
+                case FrogEffect.Ammo:
+                    frog = ActorFactory.Create<FrogActor>(ResourceDictionary.GetResource("YellowFrogData"),
+                                      new Vector2(random.Next((Int32)_bounds.Left + 1, (Int32)_bounds.Right - 1),
+                                      _bounds.Bottom + 1f));
+                    frog.SetFrameSet("Zazumo.FrameSets.AmmoFrog");
+
+                    break;
+                default:
+                    break;
+            }
+            var controller = AddActorController<FrogController>(frog);
+        }
+
+        private void CreateZazumo()
+        {
+            zazumoData = (CharacterArchetypeData)ResourceDictionary.GetResource("ZazumoData");
+            _zazumo = ActorFactory.Create<ZazumoActor>(zazumoData, new Vector2(_bounds.Left + _bounds.Width / 2f - zazumoData.Width / 2f, _bounds.Top + _bounds.Height / 2 - zazumoData.Height / 2f));
+            AddActorController<ZazumoController>(_zazumo);
+        }
+
+        public void OnPlayerDied(PlayerDiedEvent @event)
+        {
+            _zazumo.Destroy();
+            CreateZazumo();
+
+            if (_mode == ZazumoActionMode.Shape)
+                _mode = ZazumoActionMode.Normal;
+
+            foreach (var actor in ActorRepository.GetAllActors<EnemyActor>())
+            {
+                if (!actor.IsMiniBoss)
+                    actor.Destroy();
+            }
+
+            foreach (var actor in ActorRepository.GetAllActors<FrogActor>())
+            {
+                actor.Destroy();
+            }
+
+            foreach (var actor in ActorRepository.GetAllActors<PowerUpActor>())
+            {
+                actor.SetZIndex(100);
+            }
+        }
+
+        public void OnShapeChanged(ZazumoShapeChangedEvent @event)
+        {
+            if (@event.Shape == ZazumoShape.None)
+            {
+                foreach (var actor in ActorRepository.GetAllActors<FrogActor>())
+                {
+                    actor.Destroy();
+                }
+
+                if (this._mode == ZazumoActionMode.Shape)
+                    this._mode = ZazumoActionMode.Normal;
+
+                if (_fireButton != null)
+                {
+                    _fireButton.Destroy();
+                    _fireButton = null;
+                }
+
+                if (_ammoMeter != null)
+                {
+                    _ammoMeter.Destroy();
+                    _ammoMeter = null;
+                }
+            }
+            else
+            {
+                _fireButton = ActorFactory.Create<FireButton>(new UIResource { X = 0.9f, Y = 0.80f, Width = 0.1f, Height = 0.175f, SpriteKey = "Zazumo.Sprites.FireButton" });
+                _ammoMeter = ActorFactory.Create<AmmoMeter>(new UIResource { X = 0.9f, Y = 0.15f, Width = 0.09f, Height = 0.6f, SpriteKey = "Zazumo.Sprites.AmmoMeter" });
+
+                _fireButton.AnimateProperty("Opacity", 0.0f, 0.5f, TimeSpan.FromMilliseconds(500));
+                _ammoMeter.AnimateProperty("Opacity", 0.0f, 0.5f, TimeSpan.FromMilliseconds(500));
+                _ammoMeter.AmmoLevel = @event.AmmoLevel;
+                _zazumo.SetAmmo(_ammoMeter);
+
+                if (this._mode == ZazumoActionMode.Normal)
+                    this._mode = ZazumoActionMode.Shape;
+            }
+        }
+
+        public void OnWormholeClosed(WormholeClosedEvent @event)
+        {
+            this._mode = ZazumoActionMode.Normal;
+            _zazumo.ReleaseShape();
+
+            Spawn(@event.MiniBossData);         
+        }
+
+        public void OnMiniBossDestroyed(MiniBossDestroyedEvent @event)
+        {
+            var wormholes = ActorRepository.GetAllActors<WormholeActor>();
+
+            if (wormholes.Count() > 0)
+            {
+                CreateClam();
+            }
+            else
+            {
+                // Start boss battle.
+                _mode = ZazumoActionMode.Boss;
+
+                foreach (var enemy in ActorRepository.GetAllActors<EnemyActor>())
+                    enemy.Destroy();
+
+                var clam = ActorFactory.Create<ClamActor>(ResourceDictionary.GetResource("ClamData"), new Vector2(4.5f, -1.0f));
+
+                foreach (var shape in _levelShapeData)
+                {
+                    clam.AddItem(new ClamShapeItem { Shape = shape });
+                }
+
+                clam.AnimateProperty("YOffset", 0f, 1.5f, TimeSpan.FromMilliseconds(1000));
+                In(1).Seconds.Run(() => clam.Open());
+                In(2).Seconds.Run(() =>
+                {
+                    clam.AnimateProperty("YOffset", 1.5f, 0f, TimeSpan.FromMilliseconds(1000));
+
+                    foreach (var item in this.ActorRepository.GetAllActors<PowerUpActor>())
+                    {
+                        AddActorController<PowerUpController>(item);
+                    }
+                });
+
+                In(3).Seconds.Run(() => SpawnBoss(SpawnType.Squid));                
+            }
+        }
+
+        private void CreateClam()
+        {
+            var clam = ActorFactory.Create<ClamActor>(ResourceDictionary.GetResource("ClamData"), new Vector2(4.5f, -1.0f));
+           
+            clam.AddItem(new ClamShapeItem { Shape = ActorRepository.GetAllActors<WormholeActor>().First().Shape });
+
+            AddActorController<ClamController>(clam);
+
+            In(4).Seconds.Run(() => 
+                {
+                    foreach (var item in this.ActorRepository.GetAllActors<PowerUpActor>())
+                    {
+                        AddActorController<PowerUpController>(item);
+                    }
+                });            
+        }
+    }
+}

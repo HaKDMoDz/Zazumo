@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect
+END
+Effect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/Effect.cs
+END
+EffectParameter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectParameter.cs
+END
+IEffectMatrices.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/IEffectMatrices.cs
+END
+BasicEffect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/BasicEffect.cs
+END
+EffectTechniqueCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectTechniqueCollection.cs
+END
+EffectPassCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectPassCollection.cs
+END
+IEffectLights.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/IEffectLights.cs
+END
+IEffectFog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/IEffectFog.cs
+END
+EffectTechnique.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectTechnique.cs
+END
+EffectPass.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectPass.cs
+END
+EffectPool.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectPool.cs
+END
+EffectParameterCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Graphics/Effect/EffectParameterCollection.cs
+END

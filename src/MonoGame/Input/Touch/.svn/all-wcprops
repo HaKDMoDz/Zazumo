@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch
+END
+TouchLocation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/TouchLocation.cs
+END
+TouchLocationState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/TouchLocationState.cs
+END
+TouchPanelCapabilities.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/TouchPanelCapabilities.cs
+END
+TouchCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/TouchCollection.cs
+END
+GestureSample.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/GestureSample.cs
+END
+GestureType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/GestureType.cs
+END
+TouchPanel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Input/Touch/TouchPanel.cs
+END

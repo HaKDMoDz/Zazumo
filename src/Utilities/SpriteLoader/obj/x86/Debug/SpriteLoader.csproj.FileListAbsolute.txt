@@ -1,0 +1,10 @@
+C:\Dev\Karendow\src\Utilities\SpriteLoader\bin\Debug\SpriteLoader.exe
+C:\Dev\Karendow\src\Utilities\SpriteLoader\bin\Debug\SpriteLoader.pdb
+C:\Dev\Karendow\src\Utilities\SpriteLoader\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Utilities\SpriteLoader\obj\x86\Debug\SpriteLoader.exe
+C:\Dev\Karendow\src\Utilities\SpriteLoader\obj\x86\Debug\SpriteLoader.pdb
+C:\Dev\Zazumo\src\Utilities\SpriteLoader\bin\Debug\SpriteLoader.exe
+C:\Dev\Zazumo\src\Utilities\SpriteLoader\bin\Debug\SpriteLoader.pdb
+C:\Dev\Zazumo\src\Utilities\SpriteLoader\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Dev\Zazumo\src\Utilities\SpriteLoader\obj\x86\Debug\SpriteLoader.exe
+C:\Dev\Zazumo\src\Utilities\SpriteLoader\obj\x86\Debug\SpriteLoader.pdb

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces
+END
+Phat.Editor.Interfaces.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Phat.Editor.Interfaces.csproj.user
+END
+packages.config
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/packages.config
+END
+ExportContextMenuItemAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/ExportContextMenuItemAttribute.cs
+END
+BehaviorRegistry.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/BehaviorRegistry.cs
+END
+IWorkspaceService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/IWorkspaceService.cs
+END
+IMenuItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/IMenuItem.cs
+END
+LocalizedString.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/LocalizedString.cs
+END
+Phat.Editor.Interfaces.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Phat.Editor.Interfaces.csproj
+END
+IEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/IEditor.cs
+END
+ExportViewAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/ExportViewAttribute.cs
+END
+ExportGlobalCommand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/ExportGlobalCommand.cs
+END
+ViewFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/ViewFactory.cs
+END
+EditorViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/EditorViewModel.cs
+END
+AssetTypes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/AssetTypes.cs
+END
+IPackageRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/IPackageRepository.cs
+END
+IRegionViewUIService.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/IRegionViewUIService.cs
+END
+Regions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Regions.cs
+END
+ExportMenuItemAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/ExportMenuItemAttribute.cs
+END

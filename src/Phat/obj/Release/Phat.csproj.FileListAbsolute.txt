@@ -1,0 +1,14 @@
+C:\Dev\ProfessionalBurglar\Phat\bin\Release\Phat.dll
+C:\Dev\ProfessionalBurglar\Phat\bin\Release\Phat.pdb
+C:\Dev\ProfessionalBurglar\Phat\bin\Release\FarseerPhysics.dll
+C:\Dev\ProfessionalBurglar\Phat\bin\Release\FarseerPhysics.pdb
+C:\Dev\ProfessionalBurglar\Phat\obj\Release\ResolveAssemblyReference.cache
+C:\Dev\ProfessionalBurglar\Phat\obj\Release\Phat.dll
+C:\Dev\ProfessionalBurglar\Phat\obj\Release\Phat.pdb
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Release\Phat.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Release\Phat.pdb
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Release\FarseerPhysics.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\bin\Release\FarseerPhysics.pdb
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Release\Phat.dll
+C:\Users\Phil\Documents\Visual Studio 2010\Projects\ProfessionalBurglar\Phat\obj\Release\Phat.pdb

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ActorResources="Phat.ActorResources" xmlns:Animations="Phat.Animations">
+  <Asset Type="ActorResources:ResourceModel[]">
+    <Item Type="ActorResources:ArchetypeResource">
+      <Key>Splash.Archetypes.SplashBackground</Key>
+      <Data Type="ActorResources:UIResource">
+        <X>0</X>
+        <Y>0</Y>
+        <Name Null="true" />
+        <SpriteKey>Splash.Sprites.Splash</SpriteKey>
+        <Width>1</Width>
+        <Height>1</Height>
+      </Data>
+    </Item>
+    <Item Type="ActorResources:SpriteResource">
+      <Key>Splash.Sprites.Splash</Key>
+      <TextureKey>Splash.Textures.SplashScreen</TextureKey>
+      <UCoordinate>0</UCoordinate>
+      <VCoordinate>0</VCoordinate>
+      <Width>800</Width>
+      <Height>480</Height>
+      <HorizontalFlip>false</HorizontalFlip>
+      <VerticalFlip>false</VerticalFlip>
+    </Item>
+    <Item Type="Animations:Storyboard">
+      <Key>Splash.Storyboards.FadeIn</Key>
+      <Children>
+        <Item>
+          <TargetName>Background</TargetName>
+          <TargetProperty>Opacity</TargetProperty>
+          <Timeline Type="Animations:SingleAnimationUsingKeyFrames">
+            <KeyFrames>
+              <Item Type="Animations:LinearSingleKeyFrame">
+                <KeyTime>
+                  <TimeSpan>PT0S</TimeSpan>
+                </KeyTime>
+                <Value>0</Value>
+              </Item>
+              <Item Type="Animations:LinearSingleKeyFrame">
+                <KeyTime>
+                  <TimeSpan>PT0.3S</TimeSpan>
+                </KeyTime>
+                <Value>1</Value>
+              </Item>
+            </KeyFrames>
+          </Timeline>
+        </Item>
+      </Children>
+    </Item>
+    <Item Type="Animations:Storyboard">
+      <Key>Splash.Storyboards.FadeOut</Key>
+      <Children>
+        <Item>
+          <TargetName>Background</TargetName>
+          <TargetProperty>Opacity</TargetProperty>
+          <Timeline Type="Animations:SingleAnimationUsingKeyFrames">
+            <KeyFrames>
+              <Item Type="Animations:LinearSingleKeyFrame">
+                <KeyTime>
+                  <TimeSpan>PT0S</TimeSpan>
+                </KeyTime>
+                <Value>1</Value>
+              </Item>
+              <Item Type="Animations:LinearSingleKeyFrame">
+                <KeyTime>
+                  <TimeSpan>PT0.3S</TimeSpan>
+                </KeyTime>
+                <Value>0</Value>
+              </Item>
+            </KeyFrames>
+          </Timeline>
+        </Item>
+      </Children>
+    </Item>
+    <Item Type="ActorResources:Texture2DResource">
+      <Key>Splash.Textures.SplashScreen</Key>
+      <Path>Backgrounds\Splash.png</Path>
+    </Item>
+  </Asset>
+</XnaContent>

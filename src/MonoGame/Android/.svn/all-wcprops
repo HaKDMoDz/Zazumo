@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android
+END
+GraphicsDeviceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android/GraphicsDeviceManager.cs
+END
+PowerStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android/PowerStatus.cs
+END
+AndroidGameWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android/AndroidGameWindow.cs
+END
+Game.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android/Game.cs
+END
+XnaGameWindowImpl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Android/XnaGameWindowImpl.cs
+END

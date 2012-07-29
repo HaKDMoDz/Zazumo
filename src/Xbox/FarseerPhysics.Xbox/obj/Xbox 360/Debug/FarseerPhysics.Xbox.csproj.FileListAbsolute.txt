@@ -1,0 +1,6 @@
+C:\Dev\Karendow\src\Xbox\FarseerPhysics.Xbox\obj\Xbox 360\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Xbox\FarseerPhysics.Xbox\obj\Xbox 360\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dev\Karendow\build\Xbox\Debug\FarseerPhysics.Xbox.dll
+C:\Dev\Karendow\build\Xbox\Debug\FarseerPhysics.Xbox.pdb
+C:\Dev\Karendow\src\Xbox\FarseerPhysics.Xbox\obj\Xbox 360\Debug\FarseerPhysics.Xbox.dll
+C:\Dev\Karendow\src\Xbox\FarseerPhysics.Xbox\obj\Xbox 360\Debug\FarseerPhysics.Xbox.pdb

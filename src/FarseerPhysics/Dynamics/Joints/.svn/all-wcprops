@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints
+END
+FixedLineJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedLineJoint.cs
+END
+FixedMouseJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedMouseJoint.cs
+END
+PulleyJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/PulleyJoint.cs
+END
+FixedDistanceJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedDistanceJoint.cs
+END
+FixedPrismaticJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedPrismaticJoint.cs
+END
+FrictionJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FrictionJoint.cs
+END
+GearJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/GearJoint.cs
+END
+Joint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/Joint.cs
+END
+SliderJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/SliderJoint.cs
+END
+FixedRevoluteJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedRevoluteJoint.cs
+END
+AngleJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/AngleJoint.cs
+END
+LineJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/LineJoint.cs
+END
+DistanceJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/DistanceJoint.cs
+END
+PrismaticJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/PrismaticJoint.cs
+END
+WeldJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/WeldJoint.cs
+END
+FixedFrictionJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedFrictionJoint.cs
+END
+RevoluteJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/RevoluteJoint.cs
+END
+RopeJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/RopeJoint.cs
+END
+FixedAngleJoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Dynamics/Joints/FixedAngleJoint.cs
+END

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Phat.Editor.Modules.Editors.Views.LevelEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Name" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="2" Text="World" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="4" Text="Up Arrows" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="6" Text="Down Arrows" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="8" Text="Left Arrows" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="10" Text="Right Arrows" Margin="5,0" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="12" Text="Bombs" Margin="5,0" VerticalAlignment="Bottom" />
+
+        <TextBox Text="{Binding Name, Mode=TwoWay}" Grid.Row="1" VerticalAlignment="Center" Margin="5,0"  />
+
+        <ComboBox Grid.Row="3"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Worlds}"
+                  SelectedItem="{Binding SelectedWorld, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Key}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBox Text="{Binding UpArrows, Mode=TwoWay}" Grid.Row="5" VerticalAlignment="Center" Margin="5,0"  />
+        <TextBox Text="{Binding DownArrows, Mode=TwoWay}" Grid.Row="7" VerticalAlignment="Center" Margin="5,0"  />
+        <TextBox Text="{Binding LeftArrows, Mode=TwoWay}" Grid.Row="9" VerticalAlignment="Center" Margin="5,0"  />
+        <TextBox Text="{Binding RightArrows, Mode=TwoWay}" Grid.Row="11" VerticalAlignment="Center" Margin="5,0"  />
+        <TextBox Text="{Binding Bombs, Mode=TwoWay}" Grid.Row="13" VerticalAlignment="Center" Margin="5,0"  />
+    </Grid>
+</UserControl>

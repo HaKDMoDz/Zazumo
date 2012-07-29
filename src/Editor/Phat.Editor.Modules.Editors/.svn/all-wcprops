@@ -1,0 +1,123 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/Phat/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/18/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors
+END
+EditorAssetTypes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/EditorAssetTypes.cs
+END
+ExportArchetypeDataEditorAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ExportArchetypeDataEditorAttribute.cs
+END
+IWorldChildEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/IWorldChildEditor.cs
+END
+IWorldEditorContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/IWorldEditorContext.cs
+END
+ArchetypeBasedWorldEditorTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ArchetypeBasedWorldEditorTypeDefinition.cs
+END
+EditorMenuItems.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/EditorMenuItems.cs
+END
+packages.config
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/packages.config
+END
+EditorsModule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/EditorsModule.cs
+END
+IWorldEditorTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/IWorldEditorTypeDefinition.cs
+END
+ExportWorldEditorTypeAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ExportWorldEditorTypeAttribute.cs
+END
+TerrainPosition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/TerrainPosition.cs
+END
+ExportArchetypeBasedWorldEditorTypeAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ExportArchetypeBasedWorldEditorTypeAttribute.cs
+END
+Phat.Editor.Modules.Editors.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Phat.Editor.Modules.Editors.csproj
+END
+SpriteLoader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/SpriteLoader.cs
+END
+IWorldEditorObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/IWorldEditorObject.cs
+END
+ViewNames.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/ViewNames.cs
+END
+WorldEditorContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldEditorContext.cs
+END
+IWorldEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/IWorldEditor.cs
+END
+WorldEditorTypeDefinition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/WorldEditorTypeDefinition.cs
+END

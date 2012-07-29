@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content
+END
+ContentSerializerIgnoreAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentSerializerIgnoreAttribute.cs
+END
+ContentReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReader.cs
+END
+ContentTypeReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentTypeReader.cs
+END
+ContentManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentManager.cs
+END
+ContentSerializerAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentSerializerAttribute.cs
+END
+ContentLoadException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentLoadException.cs
+END
+ContentTypeReaderManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentTypeReaderManager.cs
+END

@@ -1,0 +1,12 @@
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\Phat.Karendow.Resources.dll
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\Phat.Karendow.Resources.pdb
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\Phat.dll
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\ProjectMercury.dll
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\FarseerPhysics.dll
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\Phat.pdb
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\ProjectMercury.pdb
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\ProjectMercury.xml
+C:\Dev\Karendow\src\Phat.Karendow.Resources\bin\Debug\FarseerPhysics.pdb
+C:\Dev\Karendow\src\Phat.Karendow.Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\src\Phat.Karendow.Resources\obj\Debug\Phat.Karendow.Resources.dll
+C:\Dev\Karendow\src\Phat.Karendow.Resources\obj\Debug\Phat.Karendow.Resources.pdb

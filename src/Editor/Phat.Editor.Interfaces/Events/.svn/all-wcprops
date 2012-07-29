@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events
+END
+AssetRenamedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events/AssetRenamedEvent.cs
+END
+PackageDatabaseOpenedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events/PackageDatabaseOpenedEvent.cs
+END
+PackageDeletedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events/PackageDeletedEvent.cs
+END
+PackageCreatedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events/PackageCreatedEvent.cs
+END
+AssetCreatedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Interfaces/Events/AssetCreatedEvent.cs
+END

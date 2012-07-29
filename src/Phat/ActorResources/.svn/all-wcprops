@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/ActorResources
+END
+IPhysicalObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IPhysicalObject.cs
+END
+BombWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/BombWorldObjectArchetypeData.cs
+END
+SpriteResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/SpriteResource.cs
+END
+WorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/ActorResources/WorldObject.cs
+END
+LevelResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/LevelResource.cs
+END
+IMirrorWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IMirrorWorldObject.cs
+END
+ArchetypeBasedBombWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedBombWorldObject.cs
+END
+RetractableSpikeWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/RetractableSpikeWorldObjectArchetypeData.cs
+END
+ArchetypeBasedRetractableSpikeButtonWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedRetractableSpikeButtonWorldObject.cs
+END
+ScriptedSearchableWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ScriptedSearchableWorldObjectArchetypeData.cs
+END
+UIResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/UIResource.cs
+END
+IWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IWorldObject.cs
+END
+ArchetypeBasedScriptedSearchableWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedScriptedSearchableWorldObject.cs
+END
+IRetractableSpikeWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IRetractableSpikeWorldObject.cs
+END
+ArchetypeResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeResource.cs
+END
+ArchetypeBasedArrowWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedArrowWorldObject.cs
+END
+TileDefinitionResourceModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/TileDefinitionResourceModel.cs
+END
+ConcreteWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ConcreteWorldObjectArchetypeData.cs
+END
+ConcreteWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ConcreteWorldObject.cs
+END
+IArrowWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IArrowWorldObject.cs
+END
+TerrainTileDefinitionResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/TerrainTileDefinitionResource.cs
+END
+TerrainWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/TerrainWorldObject.cs
+END
+ArchetypeBasedRotatingArrowWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedRotatingArrowWorldObject.cs
+END
+ResourceModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ResourceModel.cs
+END
+IRotatingArrowWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IRotatingArrowWorldObject.cs
+END
+IConcreteWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IConcreteWorldObject.cs
+END
+ArchetypeBasedMirrorWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedMirrorWorldObject.cs
+END
+WorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/WorldObjectArchetypeData.cs
+END
+FrameSetResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/FrameSetResource.cs
+END
+ArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeData.cs
+END
+RetractableSpikeButtonWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/RetractableSpikeButtonWorldObjectArchetypeData.cs
+END
+TutorialTriggerVolumeWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/TutorialTriggerVolumeWorldObject.cs
+END
+ArchetypeBasedWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedWorldObject.cs
+END
+IBombWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IBombWorldObject.cs
+END
+ArchetypeBasedRetractableSpikeWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedRetractableSpikeWorldObject.cs
+END
+IRetractableSpikeButtonWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IRetractableSpikeButtonWorldObject.cs
+END
+ArrowWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArrowWorldObjectArchetypeData.cs
+END
+IDrawable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IDrawable.cs
+END
+IAnimatedWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IAnimatedWorldObject.cs
+END
+TriggerVolumeWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/TriggerVolumeWorldObject.cs
+END
+CharacterArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/CharacterArchetypeData.cs
+END
+Texture2DResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/Texture2DResource.cs
+END
+IScriptedSearchableWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IScriptedSearchableWorldObject.cs
+END
+WorldResource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/WorldResource.cs
+END
+RotatingArrowWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/RotatingArrowWorldObjectArchetypeData.cs
+END
+IBurgalsData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/IBurgalsData.cs
+END
+ArchetypeBasedConcreteWorldObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/ArchetypeBasedConcreteWorldObject.cs
+END
+MirrorWorldObjectArchetypeData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/ActorResources/MirrorWorldObjectArchetypeData.cs
+END

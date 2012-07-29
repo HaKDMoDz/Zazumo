@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.Actors;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Actors;
+
+namespace Phat.Zazumo.Controllers.Action
+{
+    public class WormController : ActorController
+    {
+        Vector2[] path;
+        TimeSpan lifetime;
+
+        protected override void OnInitialize()
+        {
+            
+        }
+
+        public override void  Update(TimeSpan ellapsedTime)
+        {
+            base.Update(ellapsedTime);
+
+            if (path == null)
+                path = ((WormActor)Actor).Path;
+
+            lifetime = lifetime.Add(ellapsedTime);
+            var t = (Single)lifetime.TotalMilliseconds / 500f;      
+            
+            // Move Segments.
+            for (Int32 wormSegmentIndex =  0; wormSegmentIndex < ((WormActor)Actor).Segments.Length; wormSegmentIndex++)
+            {
+                var segmentPosition = Math.Max(0f, (t - (wormSegmentIndex) * 0.1f));
+                Int32 pathSegmentIndex = (Int32)Math.Floor(segmentPosition);
+
+                var a = (pathSegmentIndex - 1) % path.Length; if (a < 0) a += path.Length;
+                var b = (pathSegmentIndex) % path.Length;
+                var c = (pathSegmentIndex + 1) % path.Length;
+                var d = (pathSegmentIndex + 2) % path.Length;
+
+                if (d == 1)
+                    Actor.Destroy();
+
+                var position = segmentPosition - (Single)Math.Floor(segmentPosition);
+                var result = Vector2.CatmullRom(path[a], path[b], path[c], path[d], position);
+                ((WormActor)Actor).Segments[wormSegmentIndex].SetLocation(result.X, result.Y, 0f);
+            }
+        }
+    }
+}

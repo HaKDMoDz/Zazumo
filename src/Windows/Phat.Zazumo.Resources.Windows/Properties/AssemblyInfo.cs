@@ -1,0 +1,34 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("Phat.Zazumo.Resources.Windows")]
+[assembly: AssemblyProduct("Phat.Zazumo.Resources.Windows")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyCompany("Phat Games")]
+[assembly: AssemblyCopyright("Copyright © Phat Games 2011")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type. Only Windows
+// assemblies support COM.
+[assembly: ComVisible(false)]
+
+// On Windows, the following GUID is for the ID of the typelib if this
+// project is exposed to COM. On other platforms, it unique identifies the
+// title storage container when deploying this assembly to the device.
+[assembly: Guid("5a2a1cba-99dc-4cba-953e-c3f14dcb3133")]
+
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+[assembly: AssemblyVersion("1.0.0.0")]

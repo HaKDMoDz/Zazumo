@@ -1,0 +1,457 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+#if WINDOWS_PHONE
+using Microsoft.Xna.Framework.Input.Touch;
+#endif
+using System.IO.IsolatedStorage;
+using System.Xml.Serialization;
+using System.IO;
+using Phat;
+using Phat.Messages;
+using Phat.ActorResources;
+using Phat.Visual.Xna;
+using Phat.ActorModel;
+using Phat.ActorPhysics;
+using Phat.ActorVisuals;
+using Phat.Zazumo.Controllers.Splash;
+using Phat.Zazumo.Resources;
+using Phat.Zazumo.Actors;
+using Phat.Zazumo.Physics;
+using Phat.Zazumo.Visuals;
+
+namespace Phat.Zazumo
+{
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    public class Game1 : PhatGame
+    {
+        Color[] backgroundColors = { Color.Black, Color.CornflowerBlue, Color.Pink, Color.Olive, Color.Red, Color.Purple, Color.Brown, Color.Navy, Color.White, Color.Yellow, Color.Teal, Color.Orange};
+
+        public Game1()
+        {
+        }
+
+        protected override void Initialize()
+        {
+            base.Initialize();
+                        
+            InitializeAndRun<SplashGameMode, SaveData>();
+
+            Phat.Settings.MetersToPixels = (Single)GraphicsDevice.PresentationParameters.BackBufferWidth / 10f;
+        }
+
+        protected override void LoadResources(IResourceDictionary resources)
+        {
+            base.LoadResources(resources);
+
+            #region Physics
+            // Physics
+            Dictionary<String, Object> physics = new Dictionary<String, Object>();
+            physics.Add("TileCollisionHull", new Vector2[] 
+            { 
+                new Vector2(0f, 0f), 
+                new Vector2(1f, 0f), 
+                new Vector2(1f, 1f), 
+                new Vector2(0f, 1f) 
+            });
+
+            physics.Add("UnitCollisionHull", new Vector2[] 
+            { 
+                new Vector2(0f, 0f), 
+                new Vector2(1f, 0f), 
+                new Vector2(1f, 1f), 
+                new Vector2(0f, 1f) 
+            });
+
+            physics.Add("WormSegmentCollisionHull", new Vector2[] 
+            { 
+                new Vector2(0f, 0f), 
+                new Vector2(0.5f, 0f), 
+                new Vector2(0.5f, 0.5f), 
+                new Vector2(0f, 0.5f) 
+            });
+
+            physics.Add("ZazumoNormalHull", new Vector2[] 
+            { 
+                new Vector2(0.1f, 0.1f), 
+                new Vector2(0.9f, 0.1f), 
+                new Vector2(0.9f, 0.9f), 
+                new Vector2(0.1f, 0.9f) 
+            });
+
+
+            physics.Add("WormholeCollisionHull", new Vector2[] 
+            { 
+                new Vector2(0f, 0f), 
+                new Vector2(0.5f, 0f), 
+                new Vector2(0.5f, 0.5f), 
+                new Vector2(0f, 0.5f) 
+            });
+            #endregion
+
+            #region GameData
+            // Game data
+            Dictionary<String, Object> gameData = new Dictionary<String, Object>();
+            gameData.Add("ZazumoData", new ZazumoArchetypeData 
+            { 
+                Height = 0.75f, 
+                Width = 0.465f, 
+                Damping = 2.5f,
+                Speed = 40.0f,
+                BulletSpeed = 5.0f,
+                SpriteKey = "Zazumo.Sprites.Zazumo" 
+            });                       
+
+            #region Shape Enemies
+            gameData.Add("TriangleData", new CharacterArchetypeData
+            {
+                Height = 0.333f,
+                Width = 0.5f,
+                SpriteKey = "Zazumo.Sprites.TriangleShape",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("SquareData", new CharacterArchetypeData
+            {
+                Height = 0.5f,
+                Width = 0.5f,
+                SpriteKey = "Zazumo.Sprites.SquareShape",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("DiamondData", new CharacterArchetypeData
+            {
+                Height = 0.333f,
+                Width = 0.666f,
+                SpriteKey = "Zazumo.Sprites.DiamondShape",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+            #endregion
+
+            #region Mini Bosses
+            gameData.Add("WormHeadData", new CharacterArchetypeData
+            {
+                Height = 0.65f,
+                Width = 0.65f,
+                SpriteKey = "Zazumo.Sprites.Wormhead",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("WormSegmentData", new CharacterArchetypeData
+            {
+                Height = 0.5f,
+                Width = 0.5f,
+                SpriteKey = "Zazumo.Sprites.WormSegment",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("EyeData", new CharacterArchetypeData
+            {
+                Height = 0.5f,
+                Width = 1.2f,
+                SpriteKey = "Zazumo.Sprites.Eye",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("BoulderData", new CharacterArchetypeData
+            {
+                Height = 1.5f,
+                Width = 1.0f,
+                SpriteKey = "Zazumo.Sprites.Boulder",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("SquidData", new CharacterArchetypeData
+            {
+                Height = 1.75f,
+                Width = 1.0f,
+                SpriteKey = "Zazumo.Sprites.Squid1",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("SquidArmData", new CharacterArchetypeData
+            {
+                Height = 0.3f,
+                Width = 0.3f,
+                SpriteKey = "Zazumo.Sprites.SquidBall",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            #endregion
+
+            #region Power Ups
+            gameData.Add("ClamData", new ClamData
+            {
+                Height = 1.0f,
+                Width = 1.0f,
+                SpriteKey = "Zazumo.Sprites.Clam1",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1,
+                Shape = ZazumoShape.Star,
+                HitPoints = 10
+            });
+
+            gameData.Add("StarPowerUpData", new PowerUpData
+            {
+                Height = 0.5f,
+                Width = 0.5f,
+                SpriteKey = "Zazumo.Sprites.StarPickup",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1,
+                Shape = ZazumoShape.Star
+            });
+
+            gameData.Add("PurpleFrogData", new FrogData
+            {
+                Height = 1.0f,
+                Width = 0.65f,
+                FrogEffect = Resources.FrogEffect.Shrink,
+                SpriteKey = "Zazumo.Sprites.PurpleFrog",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("YellowFrogData", new FrogData
+            {
+                Height = 1.0f,
+                Width = 0.65f,
+                FrogEffect = Resources.FrogEffect.Ammo,
+                SpriteKey = "Zazumo.Sprites.AmmoFrog1",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+
+            gameData.Add("GreenFrogData", new FrogData
+            {
+                Height = 1.0f,
+                Width = 0.65f,
+                FrogEffect = Resources.FrogEffect.Grow,
+                SpriteKey = "Zazumo.Sprites.GreenFrog",
+                CollisionHullKey = "TileCollisionHull",
+                CollisionGroup = 1
+            });
+            #endregion
+
+            #region Wormholes
+            gameData.Add("StarWormhole", new WormholeData
+            {
+                Height = 1f,
+                Width = 1f,
+                SpriteKey = "Zazumo.Sprites.StarWormhole",
+                CollisionGroup = 1,
+                CollisionHullKey = "WormholeCollisionHull"
+            });
+
+            gameData.Add("SwirlWormhole", new WormholeData
+            {
+                Height = 1f,
+                Width = 1f,
+                SpriteKey = "Zazumo.Sprites.SwirlWormhole",
+                CollisionGroup = 1,
+                CollisionHullKey = "WormholeCollisionHull"
+            });
+            #endregion
+
+            gameData.Add("Bullet", new ProjectileData
+            {
+                Height = 0.325f,
+                Width = 0.325f,
+                Speed = 1.0f,
+                CollisionGroup = 2,
+                SpriteKey = "Zazumo.Sprites.Bullet"
+            });
+
+            gameData.Add("StarBullet", new ProjectileData
+            {
+                Height = 0.3f,
+                Width = 0.3f,
+                Speed = 2.0f,
+                CollisionGroup = 2,
+                SpriteKey = "Zazumo.Sprites.StarBullet"
+            });
+
+            gameData.Add("EyeBullet", new ProjectileData
+            {
+                Height = 0.075f,
+                Width = 0.075f,
+                Speed = 2.0f,
+                CollisionGroup = 1,
+                SpriteKey = "Zazumo.Sprites.EyeBullet"
+            });
+
+            gameData.Add("HorizontalWall", new VolumeWorldObject
+            {
+                Width = GraphicsDevice.PresentationParameters.BackBufferWidth / Phat.Settings.MetersToPixels,
+                Height = 0.01f
+            });
+
+            gameData.Add("VerticalWall", new VolumeWorldObject
+            {
+                Height = GraphicsDevice.PresentationParameters.BackBufferHeight / Phat.Settings.MetersToPixels,
+                Width = 0.01f
+            });
+            #endregion
+
+            #region Paths
+            gameData.Add("WormPath1", new Vector2[]
+            {
+                new Vector2(-0.9375f,0.46875f),
+                new Vector2(0.46925f,0.3435f),
+                new Vector2(1.6875335f,1.5644371f),
+                new Vector2(1.0622637f,3.1289194f),
+                new Vector2(1.5620797f,4.1305085f),
+                new Vector2(1.2496947f,5.2259965f),
+                new Vector2(1.4683642f,6.4150722f),
+                new Vector2(3.7175361f,6.5405197f),
+                new Vector2(5.0917062f,5.5391506f),
+                new Vector2(6.2159353f,6.3216659f),
+                new Vector2(7.4962972f,5.8521567f),
+                new Vector2(8.6519715f,6.4468683f),
+                new Vector2(9.8703965f,5.9773592f),
+                new Vector2(10.776219f,5.0070403f),
+                new Vector2(10.62029f,3.7550159f),
+                new Vector2(10.901413f,2.471691f),
+                new Vector2(10.276931f,1.3135685f),
+                new Vector2(9.4335437f,0.34324958f),
+                new Vector2(8.746339f,1.5950741f),
+                new Vector2(8.8712853f,3.097564f),
+                new Vector2(7.3094564f,2.9097528f),
+                new Vector2(6.7159614f,1.6889797f),
+                new Vector2(6.9346174f,0.46820667f),
+                new Vector2(5.7476275f,-3.1933881f)
+            });
+
+            gameData.Add("EyePath1", new Vector2[]
+            {
+                new Vector2(4.5f, 2.5f),
+                new Vector2(7f, 0.5f),
+                new Vector2(8.5f, 2.5f),
+                new Vector2(7f, 4.5f),
+                new Vector2(4.5f, 2.5f),
+                new Vector2(3f, 0.5f),
+                new Vector2(0.5f, 2.5f),
+                new Vector2(3f, 4.5f)                
+            });
+
+            gameData.Add("EyePath2", new Vector2[]
+            {
+                new Vector2(4.5f, 2.5f),
+                new Vector2(3f, 0.5f),
+                new Vector2(0.5f, 2.5f),
+                new Vector2(3f, 4.5f),
+                new Vector2(4.5f, 2.5f),
+                new Vector2(7f, 0.5f),
+                new Vector2(8.5f, 2.5f),
+                new Vector2(7f, 4.5f),
+
+            });
+
+            gameData.Add("EyePath3", new Vector2[]
+            {
+                new Vector2(4.5f, 2.5f),
+                new Vector2(7f, 4.5f),                
+                new Vector2(8.5f, 2.5f),
+                new Vector2(7f, 0.5f),
+                new Vector2(4.5f, 2.5f),
+                new Vector2(3f, 4.5f),
+                new Vector2(0.5f, 2.5f),
+                new Vector2(3f, 0.5f),                               
+            });
+
+            gameData.Add("EyePath4", new Vector2[]
+            {
+                new Vector2(4.5f, 2.5f),
+                new Vector2(3f, 4.5f),
+                new Vector2(0.5f, 2.5f),
+                new Vector2(3f, 0.5f),                
+                new Vector2(4.5f, 2.5f),
+                new Vector2(7f, 4.5f),
+                new Vector2(8.5f, 2.5f),
+                new Vector2(7f, 0.5f),
+            });
+            #endregion            
+
+
+            #region LevelSpawnData
+            gameData.Add("Level1NormalSpawnData", new LevelSpawnData[]
+            {
+                // new LevelSpawnData { SpawnType = SpawnType.Worm, Data = new WormSpawnData { MotionPathKey = "WormPath1", SegmentCount = 6 } },
+                // new LevelSpawnData { SpawnType = SpawnType.Eye, Data = null },
+                new LevelSpawnData { SpawnType = SpawnType.Triangle, Data = new TriangleShapeData { StartPosition = StartPosition.Left } },
+                new LevelSpawnData { SpawnType = SpawnType.Triangle, Data = new TriangleShapeData { StartPosition = StartPosition.Right } },
+                new LevelSpawnData { SpawnType = SpawnType.Square, Data = new SquareShapeData { StartPosition = StartPosition.Top } },
+                new LevelSpawnData { SpawnType = SpawnType.Square, Data = new SquareShapeData { StartPosition = StartPosition.Bottom } },
+                new LevelSpawnData { SpawnType = SpawnType.Diamond, Data = new DiamondShapeData { StartPosition = StartPosition.Top } },
+            });
+            #endregion
+
+            resources.MergeResources("GameData", gameData);
+            resources.MergeResources("Physics", physics);
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            var colorIndex = (Int32)(Math.Floor(gameTime.TotalGameTime.TotalSeconds / 5f));
+            colorIndex = colorIndex % backgroundColors.Length;
+            var nextColorIndex = (colorIndex + 1) % backgroundColors.Length;
+            var colorInterpolationPosition = (Single)((gameTime.TotalGameTime.TotalSeconds / 5f) - (Math.Floor(gameTime.TotalGameTime.TotalSeconds / 5f)));
+            
+            var c1 = backgroundColors[colorIndex].ToVector3();
+            var c2 = backgroundColors[nextColorIndex].ToVector3();
+            
+#if !MONO
+            BackgroundColor = new Color(
+                (c2.X * colorInterpolationPosition + c1.X * (1f - colorInterpolationPosition)),
+                (c2.Y * colorInterpolationPosition + c1.Y * (1f - colorInterpolationPosition)),
+                (c2.Z * colorInterpolationPosition + c1.Z * (1f - colorInterpolationPosition))
+            );
+#else
+            BackgroundColor = Color.White;
+#endif
+        }
+
+        protected override void RegisterPhysics(IActorPhysicsFactory physicsFactory, IResourceDictionary resourceDictionary)
+        {
+            base.RegisterPhysics(physicsFactory, resourceDictionary);
+
+            physicsFactory.RegisterPhysicsFactory<ZazumoActor>(x => new ZazumoPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<TriangleEnemy>(x => new CharacterPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<WormActor>(x => new CharacterPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<EnemyActor>(x => new StaticPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<FrogActor>(x => new StaticPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<PowerUpActor>(x => new StaticPhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<ProjectileActor>(x => new ProjectilePhysics(x, resourceDictionary));
+            physicsFactory.RegisterPhysicsFactory<WormholeActor>(x => new StarGatePhysics(x, resourceDictionary));
+        }
+
+        protected override void RegisterVisuals(IActorVisualFactory actorVisualFactory, IResourceDictionary resourceDictionary, SpriteBatch spriteBatch)
+        {
+            base.RegisterVisuals(actorVisualFactory, resourceDictionary, spriteBatch);
+
+            actorVisualFactory.RegisterVisualFactory<WormActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<EyeFlockActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<BoulderFlockActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<TriangleFlockActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<SquareFlockActor>(x => new NullVisual(x));
+            actorVisualFactory.RegisterVisualFactory<AmmoMeter>(x => new AmmoMeterVisual(x, spriteBatch, resourceDictionary));
+        }           
+    }
+}

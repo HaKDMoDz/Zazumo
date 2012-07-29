@@ -1,0 +1,89 @@
+10
+
+dir
+16
+http://24.89.67.76:9790/svn/Phat/Phat.Zazumo/trunk/src/packages
+http://24.89.67.76:9790/svn/Phat
+
+
+
+2011-04-05T01:56:41.782921Z
+6
+phil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9ab44cb2-8876-c648-af67-d1cf941dd106
+
+Expression
+dir
+
+SqlServerCompact.4.0.8482.1
+dir
+
+EFCodeFirst.0.8
+dir
+
+EFCodeFirst.SqlServerCompact.0.8.8482
+dir
+
+WebActivator.1.0.0.0
+dir
+
+Prism.4.0.0.0
+dir
+
+CommonServiceLocator.1.0
+dir
+
+repositories.config
+file
+
+
+
+
+2011-03-18T17:26:30.000000Z
+6fc3a184a7126dc6f180ae0623e12a9f
+2011-04-05T01:56:41.782921Z
+6
+phil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+767
+
+Prism.MEFExtensions.4.0.0.0
+dir
+
+Dataform
+dir
+

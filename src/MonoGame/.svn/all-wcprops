@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame
+END
+IOSGameWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/IOSGameWindow.cs
+END
+CurveLoopType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/CurveLoopType.cs
+END
+DisplayOrientation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/DisplayOrientation.cs
+END
+Vector2.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Vector2.cs
+END
+Quaternion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Quaternion.cs
+END
+GraphicsDeviceInformation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GraphicsDeviceInformation.cs
+END
+Vector4.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Vector4.cs
+END
+GameComponentCollectionEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameComponentCollectionEventArgs.cs
+END
+BatteryChargeStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/BatteryChargeStatus.cs
+END
+MathHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MathHelper.cs
+END
+Point.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Point.cs
+END
+GameComponent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameComponent.cs
+END
+GameServiceContainer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameServiceContainer.cs
+END
+Plane.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Plane.cs
+END
+GameWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameWindow.cs
+END
+PerformanceCounter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PerformanceCounter.cs
+END
+IGameComponent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/IGameComponent.cs
+END
+PreparingDeviceSettingsEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PreparingDeviceSettingsEventArgs.cs
+END
+MonoGame.Framework.Android.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MonoGame.Framework.Android.csproj
+END
+CurveKeyCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/CurveKeyCollection.cs
+END
+Game.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Game.cs
+END
+GraphicsDeviceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GraphicsDeviceManager.cs
+END
+BoundingSphere.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/BoundingSphere.cs
+END
+ReusableItemList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/ReusableItemList.cs
+END
+BoundingBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/BoundingBox.cs
+END
+IUpdateable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/IUpdateable.cs
+END
+ContainmentType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/ContainmentType.cs
+END
+MonoGame.Framework.Windows.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MonoGame.Framework.Windows.csproj
+END
+MonoGame.Framework.iOS.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MonoGame.Framework.iOS.csproj
+END
+IGraphicsDeviceManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/IGraphicsDeviceManager.cs
+END
+Curve.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Curve.cs
+END
+PlayerIndex.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PlayerIndex.cs
+END
+TitleContainer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/TitleContainer.cs
+END
+Vector3.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Vector3.cs
+END
+GameTime.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameTime.cs
+END
+PlaneIntersectionType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PlaneIntersectionType.cs
+END
+MonoGame.Framework.MacOS.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MonoGame.Framework.MacOS.csproj
+END
+IDrawable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/IDrawable.cs
+END
+BoundingFrustum.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/BoundingFrustum.cs
+END
+Ray.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Ray.cs
+END
+CurveKey.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/CurveKey.cs
+END
+DrawableGameComponent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/DrawableGameComponent.cs
+END
+MonoGame.Framework.Windows.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/MonoGame.Framework.Windows.csproj.user
+END
+PowerStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PowerStatus.cs
+END
+Matrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Matrix.cs
+END
+Rectangle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Rectangle.cs
+END
+CurveTangent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/CurveTangent.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Program.cs
+END
+GameComponentCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/GameComponentCollection.cs
+END
+PowerLineStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/PowerLineStatus.cs
+END
+CurveContinuity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/CurveContinuity.cs
+END

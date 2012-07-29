@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Messages;
+using Phat.Zazumo.Resources;
+
+namespace Phat.Zazumo.Actors
+{
+    public class WormFlockActor : Actor
+    {
+        public WormActor[] Segments { get; private set; }
+        private readonly List<WormActor> _deadList = new List<WormActor>();
+
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            var segmentsList = new List<WormActor>();
+
+            var data = (WormSpawnData)initializationData;
+
+            for (Int32 i = 0; i < 1; i++)
+            {
+                WormActor enemy = ActorFactory.Create<WormActor>(data, new Vector2(0f, 0f));
+                segmentsList.Add(enemy);
+                enemy.SetFlock(this);
+            }
+
+            segmentsList.Reverse();
+            Segments = segmentsList.ToArray();
+        }
+    }
+
+    public class WormActor : Actor
+    {
+        private Int32 _segments;
+        private Boolean _isInvincible;
+
+        public Vector2[] Path { get; private set; }
+
+        public WormSegmentActor[] Segments { get; private set; }
+
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            _segments = ((WormSpawnData)initializationData).SegmentCount;
+            Path = (Vector2[])Resources.GetResource(((WormSpawnData)initializationData).MotionPathKey);
+
+            var segmentsList = new List<WormSegmentActor>();
+
+            for (Int32 i = 0; i < _segments; i++)
+            {
+                WormSegmentActor newSegment = null;
+
+                if (i == _segments - 1)
+                    newSegment = ActorFactory.Create<WormSegmentActor>(Resources.GetResource("WormHeadData"), Path[0]);
+                else
+                    newSegment = ActorFactory.Create<WormSegmentActor>(Resources.GetResource("WormSegmentData"), Path[0]);
+
+                segmentsList.Add(newSegment);
+                newSegment.SetWorm(this);
+            }
+
+            segmentsList.Reverse();
+            Segments = segmentsList.ToArray();
+        }
+
+        public void Hit()
+        {
+            return;
+
+            In(100).Milliseconds.Run(() => _isInvincible = false);
+
+            if (_isInvincible)
+                return;
+
+            _isInvincible = true;
+
+            var destroyedSegment = Segments.Last();
+            destroyedSegment.Destroy();
+
+            Segments = Segments.Take(Segments.Length - 1).ToArray();
+
+            if (Segments.Length == 0)
+                Destroy();
+        }
+
+        public void SetFlock(WormFlockActor flock)
+        {
+
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            foreach (var segment in Segments)
+            {
+                segment.Destroy();
+            }
+        }
+    }
+
+    public class WormSegmentActor : EnemyActor
+    {
+        public WormActor Worm { get; private set; }
+        
+        public void SetWorm(WormActor worm)
+        {
+            this.Worm = worm;
+        }
+
+        protected override void OnActorCollided(Phat.Messages.ActorCollidedEvent @event)
+        {
+            base.OnActorCollided(@event);
+
+            if (@event.OtherActor is ZazumoProjectileActor)
+            {
+                Worm.Hit();
+            }            
+        }
+    }
+}

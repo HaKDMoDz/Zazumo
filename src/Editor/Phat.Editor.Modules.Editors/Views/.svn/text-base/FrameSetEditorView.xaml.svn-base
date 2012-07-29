@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="Phat.Editor.Modules.Editors.Views.FrameSetEditorView"
+             xmlns:vm="clr-namespace:Phat.Editor.Modules.Editors.ViewModels"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:vc="clr-namespace:Phat.Editor.Modules.Editors.ValueConverters"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <vc:FlipValueConverter x:Key="FlipValueConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <ListBox
+            MinHeight="20"
+            Margin="5"
+            ItemsSource="{Binding Frames}"
+            SelectedItem="{Binding SelectedFrame, Mode=TwoWay}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+            <ListBox.InputBindings>
+                <KeyBinding Key="Delete" Command="{Binding DeleteFrame}" />
+            </ListBox.InputBindings>
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image 
+
+                        Source="{Binding SpriteImage}" 
+                        Stretch="None"
+                        RenderTransformOrigin="0.5, 0.5">
+                        <Image.RenderTransform>
+                            <ScaleTransform ScaleX="{Binding IsFlippedHorizontally, Converter={StaticResource FlipValueConverter}}" 
+                                            ScaleY="{Binding IsFlippedVertically, Converter={StaticResource FlipValueConverter}}" />
+                        </Image.RenderTransform>
+                    </Image>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel 
+            Grid.Row="1" 
+            Orientation="Horizontal">
+
+            <ComboBox Grid.Row="1"
+                 Width="200"
+                  Margin="5" 
+                  VerticalAlignment="Center" 
+                  ItemsSource="{Binding Sprites}"
+                  SelectedItem="{Binding SelectedSprite, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Button 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Left" 
+                Margin="5"
+                Command="{Binding AddFrame}"
+                Content="+" />
+        </StackPanel>
+
+        <Image
+            Grid.Row="2"
+            DataContext="{Binding Animation}"
+            Source="{Binding SpriteImage}" 
+            Stretch="None" 
+            RenderTransformOrigin="0.5, 0.5">
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="{Binding IsFlippedHorizontally, Converter={StaticResource FlipValueConverter}}" 
+                                            ScaleY="{Binding IsFlippedVertically, Converter={StaticResource FlipValueConverter}}" />
+            </Image.RenderTransform>
+        </Image>
+
+        <Slider Grid.Row="3" Minimum="0.05" Maximum="2" Value="{Binding FrameDuration}"/>
+    </Grid>
+</UserControl>

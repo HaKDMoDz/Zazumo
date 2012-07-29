@@ -1,0 +1,5 @@
+C:\Dev\Karendow\src\Phat.Karendow\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Karendow\build\.NET\Debug\Phat.Karendow.dll
+C:\Dev\Karendow\build\.NET\Debug\Phat.Karendow.pdb
+C:\Dev\Karendow\src\Phat.Karendow\obj\Debug\Phat.Karendow.dll
+C:\Dev\Karendow\src\Phat.Karendow\obj\Debug\Phat.Karendow.pdb

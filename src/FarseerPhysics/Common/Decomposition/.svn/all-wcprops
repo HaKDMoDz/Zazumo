@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition
+END
+CDTDecomposer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/CDTDecomposer.cs
+END
+EarclipDecomposer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/EarclipDecomposer.cs
+END
+BayazitDecomposer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/BayazitDecomposer.cs
+END
+FlipcodeDecomposer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/FlipcodeDecomposer.cs
+END
+SeidelDecomposer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/FarseerPhysics/Common/Decomposition/SeidelDecomposer.cs
+END

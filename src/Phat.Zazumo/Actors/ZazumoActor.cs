@@ -1,0 +1,395 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Phat.ActorModel;
+using Phat.Zazumo.Resources;
+using Phat.Messages;
+using Microsoft.Xna.Framework;
+using Phat.Zazumo.Messages;
+using Phat.ActorResources;
+
+namespace Phat.Zazumo.Actors
+{
+    public class ZazumoActor : CharacterActor<ZazumoActor>
+    {
+        private const Single DistanceThreshold = 0.3f;
+
+        private IZazumoData data;
+        private Boolean _isFiring;
+        private Int64 _lastFired;
+        private TimeSpan _fireDelay;
+        private Vector2[] _targets;
+        private ZazumoShape _shape;
+        private PowerUpActor _powerUp;
+        private Weapon _currentWeapon;
+        private AmmoMeter _ammoMeter;
+        private Boolean _isInvincible;
+        
+        protected override void OnInitializing(Object initializationData)
+        {
+            base.OnInitializing(initializationData);
+
+            data = (IZazumoData)initializationData;
+
+            SetWeapon(new DefaultWeapon());
+            StartFiring();
+            
+            Handle<ActorCollidedEvent>()
+                .ApplyDefaultHandler(OnCollided);
+
+            _lastFired = _fireDelay.Ticks + 1;
+
+            _targets = new Vector2[] { };
+
+            _isInvincible = true;
+            In(1).Seconds.Run(() => _isInvincible = false);
+
+        }
+
+        public void Move(Single horizontalAcceleration, Single verticalAcceleration)
+        {
+            ApplyForce(horizontalAcceleration * data.Speed, verticalAcceleration * data.Speed);
+        }
+
+        public Boolean FindTargets(IEnumerable<EnemyActor> enemies)
+        {
+            var targets = _currentWeapon.FindTargets(this, enemies);
+            SetTargets(targets);
+
+            return targets.Length > 0;
+        }
+        
+        public void StartFiring()
+        {
+            if (_isFiring == true)
+                return;
+
+            _isFiring = true;
+
+            RunLatent(t => 
+                {
+                    _lastFired += t;
+
+                    if (_lastFired > _fireDelay.Ticks)
+                    {
+                        Fire();
+                        _lastFired = 0;
+                    }
+
+                    if (_isFiring)
+                        return ProcessState.Running;
+                    else
+                        return ProcessState.Completed;
+                }
+            );
+        }
+
+        public void StopFiring()
+        {
+            if (_isFiring == false)
+                return;
+
+            if (_shape == ZazumoShape.None)
+                return;
+
+            _isFiring = false;
+
+            In((Int32)_fireDelay.TotalMilliseconds).Milliseconds.Run(() => _lastFired = _fireDelay.Ticks + 1);
+        }
+
+        public void SetTargets(params Vector2[] targets)
+        {
+            if (!_isFiring)
+            {
+                _targets = new Vector2[] { };
+            }
+            else
+            {
+                _targets = targets;
+            }
+        }
+
+        private void Fire()
+        {
+            if (_ammoMeter != null)
+            {
+                if (_ammoMeter.AmmoLevel <= 0)
+                    return;
+            }
+
+            if (IsDestoryed)
+                return;
+
+            if (!_isFiring)
+                return;
+
+            if (_shape == ZazumoShape.None)
+            {
+                foreach (var target in _targets)
+                {
+                    Vector2 fireFrom = new Vector2(this.Location.X + data.Width / 2f, this.Location.Y + data.Height / 2f);
+
+                    var unit = (target - fireFrom);
+                    unit.Normalize();
+
+                    var bullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("Bullet"), fireFrom);
+                    
+                    bullet.BulletPower = 1;
+                    var velocity = unit * data.BulletSpeed;
+                    var trail1 = ActorFactory.Create<BulletTrailParticleSystemActor>(new Object());
+                    trail1.AttachTo(bullet, new Vector2(0f, 0.05f));
+
+                    bullet.SetVelocity(velocity.X, velocity.Y, 0f);
+
+                    var angle = Math.Acos(unit.X) * (unit.Y > 0 ? -1.0 : 1.0);
+                    bullet.SetProperty("Rotation",  (Single)(Math.PI / 2.0) - (Single)angle);
+
+                    var upperBulletAngle = angle - 0.15f;
+                    var upperBulletDirection = new Vector2((Single)Math.Cos(upperBulletAngle), (Single)Math.Sin(upperBulletAngle) * -1.0f);
+                    upperBulletDirection.Normalize();
+                    var upperBullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("Bullet"), fireFrom);
+                    var upperBulletVelocity = upperBulletDirection * data.BulletSpeed;
+                    upperBullet.SetVelocity(upperBulletVelocity.X, upperBulletVelocity.Y, 0f);
+                    upperBullet.SetProperty("Rotation", (Single)(Math.PI / 2.0) - (Single)upperBulletAngle);
+
+                    var trail2 = ActorFactory.Create<BulletTrailParticleSystemActor>(new Object());
+                    trail2.AttachTo(upperBullet, new Vector2(0f, 0.05f));
+
+                    var lowerBulletAngle = angle + 0.15f;
+                    var lowerBulletDirection = new Vector2((Single)Math.Cos(lowerBulletAngle), (Single)Math.Sin(lowerBulletAngle) * -1.0f);
+                    lowerBulletDirection.Normalize();
+                    var lowerBullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("Bullet"), fireFrom);
+                    var lowerBulletVelocity = lowerBulletDirection * data.BulletSpeed;
+                    lowerBullet.SetVelocity(lowerBulletVelocity.X, lowerBulletVelocity.Y, 0f);
+                    lowerBullet.SetProperty("Rotation", (Single)(Math.PI / 2.0) - (Single)lowerBulletAngle);
+                    var trail3 = ActorFactory.Create<BulletTrailParticleSystemActor>(new Object());
+                    trail3.AttachTo(lowerBullet, new Vector2(0f, 0.05f));
+
+
+                }
+            }
+            else if (_shape == ZazumoShape.Star)
+            {
+                foreach (var target in _targets)
+                {
+                    var bulletData = (ProjectileData)Resources.GetResource("StarBullet");
+
+                    Vector2 fireFrom = new Vector2(this.Location.X + data.Width / 2f - bulletData.Width / 2f, this.Location.Y + data.Height / 2f - bulletData.Height / 2f);
+
+                    var unit = (target - fireFrom);
+                    unit.Normalize();
+                    
+                    if (Single.IsNaN(unit.X) || Single.IsNaN(unit.Y))
+                        continue;
+
+                    var bullet = ActorFactory.Create<ZazumoProjectileActor>(Resources.GetResource("StarBullet"), fireFrom);
+                    var velocity = unit * data.BulletSpeed;
+
+                    bullet.SetVelocity(velocity.X, velocity.Y, 0f);
+                    bullet.SetProperty("Center", new Vector2(0.5f, 0.5f));
+                    bullet.AnimateProperty("Rotation", 0f, (Single)Math.PI * 14f, TimeSpan.FromMilliseconds(7000), false);
+                    bullet.SetFrameSet("Zazumo.FrameSets.StarBullet");
+
+                    _ammoMeter.AmmoLevel -= 0.01f;
+                    bullet.BulletPower = 5;
+                }
+            }
+        }
+
+        public void Grow()
+        {
+            if (_powerUp == null)
+                return;
+
+            _powerUp.Grow();
+
+            Publish(new ZazumoSizeChangedEvent(this.ActorId, _powerUp.Size));
+        }
+
+        public void Shrink()
+        {
+            if (_powerUp == null)
+                return;
+
+            _powerUp.Shrink();
+            Publish(new ZazumoSizeChangedEvent(this.ActorId, _powerUp.Size));
+        }
+
+        public void ReleaseShape()
+        {
+            if (_powerUp != null)
+            {
+                _powerUp.Dettach();
+            }
+
+            this._powerUp = null;
+
+            this._shape = ZazumoShape.None;
+            this.SetWeapon(new DefaultWeapon());
+            StartFiring();
+            Publish(new ZazumoShapeChangedEvent(this.ActorId, this._shape, 0f));
+        }
+
+        public void GetShape(PowerUpActor powerUp, ZazumoShape zazumoShape)
+        {
+            switch (zazumoShape)
+            {
+                case ZazumoShape.None:
+                    SetWeapon(new DefaultWeapon());
+                    break;
+
+                case ZazumoShape.Star:
+                    SetWeapon(new StarWeapon());
+                    break;
+
+                case ZazumoShape.Pear:
+                    break;
+                case ZazumoShape.Swirl:
+                    break;
+                default:
+                    break;
+            }
+
+            this._powerUp = powerUp;
+            this._shape = zazumoShape;
+
+            Publish(new ZazumoShapeChangedEvent(this.ActorId, zazumoShape, _powerUp.AmmoLevel));
+
+            if (zazumoShape != ZazumoShape.None)
+            {
+                StopFiring();
+            }
+            else
+            {
+                StartFiring();
+            }
+
+            Publish(new ZazumoSizeChangedEvent(this.ActorId, _powerUp.Size));
+        }
+
+        private void SetWeapon(Weapon weapon)
+        {
+            _currentWeapon = weapon;
+            _fireDelay = _currentWeapon.FireDelay;
+        }
+
+        protected void OnCollided(ActorCollidedEvent @event)
+        {
+            if (this.IsDestoryed)
+                return;
+
+            if (@event.OtherActor is Volume)
+                return;
+
+            if (@event.OtherActor is PowerUpActor)
+            {
+                @event.Cancel = true;
+
+                if (_powerUp != null)
+                    return;
+
+                GetShape((PowerUpActor)@event.OtherActor, ((PowerUpActor)@event.OtherActor).Shape);
+                @event.OtherActor.AttachTo(this, new Vector2(-0.24f, 0.0f));
+                @event.OtherActor.AnimateProperty("Opacity", 1.0f, 0.75f, TimeSpan.FromMilliseconds(1500));
+
+                return;
+            }
+
+            if (@event.OtherActor is EnemyActor)
+            {
+                if (!((EnemyActor)@event.OtherActor).CanDamagePlayer || _isInvincible)
+                {
+                    @event.Cancel = true;
+                    return;
+                }
+            }
+
+            if (@event.OtherActor is FrogActor)
+            {
+                @event.Cancel = true;
+                return;
+            }
+
+            if (@event.OtherActor is WormholeActor)
+            {
+                @event.Cancel = true;
+
+                if (_powerUp == null)
+                    return;
+                                
+                if (_powerUp.Size != ((WormholeActor)@event.OtherActor).Size)
+                    return;
+
+                if (((WormholeActor)@event.OtherActor).Shape != _shape)
+                    return;
+
+                var powerUpLocation = new Vector3(this._powerUp.Location.X + this._powerUp.OffsetX, this._powerUp.Location.Y + this._powerUp.OffsetY, 0f);
+                var distance = Vector3.Distance(@event.OtherActor.Location, powerUpLocation);
+
+                if (distance > DistanceThreshold)
+                    return;
+
+                if (_powerUp != null)
+                    this._powerUp.Dettach();
+
+                if (_powerUp != null)
+                    this._powerUp.Destroy();
+
+                if (_powerUp != null)
+                {
+                    Publish(new ZazumoShapeChangedEvent(this.ActorId, ZazumoShape.None, 0f));
+                    Publish(new WormholeClosedEvent((WormholeActor)@event.OtherActor, ((WormholeActor)@event.OtherActor).MiniBossData));
+                    SetSprite("Zazumo.Sprites.ZazumoNormal");
+                }
+
+                @event.OtherActor.Destroy();
+                _powerUp = null;
+                _shape = ZazumoShape.None;
+
+                return;
+            }
+
+            KillZazumo();
+        }
+
+        private void KillZazumo()
+        {
+            this.Destroy();
+            StopFiring();
+
+            if (_powerUp != null)
+            {
+                _powerUp.AmmoLevel = _ammoMeter.AmmoLevel;
+                _powerUp.Dettach();
+                _powerUp = null;
+            }
+
+            Publish(new ZazumoShapeChangedEvent(this.ActorId, ZazumoShape.None, 0f));
+            Publish(new PlayerDiedEvent());
+        }
+
+        public void SetAmmo(AmmoMeter ammoMeter)
+        {
+            this._ammoMeter = ammoMeter;
+        }
+
+        public void GetAmmo()
+        {
+            _ammoMeter.AmmoLevel = 1f;
+        }
+
+        public void DestroyPowerUp()
+        {
+            if (this._powerUp == null)
+                return;
+
+            this._powerUp.Destroy();
+            this._powerUp = null;
+            this._shape = ZazumoShape.None;
+
+            Publish(new ZazumoShapeChangedEvent(this.ActorId, ZazumoShape.None, 0f));
+        }
+    }
+}
+

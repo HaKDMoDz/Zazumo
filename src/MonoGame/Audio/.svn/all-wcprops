@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio
+END
+AudioEmitter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/AudioEmitter.cs
+END
+SoundEffect.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/SoundEffect.cs
+END
+AudioListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/AudioListener.cs
+END
+InstancePlayLimitException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/InstancePlayLimitException.cs
+END
+Sound.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/Sound.cs
+END
+SoundState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/SoundState.cs
+END
+SoundEffectInstance.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Audio/SoundEffectInstance.cs
+END

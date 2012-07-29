@@ -1,0 +1,15 @@
+C:\Dev\Phat.Zazumo\build\Editor\Debug\Editor.exe.config
+C:\Dev\Phat.Zazumo\build\Editor\Debug\Editor.exe
+C:\Dev\Phat.Zazumo\build\Editor\Debug\Editor.pdb
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\ResolveAssemblyReference.cache
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Shell.g.cs
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\App.g.cs
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Editor_MarkupCompile.cache
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Editor_MarkupCompile.lref
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Shell.baml
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Editor.g.resources
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Phat.Editor.Properties.Resources.resources
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\GenerateResource.read.1.tlog
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\GenerateResource.write.1.tlog
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Editor.exe
+C:\Dev\Phat.Zazumo\src\Editor\Phat.Editor.Core\obj\x64\Debug\Editor.pdb

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders
+END
+ReflectiveReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/ReflectiveReader.cs
+END
+ListReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/ListReader.cs
+END
+CharReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/CharReader.cs
+END
+SpriteFontReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/SpriteFontReader.cs
+END
+Int32Reader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/Int32Reader.cs
+END
+Int16Reader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/Int16Reader.cs
+END
+SingleReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/SingleReader.cs
+END
+Int64Reader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/Int64Reader.cs
+END
+RectangleReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/RectangleReader.cs
+END
+SoundEffectReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/SoundEffectReader.cs
+END
+Vector3Reader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/Vector3Reader.cs
+END
+SongReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/SongReader.cs
+END
+StringReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/StringReader.cs
+END
+Texture2DReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/MonoGame/Content/ContentReaders/Texture2DReader.cs
+END

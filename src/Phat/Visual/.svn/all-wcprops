@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Phat/!svn/ver/11/Phat.Zazumo/trunk/src/Phat/Visual
+END
+IVisualSubsystem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/Visual/IVisualSubsystem.cs
+END
+VisualActorBehaviorSubsystem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/VisualActorBehaviorSubsystem.cs
+END
+IActorVisualFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/IActorVisualFactory.cs
+END
+ViewPort.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/ViewPort.cs
+END
+VisualSubsystem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Phat/!svn/ver/25/Phat.Zazumo/trunk/src/Phat/Visual/VisualSubsystem.cs
+END
+ActorVisualFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/ActorVisualFactory.cs
+END
+IActorVisual.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/IActorVisual.cs
+END
+VisualHitTestResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Phat/Visual/VisualHitTestResult.cs
+END

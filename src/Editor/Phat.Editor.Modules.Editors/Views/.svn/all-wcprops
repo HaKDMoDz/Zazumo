@@ -1,0 +1,329 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Phat/!svn/ver/12/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views
+END
+CreateNewStoryboardView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewStoryboardView.xaml
+END
+ArchetypeBasedConcreteWorldObjectPropertiesView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ArchetypeBasedConcreteWorldObjectPropertiesView.xaml.cs
+END
+WorldEditorTerrainView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorTerrainView.xaml.cs
+END
+CreateNewTexture2D.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTexture2D.xaml
+END
+CreateNewTerrainTileDefinitionView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTerrainTileDefinitionView.xaml
+END
+ArchetypeEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ArchetypeEditorView.xaml
+END
+TutorialTriggerVolumeWorldObjectPropertiesView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TutorialTriggerVolumeWorldObjectPropertiesView.xaml
+END
+CreateNewTexture2D.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTexture2D.xaml.cs
+END
+CreateNewTerrainTileDefinitionView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTerrainTileDefinitionView.xaml.cs
+END
+ArchetypeEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ArchetypeEditorView.xaml.cs
+END
+StoryboardEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/StoryboardEditorView.xaml
+END
+TutorialTriggerVolumeWorldObjectPropertiesView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TutorialTriggerVolumeWorldObjectPropertiesView.xaml.cs
+END
+ConcreteWorldObjectView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ConcreteWorldObjectView.xaml
+END
+TerrainTileDefinitionEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TerrainTileDefinitionEditorView.xaml
+END
+WorldEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorView.xaml.cs
+END
+StoryboardEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/StoryboardEditorView.xaml.cs
+END
+CreateNewFrameSetView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewFrameSetView.xaml
+END
+WorldEditorTerrainToolsView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorTerrainToolsView.xaml
+END
+ConcreteWorldObjectView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ConcreteWorldObjectView.xaml.cs
+END
+CreateNewTerrainView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTerrainView.xaml.cs
+END
+CreateNewSpriteView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewSpriteView.xaml.cs
+END
+WorldEditorWorldView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorWorldView.xaml.cs
+END
+FrameSetEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/FrameSetEditorView.xaml
+END
+FrameSetEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/FrameSetEditorView.xaml.cs
+END
+LevelEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/LevelEditorView.xaml.cs
+END
+ArchetypeBasedConcreteWorldObjectPropertiesView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ArchetypeBasedConcreteWorldObjectPropertiesView.xaml
+END
+ConcreteWorldObjectPropertiesView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ConcreteWorldObjectPropertiesView.xaml.cs
+END
+TerrainWorldObjectPropertiesView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TerrainWorldObjectPropertiesView.xaml.cs
+END
+CreateNewWorldView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewWorldView.xaml
+END
+CreateNewArchetypeView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewArchetypeView.xaml.cs
+END
+WorldEditorWorldToolsView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorWorldToolsView.xaml
+END
+CreateNewWorldView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewWorldView.xaml.cs
+END
+CreateNewStoryboardView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewStoryboardView.xaml.cs
+END
+WorldEditorWorldToolsView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorWorldToolsView.xaml.cs
+END
+Texture2DEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/Texture2DEditorView.xaml
+END
+WorldEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorView.xaml
+END
+Texture2DEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/Texture2DEditorView.xaml.cs
+END
+CreateNewTerrainView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewTerrainView.xaml
+END
+CreateNewSpriteView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewSpriteView.xaml
+END
+ArchetypeDataViewDictionary.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ArchetypeDataViewDictionary.xaml
+END
+CreateNewLevelView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewLevelView.xaml
+END
+TerrainTileDefinitionEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TerrainTileDefinitionEditorView.xaml.cs
+END
+WorldEditorWorldView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorWorldView.xaml
+END
+CreateNewFrameSetView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewFrameSetView.xaml.cs
+END
+WorldEditorTerrainToolsView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorTerrainToolsView.xaml.cs
+END
+CreateNewLevelView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewLevelView.xaml.cs
+END
+WorldEditorObjectViewDictionary.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorObjectViewDictionary.xaml
+END
+SpriteEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Phat/!svn/ver/12/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/SpriteEditorView.xaml
+END
+LevelEditorView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/LevelEditorView.xaml
+END
+ConcreteWorldObjectPropertiesView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/ConcreteWorldObjectPropertiesView.xaml
+END
+TerrainWorldObjectPropertiesView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/TerrainWorldObjectPropertiesView.xaml
+END
+SpriteEditorView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/SpriteEditorView.xaml.cs
+END
+CreateNewArchetypeView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/CreateNewArchetypeView.xaml
+END
+WorldEditorTerrainView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Phat/!svn/ver/6/Phat.Zazumo/trunk/src/Editor/Phat.Editor.Modules.Editors/Views/WorldEditorTerrainView.xaml
+END
